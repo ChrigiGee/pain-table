@@ -1,0 +1,55 @@
+object Form1: TForm1
+  Left = 334
+  Height = 522
+  Top = 136
+  Width = 689
+  Caption = 'Form1'
+  ClientHeight = 522
+  ClientWidth = 689
+  LCLVersion = '1.5'
+  object BuCreateDB: TButton
+    Left = 25
+    Height = 25
+    Top = 21
+    Width = 75
+    Caption = 'CreateDB'
+    OnClick = BuCreateDBClick
+    TabOrder = 0
+  end
+  object BuDeleteDB: TButton
+    Left = 432
+    Height = 25
+    Top = 21
+    Width = 75
+    Caption = 'DeleteDB'
+    OnClick = BuDeleteDBClick
+    TabOrder = 1
+  end
+  object BuCreateTable: TButton
+    Left = 112
+    Height = 25
+    Top = 21
+    Width = 75
+    Caption = 'CreateTable'
+    OnClick = BuCreateTableClick
+    TabOrder = 2
+  end
+  object BuGenData: TButton
+    Left = 200
+    Height = 25
+    Top = 21
+    Width = 75
+    Caption = 'Generate Data'
+    OnClick = BuGenDataClick
+    TabOrder = 3
+  end
+  object BuShowData: TButton
+    Left = 288
+    Height = 25
+    Top = 21
+    Width = 75
+    Caption = 'ShowData'
+    OnClick = BuShowDataClick
+    TabOrder = 4
+  end
+end
