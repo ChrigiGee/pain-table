@@ -1,0 +1,129 @@
+object Form3: TForm3
+  Left = 110
+  Height = 475
+  Top = 508
+  Width = 653
+  BorderStyle = bsSingle
+  Caption = 'Form3'
+  ClientHeight = 475
+  ClientWidth = 653
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '1.4.4.0'
+  object DBGrid1: TDBGrid
+    Left = 16
+    Height = 192
+    Top = 8
+    Width = 632
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource2
+    TabOrder = 0
+  end
+  object Jahr: TDBText
+    Left = 400
+    Height = 15
+    Top = 216
+    Width = 21
+    DataSource = DataSource1
+    ParentColor = False
+  end
+  object DBEdit2: TDBEdit
+    Left = 394
+    Height = 23
+    Top = 248
+    Width = 198
+    DataSource = DataSource1
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 1
+  end
+  object DBGrid2: TDBGrid
+    Left = 8
+    Height = 192
+    Top = 208
+    Width = 368
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 2
+  end
+  object SpeedButton2: TSpeedButton
+    Left = 394
+    Height = 30
+    Top = 288
+    Width = 201
+    Caption = 'Jahr Hinzufügen'
+  end
+  object SpeedButton3: TSpeedButton
+    Left = 394
+    Height = 30
+    Top = 336
+    Width = 201
+    Caption = 'Schliesse Formular'
+    OnClick = SpeedButton3Click
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 452
+    Width = 653
+    Panels = <>
+  end
+  object SQLQuery1: TSQLQuery
+    PacketRecords = 1
+    IndexFieldNames = 'ID'
+    FieldDefs = <>
+    Filtered = True
+    Database = Form1.SQLite3Connection1
+    Transaction = Form1.SQLTransaction1
+    SQL.Strings = (
+      'Select * FROM tblJahr'
+    )
+    Params = <>
+    ServerFiltered = True
+    left = 472
+    top = 376
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    OnDataChange = DataSource1DataChange
+    left = 400
+    top = 376
+  end
+  object DataSource2: TDataSource
+    DataSet = SQLQuery2
+    OnDataChange = DataSource2DataChange
+    left = 536
+    top = 376
+  end
+  object SQLQuery2: TSQLQuery
+    FieldDefs = <>
+    Database = Form1.SQLite3Connection1
+    Transaction = Form1.SQLTransaction1
+    SQL.Strings = (
+      'Select * FROM tblMonth'
+    )
+    Params = <>
+    left = 600
+    top = 376
+  end
+  object EventLog1: TEventLog
+    AppendContent = False
+    LogType = ltSystem
+    Active = False
+    RaiseExceptionOnError = False
+    DefaultEventType = etCustom
+    CustomLogType = 0
+    EventIDOffset = 0
+    Paused = False
+    left = 612
+    top = 343
+  end
+  object XMLConfig1: TXMLConfig
+    StartEmpty = False
+    RootName = 'CONFIG'
+    left = 621
+    top = 307
+  end
+end
