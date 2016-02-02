@@ -64,20 +64,33 @@ end;
 procedure TForm1.BuGridClick(Sender: TObject);
 var
   i: Integer;
+  MyCol : TGridColumn;
 begin
-  SG1.RowCount:= 11;
-  SG1.ColCount:= 97;
+  SG1.RowCount:= 12;
+//  SG1.ColCount:= 25;
   for i:= 0 to SG1.RowCount-1 do
   begin
     // Beschriftung erzeugen
-    SG1.Cells[0,i+1]:= 'Row' + IntToStr(i);
+    SG1.Cells[0,i]:= 'Row' + IntToStr(i);
+    SG1.RowHeights[i] := 40;
   end;
-  for i:= 0 to SG1.ColCount-1 do
-  begin
-    // Beschriftung erzeugen
-    SG1.Cells[i+1,0]:= 'Col' + IntToStr(i);
-  end;
+  //for i:= 1 to SG1.ColCount-1 do
+  //begin
+  //  // Beschriftung erzeugen
+  //  SG1.Cells[i,0]:= 'Col' + IntToStr(i);
+  //end;
 
+  SG1.Columns.Clear;
+  for i:= 0 to 25  do
+  begin
+    MyCol := SG1.Columns.Add;
+    MyCol.Width:=20;
+    MyCol.Index:=i;
+    MyCol.Title.Font.Orientation:=900;
+//    MyCol.Title.Font.Color:=clRed;
+    MyCol.Title.Layout:=tlBottom;
+    MyCol.Title.Caption := 'Col' + IntToStr(i);
+  end;
 
 end;
 
