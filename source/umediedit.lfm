@@ -8,6 +8,7 @@ object FormMediEdit: TFormMediEdit
   ClientWidth = 642
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  SessionProperties = 'WindowState;Width;Height;Left;Top'
   LCLVersion = '1.7'
   object DBGrid1: TDBGrid
     Left = 8
@@ -105,5 +106,12 @@ object FormMediEdit: TFormMediEdit
     DataSet = DM1.QMedikamente
     left = 536
     top = 312
+  end
+  object XMLPropStorage1: TXMLPropStorage
+    StoredValues = <>
+    OnSaveProperties = XMLPropStorage1SaveProperties
+    OnRestoreProperties = XMLPropStorage1RestoreProperties
+    left = 329
+    top = 295
   end
 end

@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, eventlog, db, FileUtil, Forms, Controls, Graphics, Dialogs,
-  DBGrids, DbCtrls, Buttons, ComCtrls, uDM1;
+  DBGrids, DbCtrls, Buttons, ComCtrls, XMLPropStorage, uDM1;
 
 type
 
@@ -23,10 +23,13 @@ type
     BuSaveExit: TSpeedButton;
     BuUpdate: TSpeedButton;
     StatusBar1: TStatusBar;
+    XMLPropStorage1: TXMLPropStorage;
     procedure BuUpdateClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure BuSaveExitClick(Sender: TObject);
+    procedure XMLPropStorage1RestoreProperties(Sender: TObject);
+    procedure XMLPropStorage1SaveProperties(Sender: TObject);
   private
     { private declarations }
   public
@@ -46,6 +49,14 @@ procedure TFormMediEdit.FormCreate(Sender: TObject);
 var
   DirStr: string;
 begin
+  if not DirectoryExists('./ini') then
+  begin
+    DirStr:= 'ini';
+    CreateDir(DirStr);
+  end;
+  XMLPropStorage1.FileName := './ini/FormMediEdit.ini';
+  XMLPropStorage1.Restore;
+
   if not DirectoryExists('./log') then
   begin
     DirStr:= 'log';
@@ -75,6 +86,19 @@ end;
 procedure TFormMediEdit.BuSaveExitClick(Sender: TObject);
 begin
   close;
+end;
+
+procedure TFormMediEdit.XMLPropStorage1RestoreProperties(Sender: TObject);
+begin
+  // Hier kann man den Storage lesen
+
+
+end;
+
+procedure TFormMediEdit.XMLPropStorage1SaveProperties(Sender: TObject);
+begin
+  // Hier kann man den Storage schreiben
+
 end;
 
 
