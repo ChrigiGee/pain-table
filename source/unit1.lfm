@@ -244,7 +244,7 @@ object Form1: TForm1
   OnClose = FormClose
   OnCreate = FormCreate
   OnHide = FormHide
-  LCLVersion = '1.4.4.0'
+  LCLVersion = '1.7'
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
@@ -2455,45 +2455,24 @@ object Form1: TForm1
     LookupCache = False
     TabOrder = 101
   end
-  object SQLite3Connection1: TSQLite3Connection
-    Connected = False
-    LoginPrompt = False
-    AfterConnect = SQLite3Connection1AfterConnect
-    DatabaseName = './sql/migraenetagebuch.sql3db'
-    KeepConnection = False
-    Transaction = SQLTransaction1
-    CharSet = 'utf-8'
-    LogEvents = []
-    Options = []
-    left = 1072
-    top = 716
-  end
-  object SQLTransaction1: TSQLTransaction
-    Active = False
-    Database = SQLite3Connection1
-    left = 1015
-    top = 714
-  end
   object SQLQuery1: TSQLQuery
+    PacketRecords = -1
     IndexFieldNames = 'ID'
     FieldDefs = <    
       item
         Name = 'ID'
         DataType = ftInteger
         Precision = -1
-        Size = 0
       end    
       item
         Name = 'Jahr'
         DataType = ftDate
         Precision = -1
-        Size = 0
       end    
       item
         Name = 'Monat'
         DataType = ftDate
         Precision = -1
-        Size = 0
       end    
       item
         Name = '00.00'
@@ -3071,11 +3050,12 @@ object Form1: TForm1
         Precision = -1
         Size = 25
       end>
-    Database = SQLite3Connection1
-    Transaction = SQLTransaction1
+    Database = DM1.Con1
+    Transaction = DM1.SQLTran1
     SQL.Strings = (
       'Select * FROM tblDateTime'
     )
+    Options = []
     Params = <>
     left = 928
     top = 712
@@ -3086,13 +3066,13 @@ object Form1: TForm1
     top = 656
   end
   object SQLQuery2: TSQLQuery
+    PacketRecords = -1
     IndexFieldNames = 'ID'
     FieldDefs = <    
       item
         Name = 'ID'
         DataType = ftInteger
         Precision = -1
-        Size = 0
       end    
       item
         Name = 'Jahr'
@@ -3100,23 +3080,24 @@ object Form1: TForm1
         Precision = -1
         Size = 6
       end>
-    Database = SQLite3Connection1
-    Transaction = SQLTransaction1
+    Database = DM1.Con1
+    Transaction = DM1.SQLTran1
     SQL.Strings = (
       'Select * FROM tblJahr'
     )
+    Options = []
     Params = <>
     left = 813
     top = 717
   end
   object SQLQuery3: TSQLQuery
+    PacketRecords = -1
     IndexFieldNames = 'ID'
     FieldDefs = <    
       item
         Name = 'ID'
         DataType = ftInteger
         Precision = -1
-        Size = 0
       end    
       item
         Name = 'Month'
@@ -3124,11 +3105,12 @@ object Form1: TForm1
         Precision = -1
         Size = 25
       end>
-    Database = SQLite3Connection1
-    Transaction = SQLTransaction1
+    Database = DM1.Con1
+    Transaction = DM1.SQLTran1
     SQL.Strings = (
       'Select * FROM tblMonth'
     )
+    Options = []
     Params = <>
     left = 760
     top = 720
@@ -3154,7 +3136,6 @@ object Form1: TForm1
         Name = 'ID'
         DataType = ftInteger
         Precision = -1
-        Size = 0
       end    
       item
         Name = 'Medikament'
@@ -3166,13 +3147,13 @@ object Form1: TForm1
         Name = 'Image'
         DataType = ftBlob
         Precision = -1
-        Size = 0
       end>
-    Database = SQLite3Connection1
-    Transaction = SQLTransaction1
+    Database = DM1.Con1
+    Transaction = DM1.SQLTran1
     SQL.Strings = (
       'Select * FROM tblMedikamente'
     )
+    Options = []
     Params = <>
     left = 672
     top = 728
@@ -3420,6 +3401,7 @@ object Form1: TForm1
   object XMLConfig1: TXMLConfig
     StartEmpty = False
     RootName = 'CONFIG'
+    ReadOnly = False
     left = 631
     top = 646
   end

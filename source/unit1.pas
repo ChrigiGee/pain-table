@@ -218,12 +218,10 @@ type
     Label96: TLabel;
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
-    SQLite3Connection1: TSQLite3Connection;
     SQLQuery1: TSQLQuery;
     SQLQuery2: TSQLQuery;
     SQLQuery3: TSQLQuery;
     SQLQuery4: TSQLQuery;
-    SQLTransaction1: TSQLTransaction;
     StatusBar1: TStatusBar;
     TrayIcon1: TTrayIcon;
     XMLConfig1: TXMLConfig;
@@ -251,15 +249,20 @@ var
 implementation
 
 {$R *.lfm}
-uses unit2,Unit3;
+uses uMediEdit,Unit3,udm1;
 { TForm1 }
 
 
 procedure TForm1.SpeedButton1Click(Sender: TObject);
+var
+  MyForm : TFormMediEdit;
 begin
-StoreFormState(self);
-Form2.Show;
-  Form1.Hide;
+  MyForm := TFormMediEdit.Create(nil);
+  try
+    MyForm.ShowModal;
+  finally
+    MyForm.Free;
+  end;
 end;
 
 procedure TForm1.SpeedButton2Click(Sender: TObject);
@@ -308,43 +311,43 @@ EventLog1.FileName:='./log/CrashReport.txt';
 
 
 {schliesst Verbindung zu SQLite Datenbanken }
-  SQLite3Connection1.Close;
+  //SQLite3Connection1.Close;
 
     {Öffnet Datenbank Datei migränetagebuch}
-    SQLite3Connection1.DatabaseName:='./sql/migraenetagebuch.sql3db';
-  SQLTransaction1.Database:=SQLite3Connection1;
-  SQLQuery1.Transaction:=SQLTransaction1;
-  SQLite3Connection1.Open;
+    {Testet Datenbank Connection}
+    DM1.DatabaseName:='./sql/migraenetagebuch.sql3db';
+    if DM1.TestAndOpenDB then
+      StatusBar1.Panels.Add.Text:='Verbindung hergestellt';
 
   {erstellt die Tabellle DateTime}
 
   SQLQuery1.SQL.text := 'CREATE TABLE IF NOT EXISTS tblDateTime (ID INTEGER PRIMARY KEY,Jahr Date, Monat Date, aktDatum Date, "Printed" VARCHAR(15), "00.00" VARCHAR(10), "00.15" VARCHAR(25),"00.30" VARCHAR(25),"00.45" VARCHAR(25),"01.00" VARCHAR(25),"01.15" VARCHAR(25),"01.30" VARCHAR(25),"01.45" VARCHAR(25),"02.00" VARCHAR(25),"02.15" VARCHAR(25),"02.30" VARCHAR(25),"02.45" VARCHAR(25),"03.00" VARCHAR(25),"03.15" VARCHAR(25),"03.30" VARCHAR(25),"03.45" VARCHAR(25),"04.00" VARCHAR(25),"04.15" VARCHAR(25),"04.30" VARCHAR(25),"04.45" VARCHAR(25),"05.00" VARCHAR(25),"05.15" VARCHAR(25),"05.30" VARCHAR(25),"05.45" VARCHAR(25),"06.00" VARCHAR(25),"06.15" VARCHAR(25),"06.30" VARCHAR(25),"06.45" VARCHAR(25),"07.00" VARCHAR(25),"07.15" VARCHAR(25),"07.30" VARCHAR(25),"07.45" VARCHAR(25),"08.00" VARCHAR(25),"08.15" VARCHAR(25),"08.30" VARCHAR(25),"08.45" VARCHAR(25),"09.00" VARCHAR(25),"09.15" VARCHAR(25),"09.30" VARCHAR(25),"09.45" VARCHAR(25),"10.00" VARCHAR(25),"10.15" VARCHAR(25),"10.30" VARCHAR(25),"10.45" VARCHAR(25),"11.00" VARCHAR(25),"11.15" VARCHAR(25),"11.30" VARCHAR(25),"11.45" VARCHAR(25),"12.00" VARCHAR(25),"12.15" VARCHAR(25),"12.30" VARCHAR(25),"12.45" VARCHAR(25),"13.00" VARCHAR(25),"13.15" VARCHAR(25),"13.30" VARCHAR(25),"13.45" VARCHAR(25),"14.00" VARCHAR(25),"14.15" VARCHAR(25),"14.30" VARCHAR(25),"14.45" VARCHAR(25),"15.00" VARCHAR(25),"15.15" VARCHAR(25),"15.30" VARCHAR(25),"15.45" VARCHAR(25),"16.00" VARCHAR(25),"16.15" VARCHAR(25),"16.30" VARCHAR(25),"16.45" VARCHAR(25),"17.00" VARCHAR(25),"17.15" VARCHAR(25),"17.30" VARCHAR(25),"17.45" VARCHAR(25),"18.00" VARCHAR(25),"18.15" VARCHAR(25),"18.30" VARCHAR(25),"18.45" VARCHAR(25),"19.00" VARCHAR(25),"19.15" VARCHAR(25),"19.30" VARCHAR(25),"19.45" VARCHAR(25),"20.00" VARCHAR(25),"20.15" VARCHAR(25),"20.30" VARCHAR(25),"20.45" VARCHAR(25),"21.00" VARCHAR(25),"21.15" VARCHAR(25),"21.30" VARCHAR(25),"21.45" VARCHAR(25),"22.00" VARCHAR(25),"22.15" VARCHAR(25),"22.30" VARCHAR(25),"22.45" VARCHAR(25),"23.00" VARCHAR(25),"23.15" VARCHAR(25),"23.30" VARCHAR(25),"23.45" VARCHAR(25))';
   SQLQuery1.ExecSQL;
-  SQLTransaction1.commit;
+  DM1.SQLTran1.Commit;
 
 {erstellt die Tabelle Jahr}
 SQLQuery2.SQL.text := 'CREATE TABLE IF NOT EXISTS tblJahr (ID INTEGER Primary KEY, Jahr Date)';
 SQLQuery2.ExecSQL;
-SQLTransaction1.commit;
+DM1.SQLTran1.Commit;
 
 {erstellt die Tabelle Monat}
 SQLQuery3.SQL.text := 'CREATE TABLE IF NOT EXISTS tblMonth (ID INTEGER Primary KEY, Monat Date)';
 SQLQuery3.ExecSQL;
-SQLTransaction1.commit;
+DM1.SQLTran1.Commit;
 
 SQLQuery4.SQL.text := 'CREATE TABLE IF NOT EXISTS tblMedikamente (ID INTEGER Primary KEY, Medikament VARCHAR(25), Image BLOB)';
 SQLQuery4.ExecSQL;
-SQLTransaction1.commit;
+DM1.SQLTran1.Commit;
 
 {Löscht die Tabelle Jahr}
 SQLQuery2.SQL.Text:='DROP TABLE IF EXISTS tblJahr';
 SQLQuery2.ExecSQL;
-SQLTransaction1.commit;
+DM1.SQLTran1.Commit;
 
 {Erstellt Tabelle Jahr und für diverse Jahre als Einträge hinzu}
 SQLQuery2.SQL.text := 'CREATE TABLE IF NOT EXISTS tblJahr ( ID INTEGER Primary KEY, Jahr VARCHAR(6))';
 SQLQuery2.ExecSQL;
-SQLTransaction1.commit;
+DM1.SQLTran1.Commit;
 SQLQuery2.SQL.text := 'INSERT INTO tblJahr VALUES (NULL, "2010")';
 SQLQuery2.ExecSQL;
 SQLQuery2.SQL.text := 'INSERT INTO tblJahr VALUES (NULL, "2011")';
@@ -369,18 +372,18 @@ SQLQuery2.SQL.text := 'INSERT INTO tblJahr VALUES (NULL, "2020")';
 SQLQuery2.ExecSQL;
 SQLQuery2.SQL.text := 'INSERT INTO tblJahr VALUES (NULL, "2009")';
 SQLQuery2.ExecSQL;
-SQLTransaction1.commit;
+DM1.SQLTran1.Commit;
 
 
 {Löscht die Tabelle Monat}
 SQLQuery3.SQL.Text:='DROP TABLE IF EXISTS tblMonth';
 SQLQuery3.ExecSQL;
-SQLTransaction1.commit;
+DM1.SQLTran1.Commit;
 
 {Erstellt Tabelle Monat und für diverse Monate als Einträge hinzu}
 SQLQuery3.SQL.text := 'CREATE TABLE IF NOT EXISTS tblMonth (ID INTEGER Primary KEY, Month VARCHAR(25))';
 SQLQuery3.ExecSQL;
-SQLTransaction1.commit;
+DM1.SQLTran1.Commit;
 SQLQuery3.SQL.text := 'INSERT INTO tblMonth VALUES (NULL, "Januar")';
 SQLQuery3.ExecSQL;
 SQLQuery3.SQL.text := 'INSERT INTO tblMonth VALUES (NULL, "Februar")';
@@ -405,13 +408,13 @@ SQLQuery3.SQL.text := 'INSERT INTO tblMonth VALUES (NULL, "November")';
 SQLQuery3.ExecSQL;
 SQLQuery3.SQL.text := 'INSERT INTO tblMonth VALUES (NULL, "Dezember")';
 SQLQuery3.ExecSQL;
-SQLTransaction1.commit;
+DM1.SQLTran1.Commit;
 
 
-{Testet Datenbank Connection}
-SQLite3Connection1.Open;
-if SQLite3Connection1.Connected then
-StatusBar1.Panels.Add.Text:='Verbindung hergestellt';
+//{Testet Datenbank Connection}
+//SQLite3Connection1.Open;
+//if SQLite3Connection1.Connected then
+//StatusBar1.Panels.Add.Text:='Verbindung hergestellt';
 
 SQLQuery1.Close;
 SQLQuery1.SQL.text:='SELECT * FROM tblDateTime';
@@ -477,9 +480,7 @@ Form1.EventLog1.Active:=False;
 
  Form1.EventLog1.Free;
 
-Form2.SQLQuery1.ApplyUpdates;
  Form1.StoreFormState(self);
- Form2.StoreFormState(self);
  Form3.StoreFormState(self);
 
 end;

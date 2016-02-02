@@ -7,8 +7,8 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, datetimectrls, Unit1, Unit2, multiloglaz,
-  Unit3
+  Forms, datetimectrls, Unit1, Unit2,
+  Unit3,uDM1, uMediEdit
   { you can add units after this };
 
 {$R *.res}
@@ -16,8 +16,8 @@ uses
 begin
   RequireDerivedFormResource := True;
   Application.Initialize;
+  Application.CreateForm(TDM1, DM1);
   Application.CreateForm(TForm1, Form1);
-  Application.CreateForm(TForm2, Form2);
   Application.CreateForm(TForm3, Form3);
   Application.Run;
 end.

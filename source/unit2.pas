@@ -11,10 +11,10 @@ uses
 
 type
 
-  { TForm2 }
+  { TFormEditMedi }
 
-  TForm2 = class(TForm)
-    DataSource1: TDataSource;
+  TFormEditMedi = class(TForm)
+    DSMedikamente: TDataSource;
     DBEdit1: TDBEdit;
     DBGrid1: TDBGrid;
     DBImage1: TDBImage;
@@ -23,12 +23,12 @@ type
     EventLog1: TEventLog;
     SpeedButton2: TSpeedButton;
     SpeedButton3: TSpeedButton;
-    SQLQuery1: TSQLQuery;
     StatusBar1: TStatusBar;
     XMLConfig1: TXMLConfig;
 
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure SpeedButton3Click(Sender: TObject);
     procedure StoreFormState(Sender: TObject);
@@ -41,68 +41,59 @@ type
   end;
 
 var
-  Form2: TForm2;
+  FormEditMedi: TFormEditMedi;
 
 implementation
 
 {$R *.lfm}
- uses
-   {implementiert unit1 für die form1
-   oder die weiteren Unit's für Logging Errors}
-   unit1,
-   unit3;
-{ TForm2 }
 
-procedure TForm2.FormCreate(Sender: TObject);
+ uses
+   uDM1;
+
+{ TFormEditMedi }
+
+procedure TFormEditMedi.FormCreate(Sender: TObject);
 var
   DirStr: string;
 begin
-
-EventLog1.FileName:='./log/CrashReport.txt';
-  EventLog1.Active:=True;
-
-
-{Testet Datenbank Connection}
-Form1.SQLite3Connection1.Open;
-if Form1.SQLite3Connection1.Connected then
-StatusBar1.Panels.Add.Text:='Verbindung hergestellt';
-
-SQLQuery1.Close;
-SQLQuery1.active:=false;
-SQLQuery1.DataBase.DatabaseName:='Form1.SQLite3Connection1.DatabaseName';
-SQLQuery1.ReadOnly:=FALSE;
-// SQLQuery1.FileName:='migraenetagebuch.sql3db';
-SQLQuery1.SQL.Text:='Select * FROM tblMedikamente';
-SQLQuery1.Open;
-SQLQuery1.Active:=True;
-
- RestoreFormState(self);
+  EventLog1.FileName:='./log/CrashReport.txt';
+    EventLog1.Active:=True;
+ {Testet Datenbank Connection}
+ DM1.DatabaseName:='./sql/migraenetagebuch.sql3db';
+ if DM1.TestAndOpenDB then
+   StatusBar1.Panels.Add.Text:='Verbindung hergestellt';
+ DM1.QMedikamente.Active:=true;
+ // RestoreFormState(self);
 end;
 
-procedure TForm2.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+procedure TFormEditMedi.FormDestroy(Sender: TObject);
 begin
 
-Form2.EventLog1.Active:=False;
-SQLQuery1.ApplyUpdates(0);
-Form2.EventLog1.Free;
- Form2.StoreFormState(self);
- Form1.Show;
 end;
 
-procedure TForm2.SpeedButton2Click(Sender: TObject);
+procedure TFormEditMedi.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  SQLQuery1.ApplyUpdates;
-  Form1.Show;
-  Form2.Close;
-  Form2.StoreFormState(self);
+  if DM1.QMedikamente.UpdateStatus <> TUpdateStatus.usUnmodified then
+    DM1.QMedikamente.ApplyUpdates;
+  DM1.QMedikamente.Active:=false;
+  CloseAction:=caFree;
+  // FormEditMedi.EventLog1.Active:=False;
+  // FormEditMedi.EventLog1.Free; // Das gehört dem Formular !!!
+  // FormEditMedi.StoreFormState(self);
 end;
 
-procedure TForm2.SpeedButton3Click(Sender: TObject);
+procedure TFormEditMedi.SpeedButton2Click(Sender: TObject);
 begin
-  SQLQuery1.ApplyUpdates(0);
+  FormEditMedi.Close; // Ruft später selbst FormClose auf
 end;
 
-procedure TForm2.RestoreFormState(Sender: TObject);
+procedure TFormEditMedi.SpeedButton3Click(Sender: TObject);
+begin
+  if DM1.QMedikamente.UpdateStatus <> TUpdateStatus.usUnmodified then
+    DM1.QMedikamente.ApplyUpdates;
+end;
+
+procedure TFormEditMedi.RestoreFormState(Sender: TObject);
 var
   LastWindowState: TWindowState;
 begin
@@ -129,7 +120,7 @@ begin
 end;
      end;
 
-procedure TForm2.StoreFormState(Sender: TObject);
+procedure TFormEditMedi.StoreFormState(Sender: TObject);
 
 begin
   with XMLConfig1 do begin

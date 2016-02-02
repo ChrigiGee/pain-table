@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, sqlite3conn, sqldb, db, eventlog, XMLConf, FileUtil,
-  DBDateTimePicker, logtreeview, Forms, Controls, Graphics, Dialogs, DbCtrls,
+  DBDateTimePicker,  Forms, Controls, Graphics, Dialogs, DbCtrls,
   DBGrids, DBExtCtrls, Buttons, ComCtrls;
 
 type
@@ -49,7 +49,8 @@ implementation
 {$R *.lfm}
 uses
         Unit1,
-        unit2;
+        unit2,
+        udm1;
 
 
 { TForm3 }
@@ -88,9 +89,8 @@ EventLog1.FileName:='./log/CrashReport.txt';
 
 
 {Testet Datenbank Connection}
-Form1.SQLite3Connection1.Open;
-if Form1.SQLite3Connection1.Connected then
-StatusBar1.Panels.Add.Text:='Verbindung hergestellt';
+if DM1.TestAndOpenDB then
+  StatusBar1.Panels.Add.Text:='Verbindung hergestellt';
   {
 // Schliesse SQLQuerry und weise Datenbank hinzu
 SQLQuery1.Close;

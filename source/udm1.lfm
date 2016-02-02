@@ -1,0 +1,53 @@
+object DM1: TDM1
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 413
+  HorizontalOffset = 313
+  VerticalOffset = 143
+  Width = 577
+  object Con1: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = './sql/migraenetagebuch.sql3db'
+    KeepConnection = False
+    Transaction = SQLTran1
+    Options = []
+    left = 24
+    top = 16
+  end
+  object SQLTran1: TSQLTransaction
+    Active = False
+    Database = Con1
+    Options = []
+    left = 64
+    top = 16
+  end
+  object QMedikamente: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'Medikament'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'Image'
+        DataType = ftBlob
+        Precision = -1
+      end>
+    Database = Con1
+    Transaction = SQLTran1
+    SQL.Strings = (
+      'SELECT ID, Medikament, Image  FROM tblMedikamente'
+    )
+    Options = [sqoAutoCommit]
+    Params = <>
+    left = 24
+    top = 80
+  end
+end
