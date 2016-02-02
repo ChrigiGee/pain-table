@@ -1,0 +1,61 @@
+object DM1: TDM1
+  OldCreateOrder = False
+  Height = 292
+  HorizontalOffset = 908
+  VerticalOffset = 162
+  Width = 384
+  object Con1: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = '.\sql\TestDB.sq'
+    KeepConnection = False
+    Transaction = SQLTran1
+    Options = []
+    left = 32
+    top = 32
+  end
+  object SQLTran1: TSQLTransaction
+    Active = False
+    Database = Con1
+    Options = []
+    left = 88
+    top = 32
+  end
+  object QTestDaten: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'SchmerzID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Intens'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Start'
+        DataType = ftDateTime
+        Precision = -1
+      end    
+      item
+        Name = 'Ende'
+        DataType = ftDateTime
+        Precision = -1
+      end    
+      item
+        Name = 'Bemerkung'
+        DataType = ftString
+        Precision = -1
+      end>
+    Database = Con1
+    Transaction = SQLTran1
+    SQL.Strings = (
+      'SELECT SchmerzID, Intens, Start, Ende, Bemerkung FROM Schmerz'
+    )
+    Options = []
+    Params = <>
+    left = 32
+    top = 120
+  end
+end

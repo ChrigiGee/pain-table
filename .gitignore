@@ -63,3 +63,9 @@ __history/
 
 # Castalia statistics file (since XE7 Castalia is distributed with Delphi)
 *.stat
+/source/sqlite3.dll
+/source/sql
+/source/backup
+/source/ini
+/source/lib
+/source/log
