@@ -1,0 +1,506 @@
+object Form1: TForm1
+  Left = 306
+  Height = 458
+  Top = 236
+  Width = 1064
+  Caption = 'Form1'
+  ClientHeight = 458
+  ClientWidth = 1064
+  OnCreate = FormCreate
+  LCLVersion = '1.6.0.1'
+  object Chart: TChart
+    Left = 0
+    Height = 458
+    Top = 0
+    Width = 625
+    AxisList = <    
+      item
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+      end    
+      item
+        Alignment = calBottom
+        Minors = <>
+      end>
+    BackColor = clWhite
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Legend.Visible = True
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Toolset = ChartToolset1
+    Align = alClient
+  end
+  object SidePanel: TPanel
+    Left = 625
+    Height = 458
+    Top = 0
+    Width = 439
+    Align = alRight
+    BevelOuter = bvNone
+    ClientHeight = 458
+    ClientWidth = 439
+    TabOrder = 1
+    object GbBarBrush: TGroupBox
+      Left = 8
+      Height = 57
+      Top = 320
+      Width = 200
+      Caption = 'Default bar brush'
+      ClientHeight = 37
+      ClientWidth = 196
+      TabOrder = 0
+      object CbBarBrushStyle: TComboBox
+        Left = 104
+        Height = 23
+        Top = 4
+        Width = 84
+        ItemHeight = 15
+        ItemIndex = 0
+        Items.Strings = (
+          'bsSolid'
+          'bsClear'
+          'bsHorizontal'
+          'bsVertical'
+          'bsFDiagonal'
+          'bsBDiagonal'
+          'bsCross'
+          'bsDiagCross'
+          'bsImage'
+          'bsPattern'
+        )
+        OnChange = CbBarBrushStyleChange
+        Style = csDropDownList
+        TabOrder = 1
+        Text = 'bsSolid'
+      end
+      object CbBarBrushColor: TColorBox
+        Left = 8
+        Height = 22
+        Top = 4
+        Width = 92
+        ItemHeight = 16
+        OnChange = CbBarBrushColorChange
+        TabOrder = 0
+      end
+    end
+    object GbLinkEditor: TGroupBox
+      Left = 224
+      Height = 276
+      Top = 8
+      Width = 200
+      Caption = 'Green link line'
+      ClientHeight = 256
+      ClientWidth = 196
+      TabOrder = 1
+      object EdLinkStartOffset: TFloatSpinEdit
+        Left = 104
+        Height = 23
+        Top = 84
+        Width = 84
+        Increment = 0.01
+        MaxValue = 1
+        MinValue = -1
+        OnChange = EdLinkStartOffsetChange
+        TabOrder = 3
+        Value = 0
+      end
+      object EdLinkEndOffset: TFloatSpinEdit
+        Left = 104
+        Height = 23
+        Top = 112
+        Width = 84
+        Increment = 0.01
+        MaxValue = 1
+        MinValue = -1
+        OnChange = EdLinkEndOffsetChange
+        TabOrder = 4
+        Value = 0
+      end
+      object Label1: TLabel
+        Left = 8
+        Height = 15
+        Top = 88
+        Width = 74
+        Caption = 'Offset start by'
+        ParentColor = False
+      end
+      object Label2: TLabel
+        Left = 8
+        Height = 15
+        Top = 116
+        Width = 71
+        Caption = 'Offset end by'
+        ParentColor = False
+      end
+      object EdLinkLineWidth: TSpinEdit
+        Left = 104
+        Height = 23
+        Top = 56
+        Width = 84
+        MaxValue = 10
+        OnChange = EdLinkLineWidthChange
+        TabOrder = 2
+      end
+      object Label3: TLabel
+        Left = 8
+        Height = 15
+        Top = 60
+        Width = 55
+        Caption = 'Line width'
+        ParentColor = False
+      end
+      object EdLinkIndexFrom: TSpinEdit
+        Left = 104
+        Height = 23
+        Top = 0
+        Width = 84
+        MaxValue = 10
+        OnChange = EdLinkIndexFromChange
+        TabOrder = 0
+      end
+      object EdLinkIndexTo: TSpinEdit
+        Left = 104
+        Height = 23
+        Top = 28
+        Width = 84
+        MaxValue = 10
+        OnChange = EdLinkIndexToChange
+        TabOrder = 1
+      end
+      object Label4: TLabel
+        Left = 8
+        Height = 15
+        Top = 4
+        Width = 57
+        Caption = 'Index from'
+        ParentColor = False
+      end
+      object Label5: TLabel
+        Left = 8
+        Height = 15
+        Top = 32
+        Width = 42
+        Caption = 'Index to'
+        ParentColor = False
+      end
+      object Label6: TLabel
+        Left = 8
+        Height = 15
+        Top = 144
+        Width = 89
+        Caption = 'Betw tasks forwd'
+        ParentColor = False
+      end
+      object Label7: TLabel
+        Left = 8
+        Height = 15
+        Top = 172
+        Width = 92
+        Caption = 'Betw tasks backw'
+        ParentColor = False
+      end
+      object EdLinkBetwTasksBackward: TFloatSpinEdit
+        Left = 104
+        Height = 23
+        Top = 168
+        Width = 84
+        Increment = 0.1
+        MaxValue = 1000000
+        MinValue = 0
+        OnChange = EdLinkBetwTasksBackwardChange
+        TabOrder = 5
+        Value = 0
+      end
+      object Label8: TLabel
+        Left = 8
+        Height = 15
+        Top = 200
+        Width = 56
+        Caption = 'Start break'
+        ParentColor = False
+      end
+      object Label9: TLabel
+        Left = 8
+        Height = 15
+        Top = 228
+        Width = 52
+        Caption = 'End break'
+        ParentColor = False
+      end
+      object EdLinkStartBreak: TDateEdit
+        Left = 104
+        Height = 23
+        Top = 196
+        Width = 84
+        CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+        OnAcceptDate = EdLinkStartBreakAcceptDate
+        OKCaption = 'OK'
+        CancelCaption = 'Cancel'
+        DateOrder = doNone
+        DateFormat = 'dd/mm'
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        OnButtonClick = EdLinkStartBreakButtonClick
+        OnEditingDone = EdLinkStartBreakEditingDone
+        TabOrder = 6
+      end
+      object EdLinkEndBreak: TDateEdit
+        Left = 104
+        Height = 23
+        Top = 224
+        Width = 84
+        CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+        OnAcceptDate = EdLinkEndBreakAcceptDate
+        OKCaption = 'OK'
+        CancelCaption = 'Cancel'
+        DateOrder = doNone
+        DateFormat = 'dd/mm'
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        OnButtonClick = EdLinkEndBreakButtonClick
+        OnEditingDone = EdLinkEndBreakEditingDone
+        TabOrder = 7
+      end
+      object EdLinkBetwTasksForward: TDateEdit
+        Left = 104
+        Height = 23
+        Top = 140
+        Width = 84
+        CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+        OnAcceptDate = EdLinkBetwTasksForwardAcceptDate
+        OKCaption = 'OK'
+        CancelCaption = 'Cancel'
+        DateOrder = doNone
+        DateFormat = 'dd/mm'
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        OnButtonClick = EdLinkBetwTasksForwardButtonClick
+        OnEditingDone = EdLinkBetwTasksForwardEditingDone
+        TabOrder = 8
+      end
+    end
+    object GbLegend: TGroupBox
+      Left = 8
+      Height = 112
+      Top = 200
+      Width = 200
+      Caption = 'Legend'
+      ClientHeight = 92
+      ClientWidth = 196
+      TabOrder = 2
+      object CbShowGanttInLegend: TCheckBox
+        Left = 8
+        Height = 19
+        Top = 32
+        Width = 165
+        Caption = 'Show Gantt series in legend'
+        Checked = True
+        OnChange = CbShowGanttInLegendChange
+        State = cbChecked
+        TabOrder = 0
+      end
+      object Label10: TLabel
+        Left = 8
+        Height = 15
+        Top = 60
+        Width = 60
+        Caption = 'Multiplicity'
+        ParentColor = False
+      end
+      object CbLegendMultiplicity: TComboBox
+        Left = 88
+        Height = 23
+        Top = 56
+        Width = 100
+        ItemHeight = 15
+        ItemIndex = 0
+        Items.Strings = (
+          'lmSingle'
+          'lmPoint'
+          'lmStyle'
+        )
+        OnChange = CbLegendMultiplicityChange
+        Style = csDropDownList
+        TabOrder = 1
+        Text = 'lmSingle'
+      end
+      object CbShowLegend: TCheckBox
+        Left = 8
+        Height = 19
+        Top = 8
+        Width = 88
+        Caption = 'Show legend'
+        OnChange = CbShowLegendChange
+        TabOrder = 2
+      end
+    end
+    object GbGeneral: TGroupBox
+      Left = 8
+      Height = 113
+      Top = 8
+      Width = 200
+      Caption = 'General'
+      ClientHeight = 93
+      ClientWidth = 196
+      TabOrder = 3
+      object CbYInverted: TCheckBox
+        Left = 8
+        Height = 19
+        Top = 8
+        Width = 72
+        Caption = 'y inverted'
+        OnChange = CbYInvertedChange
+        TabOrder = 0
+      end
+      object CbRotated: TCheckBox
+        Left = 8
+        Height = 19
+        Top = 36
+        Width = 78
+        Caption = '90° rotated'
+        Checked = True
+        OnChange = CbRotatedChange
+        State = cbChecked
+        TabOrder = 1
+      end
+      object CbRTL: TCheckBox
+        Left = 8
+        Height = 19
+        Top = 64
+        Width = 140
+        Caption = 'Bidi Mode right-to-left'
+        OnChange = CbRTLChange
+        TabOrder = 2
+      end
+    end
+    object GbMarks: TGroupBox
+      Left = 8
+      Height = 56
+      Top = 136
+      Width = 88
+      Caption = 'Series marks'
+      ClientHeight = 36
+      ClientWidth = 84
+      TabOrder = 4
+      object CbMarks: TCheckBox
+        Left = 8
+        Height = 19
+        Top = 5
+        Width = 49
+        Caption = 'Show'
+        OnChange = CbMarksChange
+        TabOrder = 0
+      end
+    end
+    object GroupBox1: TGroupBox
+      Left = 112
+      Height = 56
+      Top = 136
+      Width = 96
+      Caption = 'Axis grid'
+      ClientHeight = 36
+      ClientWidth = 92
+      TabOrder = 5
+      object CbGridX: TCheckBox
+        Left = 8
+        Height = 19
+        Top = 5
+        Width = 25
+        Caption = 'x'
+        Checked = True
+        OnChange = CbGridXChange
+        State = cbChecked
+        TabOrder = 0
+      end
+      object CbGridY: TCheckBox
+        Left = 56
+        Height = 19
+        Top = 5
+        Width = 26
+        Caption = 'y'
+        Checked = True
+        OnChange = CbGridYChange
+        State = cbChecked
+        TabOrder = 1
+      end
+    end
+    object GbDeleteLink: TGroupBox
+      Left = 224
+      Height = 64
+      Top = 296
+      Width = 200
+      Caption = 'Delete link'
+      ClientHeight = 44
+      ClientWidth = 196
+      TabOrder = 6
+      object BtnDeleteIndex: TButton
+        Left = 8
+        Height = 23
+        Top = 8
+        Width = 88
+        Caption = 'Delete index'
+        OnClick = BtnDeleteIndexClick
+        TabOrder = 0
+      end
+      object EdDeleteIndex: TSpinEdit
+        Left = 104
+        Height = 23
+        Top = 8
+        Width = 84
+        TabOrder = 1
+      end
+    end
+    object Label11: TLabel
+      Left = 8
+      Height = 45
+      Top = 384
+      Width = 133
+      Caption = 'Chart tools:'#13#10'CTRL+Left --> click bar'#13#10'SHIFT + Left --> drag bar'
+      ParentColor = False
+    end
+    object EdBreakDistance: TSpinEdit
+      Left = 336
+      Height = 23
+      Top = 372
+      Width = 66
+      MaxValue = 1000
+      OnChange = EdBreakDistanceChange
+      TabOrder = 7
+    end
+    object Label12: TLabel
+      Left = 239
+      Height = 15
+      Top = 376
+      Width = 76
+      Caption = 'Break distance'
+      ParentColor = False
+    end
+  end
+  object DateTimeIntervalChartSource: TDateTimeIntervalChartSource
+    left = 198
+    top = 170
+  end
+  object LabelsChartSource: TListChartSource
+    left = 203
+    top = 106
+  end
+  object ChartToolset1: TChartToolset
+    left = 203
+    top = 238
+    object ChartToolset1DataPointClickTool1: TDataPointClickTool
+      Shift = [ssCtrl, ssLeft]
+      OnPointClick = ChartToolset1DataPointClickTool1PointClick
+    end
+    object ChartToolset1DataPointDragTool1: TDataPointDragTool
+      Shift = [ssShift, ssLeft]
+      DistanceMode = cdmOnlyX
+    end
+  end
+end
