@@ -4,14 +4,13 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="7">
+    <Units Count="9">
       <Unit0>
         <Filename Value="Anzeige01.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="20" Y="18"/>
-        <UsageCount Value="30"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="35"/>
       </Unit0>
       <Unit1>
         <Filename Value="uanz.pas"/>
@@ -20,9 +19,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="82"/>
-        <CursorPos X="20" Y="87"/>
-        <UsageCount Value="30"/>
+        <TopLine Value="199"/>
+        <CursorPos X="51" Y="217"/>
+        <UsageCount Value="35"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -33,10 +32,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uDM1"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="108"/>
-        <CursorPos X="35" Y="165"/>
-        <UsageCount Value="30"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="109"/>
+        <CursorPos X="34" Y="111"/>
+        <UsageCount Value="35"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -45,155 +44,173 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="693"/>
         <CursorPos Y="699"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit3>
       <Unit4>
         <Filename Value="..\..\..\lazarus\lcl\grids.pas"/>
         <UnitName Value="Grids"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="610"/>
         <CursorPos X="14" Y="617"/>
-        <UsageCount Value="11"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="10"/>
       </Unit4>
       <Unit5>
         <Filename Value="..\..\..\lazarus\lcl\graphics.pp"/>
         <UnitName Value="Graphics"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="526"/>
         <CursorPos X="14" Y="534"/>
-        <UsageCount Value="10"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="9"/>
       </Unit5>
       <Unit6>
         <Filename Value="..\..\..\lazarus\lcl\include\font.inc"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="938"/>
         <CursorPos X="3" Y="948"/>
-        <UsageCount Value="10"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="9"/>
       </Unit6>
+      <Unit7>
+        <Filename Value="GanttSeries\taganttseries.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="25"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="GanttSeries\main.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="327"/>
+        <CursorPos X="47" Y="223"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit8>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="uanz.pas"/>
-        <Caret Line="87" TopLine="71"/>
+        <Caret Line="73" Column="20" TopLine="57"/>
       </Position1>
       <Position2>
         <Filename Value="uanz.pas"/>
-        <Caret Line="88" TopLine="72"/>
+        <Caret Line="81" Column="67" TopLine="68"/>
       </Position2>
       <Position3>
         <Filename Value="uanz.pas"/>
-        <Caret Line="89" TopLine="73"/>
+        <Caret Line="83" TopLine="74"/>
       </Position3>
       <Position4>
         <Filename Value="uanz.pas"/>
-        <Caret Line="90" TopLine="75"/>
+        <Caret Line="89" Column="18" TopLine="81"/>
       </Position4>
       <Position5>
         <Filename Value="uanz.pas"/>
-        <Caret Line="84" TopLine="75"/>
+        <Caret Line="90" Column="37" TopLine="82"/>
       </Position5>
       <Position6>
         <Filename Value="uanz.pas"/>
-        <Caret Line="85" TopLine="75"/>
+        <Caret Line="89" Column="39" TopLine="78"/>
       </Position6>
       <Position7>
         <Filename Value="uanz.pas"/>
-        <Caret Line="86" TopLine="75"/>
+        <Caret Line="60" Column="73" TopLine="48"/>
       </Position7>
       <Position8>
         <Filename Value="uanz.pas"/>
-        <Caret Line="87" TopLine="75"/>
+        <Caret Line="63" Column="48" TopLine="50"/>
       </Position8>
       <Position9>
         <Filename Value="uanz.pas"/>
-        <Caret Line="88" TopLine="75"/>
+        <Caret Line="125" Column="67" TopLine="114"/>
       </Position9>
       <Position10>
         <Filename Value="uanz.pas"/>
-        <Caret Line="89" TopLine="75"/>
+        <Caret Line="130" Column="67" TopLine="119"/>
       </Position10>
       <Position11>
         <Filename Value="uanz.pas"/>
-        <Caret Line="90" TopLine="75"/>
+        <Caret Line="161" TopLine="140"/>
       </Position11>
       <Position12>
         <Filename Value="uanz.pas"/>
-        <Caret Line="84" TopLine="75"/>
+        <Caret Line="187" TopLine="96"/>
       </Position12>
       <Position13>
         <Filename Value="uanz.pas"/>
-        <Caret Line="85" TopLine="75"/>
+        <Caret Line="11" Column="48"/>
       </Position13>
       <Position14>
         <Filename Value="uanz.pas"/>
-        <Caret Line="95" Column="6" TopLine="81"/>
+        <Caret Line="8" Column="74"/>
       </Position14>
       <Position15>
         <Filename Value="uanz.pas"/>
-        <Caret Line="94" Column="6" TopLine="80"/>
+        <Caret Line="11" Column="62"/>
       </Position15>
       <Position16>
         <Filename Value="uanz.pas"/>
-        <Caret Line="96" Column="6" TopLine="82"/>
+        <Caret Line="62" Column="12" TopLine="40"/>
       </Position16>
       <Position17>
         <Filename Value="uanz.pas"/>
-        <Caret Line="79" Column="54" TopLine="63"/>
+        <Caret Line="10" Column="37"/>
       </Position17>
       <Position18>
         <Filename Value="uanz.pas"/>
-        <Caret Line="80" Column="54" TopLine="64"/>
+        <Caret Line="62" Column="12" TopLine="37"/>
       </Position18>
       <Position19>
         <Filename Value="uanz.pas"/>
-        <Caret Line="82" Column="65" TopLine="65"/>
+        <Caret Line="82" TopLine="182"/>
       </Position19>
       <Position20>
         <Filename Value="uanz.pas"/>
-        <Caret Line="81" Column="65" TopLine="64"/>
+        <Caret Line="201" Column="68" TopLine="183"/>
       </Position20>
       <Position21>
         <Filename Value="uanz.pas"/>
-        <Caret Line="85" Column="67" TopLine="65"/>
+        <Caret Line="200" Column="68" TopLine="182"/>
       </Position21>
       <Position22>
         <Filename Value="uanz.pas"/>
-        <Caret Line="86" Column="59" TopLine="72"/>
+        <Caret Line="199" Column="68" TopLine="181"/>
       </Position22>
       <Position23>
         <Filename Value="uanz.pas"/>
-        <Caret Line="78" Column="26" TopLine="49"/>
+        <Caret Line="198" Column="68" TopLine="180"/>
       </Position23>
       <Position24>
         <Filename Value="uanz.pas"/>
-        <Caret Line="70" Column="29" TopLine="51"/>
+        <Caret Line="197" Column="29" TopLine="180"/>
       </Position24>
       <Position25>
         <Filename Value="uanz.pas"/>
-        <Caret Line="73" Column="20" TopLine="57"/>
+        <Caret Line="196" Column="29" TopLine="179"/>
       </Position25>
       <Position26>
         <Filename Value="uanz.pas"/>
-        <Caret Line="81" Column="67" TopLine="68"/>
+        <Caret Line="195" Column="29" TopLine="178"/>
       </Position26>
       <Position27>
         <Filename Value="uanz.pas"/>
-        <Caret Line="83" TopLine="74"/>
+        <Caret Line="196" Column="29" TopLine="179"/>
       </Position27>
       <Position28>
         <Filename Value="uanz.pas"/>
-        <Caret Line="89" Column="18" TopLine="81"/>
+        <Caret Line="210" Column="43" TopLine="192"/>
       </Position28>
       <Position29>
-        <Filename Value="uanz.pas"/>
-        <Caret Line="90" Column="37" TopLine="82"/>
+        <Filename Value="GanttSeries\main.pas"/>
+        <Caret Line="179" Column="52" TopLine="303"/>
       </Position29>
       <Position30>
         <Filename Value="uanz.pas"/>
-        <Caret Line="89" Column="39" TopLine="78"/>
+        <Caret Line="217" TopLine="198"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

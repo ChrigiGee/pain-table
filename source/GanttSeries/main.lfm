@@ -1,13 +1,13 @@
 object Form1: TForm1
-  Left = 306
+  Left = 315
   Height = 458
-  Top = 236
+  Top = 292
   Width = 1064
   Caption = 'Form1'
   ClientHeight = 458
   ClientWidth = 1064
   OnCreate = FormCreate
-  LCLVersion = '1.6.0.1'
+  LCLVersion = '1.7'
   object Chart: TChart
     Left = 0
     Height = 458

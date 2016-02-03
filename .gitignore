@@ -69,3 +69,7 @@ __history/
 /source/ini
 /source/lib
 /source/log
+/source/GanttSeries/lib
+/source/GanttSeries/backup
+/source/GanttSeries/*.res
+/source/GanttSeries/*.lps

@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 511
+  Left = 529
   Height = 563
-  Top = 204
+  Top = 257
   Width = 918
   Caption = 'Form1'
   ClientHeight = 563
@@ -30,10 +30,10 @@ object Form1: TForm1
     Height = 502
     Top = 51
     Width = 898
-    ActivePage = TabSheet3
+    ActivePage = TabSheet2
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Around = 10
-    TabIndex = 2
+    TabIndex = 1
     TabOrder = 1
     object TabSheet1: TTabSheet
       Caption = 'TabSheet1'
@@ -57,39 +57,30 @@ object Form1: TForm1
       ClientHeight = 474
       ClientWidth = 890
       object Chart1: TChart
-        Left = 8
-        Height = 464
-        Top = 8
-        Width = 624
+        Left = 0
+        Height = 474
+        Top = 0
+        Width = 890
         AxisList = <        
           item
-            Marks.Format = '%2:s'
-            Marks.Style = smsLabel
             Minors = <>
-            Range.Max = 42398
-            Range.Min = 42397
-            Range.UseMax = True
-            Range.UseMin = True
             Title.LabelFont.Orientation = 900
-            Transformations = ChartAxisTransformations1
           end        
           item
             Alignment = calBottom
             Minors = <>
           end>
+        BackColor = clWhite
         Foot.Brush.Color = clBtnFace
         Foot.Font.Color = clBlue
+        Legend.Visible = True
         Title.Brush.Color = clBtnFace
         Title.Font.Color = clBlue
         Title.Text.Strings = (
           'TAChart'
         )
         Toolset = ChartToolset1
-        object ohlcSeries: TOpenHighLowCloseSeries
-          CandlestickDownBrush.Color = clRed
-          CandlestickUpBrush.Color = clLime
-          Mode = mOHLC
-        end
+        Align = alClient
       end
     end
     object TabSheet3: TTabSheet
@@ -130,27 +121,63 @@ object Form1: TForm1
     MonthNames = 'Long'
   end
   object BuGrid: TButton
-    Left = 344
+    Left = 456
     Height = 25
-    Top = 18
+    Top = 16
     Width = 75
     Caption = 'GridTest'
     OnClick = BuGridClick
     TabOrder = 3
+  end
+  object BuChart: TButton
+    Left = 296
+    Height = 25
+    Top = 16
+    Width = 75
+    Caption = 'Chart Test'
+    OnClick = BuChartClick
+    TabOrder = 4
   end
   object DS1: TDataSource
     DataSet = DM1.QTestDaten
     left = 208
     top = 16
   end
-  object ChartToolset1: TChartToolset
-    left = 456
-    top = 16
+  object LabelsChartSource: TListChartSource
+    left = 231
+    top = 134
   end
-  object ChartAxisTransformations1: TChartAxisTransformations
-    left = 288
-    top = 16
-    object ChartAxisTransformations1AutoScaleAxisTransform1: TAutoScaleAxisTransform
+  object DateTimeIntervalChartSource: TDateTimeIntervalChartSource
+    left = 231
+    top = 208
+  end
+  object ChartToolset1: TChartToolset
+    left = 231
+    top = 266
+    object ChartToolset1DataPointClickTool1: TDataPointClickTool
+      Shift = [ssCtrl, ssLeft]
+      OnPointClick = ChartToolset1DataPointClickTool1PointClick
     end
+    object ChartToolset1DataPointDragTool1: TDataPointDragTool
+      Shift = [ssShift, ssLeft]
+      DistanceMode = cdmOnlyX
+    end
+  end
+  object ListChartSource1: TListChartSource
+    DataPoints.Strings = (
+      '0|0|?|kein Schmerz'
+      '1|1|?|Schmerz 1'
+      '2|2|?|Schmerz 2'
+      '3|3|?|Schmerz 3'
+      '4|4|?|Schmerz 4'
+      '5|5|?|Schmerz 5'
+      '6|6|?|Schmerz 6'
+      '7|7|?|Schmerz 7'
+      '8|8|?|Schmerz 8'
+      '9|9|?|Schmerz 9'
+      '10|10|?|Schmerz 10'
+    )
+    left = 380
+    top = 134
   end
 end
