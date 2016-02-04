@@ -64,6 +64,7 @@
       <Unit3>
         <Filename Value="GanttSeries\taganttseries.pas"/>
         <IsPartOfProject Value="True"/>
+        <UnitName Value="TAGanttSeries"/>
       </Unit3>
     </Units>
   </ProjectOptions>

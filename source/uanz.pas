@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, db, FileUtil, TADbSource, TAGraph, TATools,
   TAIntervalSources, TANavigation, TASeries, Forms, Controls, Graphics, Dialogs,
-  StdCtrls, DBGrids, ComCtrls, Grids, TACustomSource, TAMultiSeries,
+  StdCtrls, DBGrids, ComCtrls, Grids, Spin, TACustomSource, TAMultiSeries,
   TATransformations, TASources, TAGanttSeries, TACustomSeries, DateTimePicker, Types;
 
 type
@@ -18,11 +18,14 @@ type
     BuQuery: TButton;
     BuGrid: TButton;
     BuChart: TButton;
+    CbMarks: TCheckBox;
     Chart1: TChart;
     ChartToolset1DataPointClickTool1: TDataPointClickTool;
     ChartToolset1DataPointDragTool1: TDataPointDragTool;
     ChartToolset1: TChartToolset;
     DateTimeIntervalChartSource: TDateTimeIntervalChartSource;
+    Label1: TLabel;
+    Label2: TLabel;
     LabelsChartSource: TListChartSource;
     DateTimePicker1: TDateTimePicker;
     DBGrid1: TDBGrid;
@@ -30,22 +33,32 @@ type
     ListChartSource1: TListChartSource;
     PageControl1: TPageControl;
     SG1: TStringGrid;
+    SPElinks: TSpinEdit;
+    SPErechts: TSpinEdit;
+    SPEoben: TSpinEdit;
+    SPEunten: TSpinEdit;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
     TabSheet3: TTabSheet;
     procedure BuChartClick(Sender: TObject);
     procedure BuGridClick(Sender: TObject);
     procedure BuQueryClick(Sender: TObject);
+    procedure CbMarksChange(Sender: TObject);
     procedure ChartToolset1DataPointClickTool1PointClick(ATool: TChartTool;
       APoint: TPoint);
     procedure DbChartSource1GetItem(ASender: TDbChartSource;
       var AItem: TChartDataItem);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure SPElinksChange(Sender: TObject);
+    procedure SPEobenChange(Sender: TObject);
+    procedure SPErechtsChange(Sender: TObject);
+    procedure SPEuntenChange(Sender: TObject);
   private
     { private declarations }
     DBSourceList: TList;
     FGanttSeries: TGanttSeries;
+    procedure OnGetMark(out AFormattedMark: String; AIndex: Integer);
     procedure PrepareChart;
   public
     { public declarations }
@@ -87,6 +100,12 @@ begin
   DM1.ShowData1(DateTimePicker1.Date);
 end;
 
+procedure TForm1.CbMarksChange(Sender: TObject);
+begin
+  if FGanttSeries <> nil then
+    FGanttSeries.Marks.Visible := CbMarks.Checked;
+end;
+
 procedure TForm1.ChartToolset1DataPointClickTool1PointClick(ATool: TChartTool;
   APoint: TPoint);
 var
@@ -96,7 +115,7 @@ begin
   ser := TChartSeries(TDatapointClickTool(ATool).Series);
   idx := TDataPointClickTool(ATool).PointIndex;
   if ser = nil then exit;
-  ShowMessage(Format('Series "%s": Datapoint #%d', [ser.Title, idx]));
+  ShowMessage(Format('Intens=%s Start=%s Ende=%s', [floattostr(ser.GetXValue(idx)), TimeTostr(TGanttSeries(ser).GetStartValue(idx)), TimeTostr(TGanttSeries(ser).GetEndValue(idx))]));
 end;
 
 procedure TForm1.BuGridClick(Sender: TObject);
@@ -146,6 +165,10 @@ procedure TForm1.FormCreate(Sender: TObject);
 begin
   DBSourceList := TList.Create;
   FGanttSeries:=nil;
+  SPEunten.Value:= Chart1.Margins.Bottom;
+  SPErechts.Value:=Chart1.Margins.Right;
+  SPElinks.Value:=Chart1.Margins.Left;
+  SPEoben.Value:=Chart1.Margins.Top;
 end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
@@ -156,6 +179,35 @@ begin
     FGanttSeries.Free;
   end;
   DBSourceList.Free;
+end;
+
+procedure TForm1.SPElinksChange(Sender: TObject);
+begin
+  Chart1.Margins.Left := SPElinks.Value;
+end;
+
+procedure TForm1.SPEobenChange(Sender: TObject);
+begin
+  Chart1.Margins.Top := SPEoben.Value;
+
+end;
+
+procedure TForm1.SPErechtsChange(Sender: TObject);
+begin
+  Chart1.Margins.Right := SPErechts.Value;
+end;
+
+procedure TForm1.SPEuntenChange(Sender: TObject);
+begin
+  Chart1.Margins.Bottom := SPEunten.Value;
+end;
+
+procedure TForm1.OnGetMark(out AFormattedMark: String; AIndex: Integer);
+begin
+  if FGanttSeries <> nil then
+    AFormattedMark:=Format('Von %s bis %s', [TimeTostr(FGanttSeries.GetStartValue(AIndex)), TimeTostr(FGanttSeries.GetEndValue(AIndex))])
+  else
+    AFormattedMark := IntToStr(AIndex);
 end;
 
 procedure TForm1.PrepareChart;
@@ -176,7 +228,7 @@ begin
   FGanttSeries.LinkPen.Color := clRed;
   FGanttSeries.LinkPen.Width := 3;
   FGanttSeries.Marks.LinkPen.Visible := false;
-
+  FGanttSeries.OnGetMark:=@OnGetMark;
 
   //DBSourceList.Clear;
   DM1.QTestDaten.First;

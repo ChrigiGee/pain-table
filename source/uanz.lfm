@@ -27,21 +27,22 @@ object Form1: TForm1
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 10
-    Height = 502
-    Top = 51
+    Height = 462
+    Top = 91
     Width = 898
     ActivePage = TabSheet2
     Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 40
     BorderSpacing.Around = 10
     TabIndex = 1
     TabOrder = 1
     object TabSheet1: TTabSheet
       Caption = 'TabSheet1'
-      ClientHeight = 474
+      ClientHeight = 434
       ClientWidth = 890
       object DBGrid1: TDBGrid
         Left = 0
-        Height = 474
+        Height = 434
         Top = 0
         Width = 890
         Align = alClient
@@ -54,16 +55,19 @@ object Form1: TForm1
     end
     object TabSheet2: TTabSheet
       Caption = 'TabSheet2'
-      ClientHeight = 474
+      ClientHeight = 434
       ClientWidth = 890
       object Chart1: TChart
         Left = 0
-        Height = 474
+        Height = 434
         Top = 0
         Width = 890
         AxisList = <        
           item
             Minors = <>
+            Range.Max = 10
+            Range.UseMax = True
+            Range.UseMin = True
             Title.LabelFont.Orientation = 900
           end        
           item
@@ -85,11 +89,11 @@ object Form1: TForm1
     end
     object TabSheet3: TTabSheet
       Caption = 'TabSheet3'
-      ClientHeight = 474
+      ClientHeight = 434
       ClientWidth = 890
       object SG1: TStringGrid
         Left = 0
-        Height = 474
+        Height = 434
         Top = 0
         Width = 890
         Align = alClient
@@ -138,6 +142,63 @@ object Form1: TForm1
     OnClick = BuChartClick
     TabOrder = 4
   end
+  object SPElinks: TSpinEdit
+    Left = 584
+    Height = 23
+    Top = 32
+    Width = 50
+    OnChange = SPElinksChange
+    TabOrder = 5
+  end
+  object SPErechts: TSpinEdit
+    Left = 672
+    Height = 23
+    Top = 32
+    Width = 50
+    OnChange = SPErechtsChange
+    TabOrder = 6
+  end
+  object SPEoben: TSpinEdit
+    Left = 624
+    Height = 23
+    Top = 8
+    Width = 50
+    OnChange = SPEobenChange
+    TabOrder = 7
+  end
+  object SPEunten: TSpinEdit
+    Left = 624
+    Height = 23
+    Top = 56
+    Width = 50
+    OnChange = SPEuntenChange
+    TabOrder = 8
+  end
+  object Label1: TLabel
+    Left = 576
+    Height = 15
+    Top = 8
+    Width = 38
+    Caption = 'Margin'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 304
+    Height = 15
+    Top = 56
+    Width = 154
+    Caption = 'CTRL+Click für Datenanzeige'
+    ParentColor = False
+  end
+  object CbMarks: TCheckBox
+    Left = 728
+    Height = 19
+    Top = 8
+    Width = 84
+    Caption = 'Show Marks'
+    OnChange = CbMarksChange
+    TabOrder = 9
+  end
   object DS1: TDataSource
     DataSet = DM1.QTestDaten
     left = 208
@@ -165,17 +226,17 @@ object Form1: TForm1
   end
   object ListChartSource1: TListChartSource
     DataPoints.Strings = (
-      '0|0|?|kein Schmerz'
-      '1|1|?|Schmerz 1'
-      '2|2|?|Schmerz 2'
-      '3|3|?|Schmerz 3'
-      '4|4|?|Schmerz 4'
-      '5|5|?|Schmerz 5'
-      '6|6|?|Schmerz 6'
-      '7|7|?|Schmerz 7'
-      '8|8|?|Schmerz 8'
-      '9|9|?|Schmerz 9'
-      '10|10|?|Schmerz 10'
+      '0|0|$00FF00|kein Schmerz'
+      '1|1|$00FF80|Schmerz 1'
+      '2|2|$00FFCC|Schmerz 2'
+      '3|3|$00FFF2|Schmerz 3'
+      '4|4|$00FFDF|Schmerz 4'
+      '5|5|$00DFFF|Schmerz 5'
+      '6|6|$00ACFF|Schmerz 6'
+      '7|7|$0053FF|Schmerz 7'
+      '8|8|$0040FF|Schmerz 8'
+      '9|9|$0000FF|Schmerz 9'
+      '10|10|$0000FF|Schmerz 10'
     )
     left = 380
     top = 134
