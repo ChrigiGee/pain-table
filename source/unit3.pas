@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, sqlite3conn, sqldb, db, eventlog, XMLConf, FileUtil,
-  DBDateTimePicker, logtreeview, Forms, Controls, Graphics, Dialogs, DbCtrls,
+  DBDateTimePicker, Forms, Controls, Graphics, Dialogs, DbCtrls,
   DBGrids, DBExtCtrls, Buttons, ComCtrls;
 
 type

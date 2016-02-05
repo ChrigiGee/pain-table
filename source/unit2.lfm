@@ -8,7 +8,7 @@ object Form2: TForm2
   ClientWidth = 679
   OnClose = FormClose
   OnCreate = FormCreate
-  LCLVersion = '1.4.4.0'
+  LCLVersion = '1.7'
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
@@ -20,7 +20,7 @@ object Form2: TForm2
     Left = 416
     Height = 15
     Top = 16
-    Width = 41
+    Width = 43
     DataField = 'ID'
     DataSource = DataSource1
     ParentColor = False
@@ -90,6 +90,7 @@ object Form2: TForm2
     OnClick = SpeedButton3Click
   end
   object SQLQuery1: TSQLQuery
+    PacketRecords = -1
     IndexFieldNames = 'ID'
     MaxIndexesCount = 10
     FieldDefs = <    
@@ -97,7 +98,6 @@ object Form2: TForm2
         Name = 'ID'
         DataType = ftInteger
         Precision = -1
-        Size = 0
       end    
       item
         Name = 'Medikament'
@@ -109,13 +109,13 @@ object Form2: TForm2
         Name = 'Image'
         DataType = ftBlob
         Precision = -1
-        Size = 0
       end>
     Database = Form1.SQLite3Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (
       'Select * FROM tblMedikamente'
     )
+    Options = []
     Params = <>
     left = 448
     top = 350
@@ -128,6 +128,7 @@ object Form2: TForm2
   object XMLConfig1: TXMLConfig
     StartEmpty = False
     RootName = 'CONFIG'
+    ReadOnly = False
     left = 335
     top = 337
   end

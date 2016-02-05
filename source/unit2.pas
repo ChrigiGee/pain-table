@@ -69,6 +69,7 @@ StatusBar1.Panels.Add.Text:='Verbindung hergestellt';
 
 SQLQuery1.Close;
 SQLQuery1.active:=false;
+SQLQuery1.Options:=[sqoAutoCommit];
 SQLQuery1.DataBase.DatabaseName:='Form1.SQLite3Connection1.DatabaseName';
 SQLQuery1.ReadOnly:=FALSE;
 // SQLQuery1.FileName:='migraenetagebuch.sql3db';
