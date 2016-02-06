@@ -1,0 +1,22 @@
+﻿[precision language file]
+languagename=English
+rtl=0
+description=
+fileversion=1.0
+author=Christian Schär
+
+[TForm1]
+Label1.Caption=00:00 pm
+Label2.Caption=00:15 am
+Label3.Caption=00:30 am
+Label4.Caption=00:45 am
+Label5.Caption=01:00 am
+Label90.Caption=10:15 pm
+Label91.Caption=10:30 pm
+Label92.Caption=10:45 pm
+Label93.Caption=11:00 pm
+Label94.Caption=11:15 pm
+Label95.Caption=11:30 pm
+Label96.Caption=11:45 pm
+SpeedButton1.Caption=medicine create
+

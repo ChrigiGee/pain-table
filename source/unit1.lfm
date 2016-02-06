@@ -1,0 +1,3439 @@
+object Form1: TForm1
+  Left = 248
+  Height = 790
+  Top = 103
+  Width = 1181
+  ActiveControl = DBLookupComboBox3
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Form1'
+  ClientHeight = 790
+  ClientWidth = 1181
+  Icon.Data = {
+    BE1C00000000010001003030000001001800A81C000016000000280000003000
+    0000600000000100180000000000000000000000000000000000000000000000
+    0000B8FDE9BBFCFAB6F4FF90CFEB589BBA387DA52A6DA61B5BA21C68B41F65B2
+    2363B12A62B32D64B52A62B4215DAF1858AC265AB82664BE2065BC1152A71F5C
+    B22462BC0350AC015CB7114BAA104AA90F49A80D47A60B45A40A44A30943A208
+    42A10047A7003C98003E95014396003B8F003C940543A10645A70E40A417509F
+    2362954989AC88C9E5B6F5FFBDFDFFB5F8F3BCFDFBA4E0F082BCE05991C0316F
+    9F29689A2D6CA82866AC3071AE2F6CAA2E66A72F63A53264A63166A92C66A828
+    65A72A5FA22E69A73571AC2E61993B62994469A32D5B95235F9A0854A00854A0
+    07539F06529E04509C034F9B024E9A024E9A2044981B3C8C29479434529F2546
+    95103A8D0C3E960D449F0F4799104A92084480154E85417AAE77AFD8A1DEF2BF
+    FFFFBAF8FF84BBE04C7EBA295DA0255B9A3A78AE5495C85B9BD275ADD673ABD4
+    74A8D174A8D177ABD476AED773B0D870B1D87AB5D570ACC96FA6BB5576894852
+    635858685459684C5C693F4C6C3F4C6C3F4C6C3E4B6B3E4B6B3D4A6A3D4A6A3D
+    4A6A524B6C4D44654C43644841663F486E4B66925989B95895C75394C74A88BE
+    2962A00A3C880C3B8C3163A574AFCFB4F5FD9CDAF85C94C5295CA2295BA34880
+    BB74B2DB91D4F598DBFAADEBFDAEECFEB0EEFFB2F0FFB1F2FFABF1FEA7EFFBA3
+    EDF9B4FCFFA9EDF2A8DCDC788F874E453B5D4234644B3B5E4D3A744530744530
+    7445307445307445307445307445307445306E5037694A3359402C4A3D2D5E66
+    5B96BBB3B1F1ECA1F0EDA0EBF99AE0F875B3E33E70BC133F98103F89447FA78C
+    CFD868A9D03470A42258974881B97CBAE0A1E5F8B2F7FFAFF4FEAAF3F7ABF5F9
+    AAF7F9A9F9FAA7F7F6A5F6F3A3F5F0A2F4EFA4F5FCACF7F9BDF3EC8FA1945E4C
+    3B68412B6B462C614326644A25644A25644A25644A25654B26654B26654B2665
+    4B26744A2563401E634D317776619DB5A3C0F3E5BFFFFCA3F9EDABFDF0B3FFFD
+    A6EAFF7CB6EA4071BB1043891F5A875597AA4181B71E5D972D6BA16FAED4A1E7
+    F4B4FAF9B2F5F6AAEBF3A2F0F6A1F2F5A2F5F6A2F6F4A3F9F3A9FCF4B2FFF7B8
+    FFFBA5F7FFB8FFFFC2F3F18C9991644D3E6E46336D4931674C315B45395B4539
+    5C463A5C463A5C463A5C463A5C463A5D473B73443C563631696364A6BCC2C3F1
+    FCB8F8FFAAF2FEA1ECFAA3F1E6AFFDF2B7FFFFAAEDFF73AFDD2A629D10498129
+    64952E6AB61B579D3E7DB087CDE5B2FBF9B2FBF3AEEEF3ACE5FAAAF2FEACF6FF
+    AEFCFFACFAFFABF5F7ABEDECADE7E6AEE5E2A3E9F6B5F3FBADD3D57175705D40
+    3770463969483565503A6B403D6B403D6B403D6B403D6B403D6B403D6B403D6B
+    403D6B414262515483979CB2E9F2B4FFFFA3F0FFA8EDFCB9F5FFADF2FFACF6F8
+    B4FFF7BAFFFF93D6EF437CB411429017469C245CBB1751A34181B88DD4E8B1FB
+    F5ADF3EDAEE9F9B7E8FFA8E7FBACEEFFADF2FFA6EAF797D4DE82B6BD719BA068
+    8A906BA5B188B9C184A0A157534E5E3D34774B3E624131574631634931634931
+    63493162483062483062483061472F61472F5C3C297F7D6BAAD5C6B2FFF79BFE
+    F49BF6EDB3F9F2C2F8F1B4EEFFA6E8FAA2F0E5B0FFF298DEEF4C83C01340A112
+    38AE235CB71959A0448FB590E0EBADFDFCA8F2F4B6F4FFAFE5FFA6EDFBA8F3FB
+    B7FDFD99CCC8687E794D4F49413E3647453D4A483D4F493E53493F59483F6046
+    3F65453F68443E68423D65463D60413861423967483F67483F62433A61423966
+    473E443F41809596C1F8F5AEF9F7B6FFFFA9F0F4ABF0F9B1F8FFB3F8FBB1FDFF
+    A8F8FFA6F2F8A8E7F5679EC5114893023DA41D5AB71F5FA64A8DB499DFECACF2
+    F1B2F7FAACEDFC9BDBF4AAEEFBB0EFF796C6C86C8280504D494F3C3756433E54
+    464052473F54473F5947405D474161474163454066433F68433F66464062423C
+    62423C66464066464060403A5F3F3963433D52595CA0C2C2BBFCFA9EEEEDA4F3
+    F6A8F0F7AEF6FEB1F9FFA8EDF0ABF7FDA6F7FEACF8FEA9EAF8609BC20C469100
+    3EA41659B52260A7457DA688BBCB98CECFBCF9FBABF1FE90DDF0AAF2FABCF0F7
+    7E92975346485432325E37356F4E4B6045415C45435E45435F46446145446345
+    446445446344436344436546436243406243406445426243405D3E3B5B3C395C
+    3D3A50686EB6E6E8B1FBFB9FF5F5A5F7FCAEF7FFAEF5FFA7F1FDACF1F4AFFBFF
+    A4F5FCAEFCFFAAEEFB5A98BE0C49930042A81059B51B59A03A6793547686749A
+    9CB9ECEEBAFFFF95E7F8A3F4F9BDEDF375787D5E3C426F4043683C3D724E4E5C
+    3E3D634147644248654349644449644449624449614348604247634649624548
+    6144476043465D4043593C3F56393C56393C5C8088B8F0F59CEBEEAAFFFFAEFF
+    FFAAF2FAA8EFF9A9F1FBB6F9FCB6FFFF9FEFF6A9F7FDA6ECF95695BB0D4C9600
+    40A50E59B515529C3A63902C4859597576A7D1D0BAF8FE90DEEB9BF6FAAADAE0
+    67626B643D4571484D5435385B4345543D4166404C67414D66424E65434E6343
+    4E61434E5E434D5D424C62464C62464C61454B5D41475A3E44583C4255393F52
+    363C688C9498CFD484CDD1B1FFFFB0F9FDA6E5EDB2F1F9B1F7FEA9E8ECB6FCFF
+    9EE9F1ADF7FDA9EDFA5694BA11509A003BA00D57B517549E4973A0415E6D4D67
+    6785A7A68BBBC17BB5C19FF3F98FB7C35B4E5C5B37435E414A3E30364C3D455F
+    47516241506342516243526243526043526043525D43515C42505F4350614552
+    6044515B3F4C593D4A593D4A563A475236433C535B51797E6FAAACAAEAEBA7E0
+    E2A8DDE0B9F0F397D4D686BDC2B5F3FBACF1FAB8FEFFACE9F7548DB41A549F00
+    3EA40F55B31C59A35283AF789DAB41605D5976733E5E6362859394D5E3778B9D
+    5C43575C364853414E433D484F3E4C6845595C42545D43555D43555E44565E44
+    565D43555E42555D41545B40506045555F44545A3F4F583D4D5A3F4F583D4D53
+    3848161B24192F3562898B78A6A7638C8E8CB4B3A5D4D2467D7A5B8990AFE6EF
+    B7F5FFB5F3FB8BC4D333678F144B960944AB0F53B21C5BA55287B2A2CEDB3859
+    5538534F03191F54697880ADC261657D623D57643A51594758514C5B4F3A5060
+    334E5542555743565844575A44575C43575E43575D42565D4155593F515E4456
+    5F4557593F51583E505C42545A4052543A4C261E28131E225975763153520424
+    2356777384ACA700312A39636AA6D7E1B2EDF79ED9E25F93A306375F01358108
+    42A90752B41557A64F89BAA8E3F37DB8B400261C294643525D618A96A27A8190
+    413B52453652634D6A5C426060455F5C425A543B575A415D5E45615C435F553C
+    58523955553C585A415D5B425E5C435F59405C563D59573E5A5B425E5A415D55
+    3C58503F5A221C2D1922263B514C2139314E63602C383E232634405E6381B0AE
+    C0FBF3A1D2D01734493B56891948990044A50350AC195CA74E89B6A5E0F0AAE7
+    E36598917492933A4650525668605F73493E58513F5E61486A543C5C5A42605C
+    4561523A5A573F5F5B4363594161543C5C513959543C5C5840605B43635B4363
+    594161553D5D563E5E5B43635B4363573F5F503E5D3932473940499AAFAD536F
+    69243F3C2A4045546470314F54699594BFF5EE7DACAA203F5448679A1A4B9B00
+    45A60552A811569B437FA99FDCEAC5FFFFB9EDEDA9CAD3263647342C4351435F
+    513E5F5A416760456D563D635842655643644F385E533C62563F65563F65533C
+    62513A60533C62553E645A43695A4369574066533C62543D635A43695B446A58
+    416759446A4A3E5C41435597AAAF5675740012124D727689AEB6284B4F4E7877
+    BCECE64A767534576B5B80B21A4D9D0044A50E5BAA094D8E3D7BA1A1E0EEBBFC
+    FDB8F1F3ABD0DE344861443354523D63563B66593C6A5F42735D46735845704E
+    3E674F3864513A66533C68533C68533C68523B67533C68543D6958416D58416D
+    553E6A513A66533C6859426E5B447058416D5D48754E3F653E3A57435060405C
+    63022D3092C7CA9DD8DA395E623E6464B0D8D32248484E76896694C4144C9B00
+    41A3135EAD0E51904785ABA9E7F7AEF1F4ACEAF0A9D5E656718C503C66513A67
+    593E70583B72573C745C457B5544774D41714D396E4D396E4D396E4F3B70513D
+    72513D72503C714F3B70513D72523E734F3B704C386D4F3B7055417657437854
+    4075543F765646764C436B3034513F55675C8790C0FFFFA2EAEA557E81325656
+    8BAAA71234346D98AB659BCA104B9A0542A40750A21253974D89B3A5E5F7A8EF
+    F2BAFCFFB5E8F87598B24F3F6F4632675B437D5C4180513777523D7B4F407A55
+    4880503C774E3A754D39744F3B76523E79533F7A503C774D39744D39744F3B76
+    4E3A754C3873503C7755417C56427D523E794C3B7A5D4B865243764E48713644
+    6089B0BEBBFBFFB0FFFC749FA22B4A4B556B691F3D3E8DBDCF5A98C60E4C9A0B
+    44A70347A01250974681AE9EE0F2A7F2F4BCFFFFB8EFFC98C1D7696196453973
+    5443825742864F377D533E824D3D7D5548865140804D3C7C4A39794D3C7C5140
+    805342824E3D7D4938784837774B3A7A4C3B7B4C3B7B503F7F5544845443834F
+    3E7E4D3E8257468654407B53447732365966879AA8E6ECB6FFFF91C1C32A4849
+    223231415D5EADE1F24E92BF094B990E45A80C4FAC104C983F7AA8A1E3F6A8F3
+    F5ADF7F7AEEBF5BAE8FA9594CC514B864A3E804F3D82503C845C48904D3F814F
+    41815442874E3C814B397E4D3B805240855341864E3C8147357A47357A4B397E
+    4E3C814F3D8253418657458A5543884F3D824B3D854F3C81644C8C48356C4645
+    6D3D5A6FAAE4EAAAF7F4AADADC324E4F08141460797BC3F9FF488FBB094B990F
+    43A7124BAE0942914A86B4A2E0F2B7F8F9B1F4F5B0F4FFA4E9FD9BCDE1667FA9
+    4745874C3C894E438C4F458B52418B52388B4C3E904D40904E41914F42904E41
+    8F4D418D4B3F8B493E874A3A874E3E8B52428F52428F4F3F8C4D3D8A50408D53
+    439059459051458D463B84554697503F903438739CC6D9B6FEF2C1FBFF274E50
+    0014149EC4C8AEEEFF4896C40B4E9D0E3FA5124BAE0841904A86B4A2E0F2B6F7
+    F8B1F4F5B0F4FFA4E9FDBAEAFF7E95C5534F974D3D904A3D8D473D894D3D8B50
+    378D4D3D944D3E924D3E924D3F914D3F914C3F8F4B3E8C4B3E8C4C3F8B4F428E
+    52459152459151449050438F52459154479354438D4F428C473D895141944B3B
+    8E2E326D7FA8BEAFF6ECAEEEF24D7D7F305553A7D4D7A7E9FB4A97C51052A00E
+    42A6124BAE0841904985B3A1DFF1B6F7F8B1F4F5B0F4FFA3E8FCB6E5FF7A8FC6
+    51499C4D3B994B3C97473E944F3F96573D9B4D3E994C3D984B3C974A3C944A3D
+    934A3D934A3D914A3D914E418F50439151449253469453469454479554479554
+    47955646945044904F46964F3F964E3E922F31715F849EADF0EBABF5F991CFCF
+    83B8B5BAF2F3A5EAFB4F98C410509E0940A1114AAD0841904985B3A1DFF1B6F7
+    F8B0F3F4AFF3FFA3E8FC98C5EB6274B3443A974C38A34E40A64941A04D3F9D50
+    3B9E4D3F9F4B3D9D4A3C9A483A98483B97483C964A3E984B3F994C41914D4292
+    4E4393504595514696514696514696504595594B9D504797544D9E50419C5846
+    9F3C3D81486D89ACEFECA9FAFFB6FFFFB3F6F1BEFFFFA6EBFC5598C50D4E9907
+    44A2114AAD07408F4884B2A0DEF0B5F6F7B0F3F4AFF3FFA2E7FB90BBE6596CB0
+    3F349A4C36AC5040B0443DA5443A9E48379E4C41A24A3FA0483D9E473C9C473D
+    9A473D9A49409B4A419C483E914A40934B41944C42954B41944B41944B41944B
+    419453489E4C4698524AA15042A05A48A546458D3D6082A7E7E89FEFF6ABFBFC
+    ADFDF8ACF7F5A9ECFB5D9AC6104F990C4FAB1049AC07408F4884B2A0DEF0B5F6
+    F7AFF2F3AEF2FFA2E7FB9BC6F15F70B940349E4934AF4C3EB4433FA94842A752
+    45AB4B42A34A41A24940A14941A048409D48409D49429D49429D443D92484196
+    4B44994A4398463F94433C91453E93484196483E984B459C4C48A15245A75643
+    A4494591416185A1DFE5ACF2FFA2F1F4A6FBF7A6F2F1AFEDFD619BC50F4F9606
+    53AA1049AC063F8E4884B2A0DEF0B4F5F6AFF2F3AEF2FFA2E7FBA5D0FB6576BF
+    4137A24A35B34B3EB8413EAB4744AB534BB04A44A34A44A34B45A44B46A24A45
+    A049449F48449D48449D443E954B459C504AA14D479E443E953F3990433D9449
+    439A413A955250AA5350AC6153B8543FA5494493506E97A7E2ECBEF9FFA4EEF4
+    AFFFFFA9F5F4B1ECFC6699C40F5297004EA31049AC063F8E4783B19FDDEFB4F5
+    F6AFF2F3AEF2FFA1E6FAAEDAFF6D7FC6483EA94F3AB9493EB83838A437379B40
+    3B9E4A44A34B46A24D48A44D48A34D48A34B47A049469C48459B474198504AA1
+    5650A7514BA24640973F3990443E954C469D433B98615FB9625EBD7164CA5442
+    A74C4697607DA9B0EAF6BAECFE9CE2E9B0FFFFA7F3F2AEE6F76899C515599C00
+    51A21249AC043F8E4485B29BE0F1B0F8F8ADF5F5AEF4FFA5E8FDB9F4FF7CA3DA
+    4853B5413BAC493FA9433F9F3E3AA33E3DB14F4CAF4744A74643A64E4CAC5150
+    AE4C4BA94A49A54E4DA94848AC4546A83F3E9E3E3A9947429D514BA44B439A3C
+    33893B42915D5BB58678DE7C6BD44B449F4254957EABCDBBF9FFA7F4F7ADF5FC
+    AFF3FAB4F8FDA3EAF459A0C1155A9F0C4DAF1249AC043F8E4485B29BE0F1B0F8
+    F8ADF5F5AEF4FFA5E8FDB4F4FF84AFE2515FBF3D37AC453BAD5049B14F4BB447
+    46B45854BB4F4BB24C48AD4F4CAF4E4BAE4B49A95250B05E5DBB4D4DB15051B3
+    4B4AAA403D993E39944842994F489D4E4699565AA85753AC5B4EB45042AC3E3D
+    99546EAA8DC3DCB5FCFFA7F4F7ADF5FCAEF2F9B4F8FDA3EAF459A0C1165BA00C
+    4DAF1249AC043F8E4485B29BE0F1B0F8F8ADF5F5AEF4FFA5E8FDB4F8FD9ACAF4
+    667AD23634AB342AA64E46B85753BC4948AF554FBA524DB6544FB85955BC5753
+    BA534FB45B58BB6865C86565C96364C65757B54846A04340964C479C514B9C4E
+    489742418B50489F4F44AC3B339E3E48A0759ACEA8E8F3AFFFF4A7F4F7ADF5FC
+    AEF2F9B4F8FDA2E9F359A0C1175CA10E4FB11249AC043F8E4485B29BE0F1B0F8
+    F8ADF5F5AEF4FFA5E8FDADF6F4AEE5FF83A0EB3B42B126209D4B42BA6763CC64
+    64C2625DCA5752BF504CB6524EB85450B95956BD6865CC7976DD7777DB6869CB
+    5151AF43419A4643984D4A9A433F8B302B763D367F4B44994944A7383DA0536A
+    B899CBF5B9FFFF9FFAE0A8F5F8ADF5FCAEF2F9B4F8FDA2E9F35AA1C2185DA20F
+    50B21249AC043F8E4485B29BE0F1B0F8F8ADF5F5AEF4FFA5E8FD9FEAE8B7F4FF
+    9DC6FD5567C43033A6514DC4817DE79190EC807DEA6461CE4947B1413FA94847
+    AF5857BE6F6ED58483EA8687E97678D75D5EB94B4AA04B4A9A52509C4A488E3B
+    387D5E57A23E3B8B2B32874057A7769FDDADEBFFB6FFFF98F3DAA8F5F8ADF5FC
+    AEF2F9B3F7FCA2E9F35BA2C3195EA31152B41249AC043F8E4485B29BE0F1B0F8
+    F8ADF5F5AEF4FFA5E8FD9DE7EBB7FCFFAFE7FF789BDA4C59BB5454C67D77E297
+    93F37F7DE76766CE5150B84F4EB55554BB5A5ABE6263C56B6CCE7576D87173D2
+    6263BD4B4B9F41418F4948905352945554944E4899282E7B364D9178A1D89FDB
+    FFA5EBFCA7F4F6B0FFF6A9F6F9AEF6FDAEF2F9B3F7FCA2E9F35BA2C31A5FA413
+    54B61249AC043F8E4485B29BE0F1B0F8F8ADF5F5AEF4FFA5E8FDA3EEF7B1FBFD
+    B7F9FE9FCFF1758DD95C60C96660CD7C73DB6769CF595BC15153B75659BB585B
+    BD5256B54E52B15055B24849AB4E50AF4B4CA63C3D8E33337F3A3B7F45468349
+    498534338944529A7BA0D2ADE9FFAFF8FF9FEAF2A8F0F8BBFDFFA9F6F9AEF6FD
+    AEF2F9B3F7FCA2E9F35BA2C31B60A51455B71249AC043F8E4485B29BE0F1B0F8
+    F8ADF5F5AEF4FFA5E8FDA5EDFEA7F4F1B3FFF4BAF3FF9CBBF87076D9625BCA70
+    63CF6265C75255B74447A94246A54146A34146A34A4FAA575CB74344A6494BAA
+    4B4CA64A4B9C4E4F995355964E4F8C42437D5556B08297DBB0DFFFAFF7FFA0F3
+    F1AAF9FCB4F7FFA8E1FBA9F6F9AEF6FDAEF2F9B2F6FBA2E9F35CA3C41C61A615
+    56B81041C5064296357C9788D4D0B2F9FCACEFFFA1E4FF9EE2FFB0ECF8B5F3FD
+    B6F7FFB4F3FFB5EAFFA8CEFE8398DC5B66B8534DBE4B45B24C46AB5550AC5552
+    A24D4A924C4B8B5654903F3E8049478D484894383A8E2C2D8835379B575BC479
+    7CE98FD7E89BE3F4A5EDFEA6EEFFA7EFFFACF4FFADF5FFA9F1FFB0F7FFABF8F5
+    A9FBE9AFFEF39BE2F05E9AC82F64A72B5DA91B53B2033D8827669280C2D4B4F8
+    FDB2F8FFA7ECFBA3E9FFADF0F9B2F8FFB0FBFDAEF8FCB3F7FFB8F1FFADD7FF99
+    BDF37584E16372CF5460BE4C56B44048A63339983336983B3EA02B28A33737AB
+    454BB64E5DBA5A70BE708ECF8FB2EAA6CEFFA8EFF9B0F7FFB4FBFFB1F8FFAFF6
+    FFB2F9FFB3FAFFB0F7FFA3EBF5A8F5F2AEFDF4ACF7F98DD0EB508ABE2B61A231
+    65AB4888B80F46890C3D89588BC39BD9EBB0F8F2ACF5F3A5ECF6A3EBF3A8F2F6
+    A5F6F39DF2EA9DF1ECA7F4F7AAF2FEA8EAFCA8DCFF97CAF287B5E57DA5E07093
+    DC6684D76681DC6E86E6687EE86F88EA7A9AED86B2EF97CBF3A5E2F6AEF2F7B2
+    FCF8ADF2F5B0F5F8B0F5F8ABF0F3A8EDF0AAEFF2ABF0F3AAEFF2AAF2F9B2FCFE
+    AEF7FB98DBF06CA7D5396FAC2F65A24B83BA82C7D63366A401248C1D43A16197
+    C097DDDDACF2F2A6E5F9B3F1FFB8FAFFB6FFFFB0FDF9ACFDF4ACFFF6ABFEF6A7
+    F9F4C0FFFABAFFF8B8FFFCB8FCFFB7F5FFB0EAFFAFE6FFB2E7FFB8F6FFB6F4FF
+    B4F6FFB5FBFFB7FFFFB4FFFDACFBF2A3F5E9B5F7FCB7F9FEB7F9FEB5F7FCB5F7
+    FCB6F8FDB6F8FDB6F8FDB2FAFFAEF5FF94D8EB69A7CD3F75B1285D9C427BAF75
+    B3D9A6E9EC6898D22344B10327931A4D8C5595AE80BDD781B8E596C9E999CEE9
+    99D2E79AD7E59CDDE59AE1E493DEE08CD9DB94DAD394DAD395DDD79AE0DF9AE0
+    E096DADF91D7DE91D6DF9AE2DC98E0DA97DDDC96DEDE96DDE193DBE390D7E18D
+    D3E096D4E696D4E698D6E89BD9EB9DDBED9BD9EB9AD8EA99D7E98CCCE481C1D9
+    5F9DBB3971A0295D99356AA366A1C9A0E1F6B2F2F699D0F76795E22554A80031
+    740B45792A619A3364AA4170A63E6DA13C6A9A3E6C9B43759F427CA03D7C9E37
+    7A994176A84176A83F78A5407AA43F7DA33E7EA14080A23E81A03C73AC3E75AE
+    4078AF427BAE457FB04984B14E8AB45390B84A82AB477FA84880A94D85AE4F87
+    B04B83AC4880A94880A9487EAD477FA83871982F66933F74A65F96C18CCAE2B7
+    FBFFB5F5FAADF0F99ADFF369AFD42B6CA30C478D0C3F8F0B3A8E1249920D428B
+    0C3A870E3A87103C890D408908428A06448A13479A14489B12499A114A99114D
+    9914539D15579E15589D1046A51349A7164EA71951A319539F1A569C1E5A9C21
+    5E9E2D61A3265A9C24589A2A5EA02C60A2295D9F275B9D295D9F2D5BA23B6DA7
+    437BA4538DB075AFD292CEEBA5E7F2B6FDFAB5F5F9A7F3E7A8FFE9A2F9F679C4
+    EB4B87D33064BE2453AE0A4DA20C48A11145A31645A71644A91244A80E47AA0D
+    4AAA1352A21756A71859AA185AAD165CB0165EB2135CB21059AF155FA71862AA
+    1F66B02268B52569B62568B72566B72465B6386ABC2F61B32B5DAF3163B53668
+    BA3567B93668BA3B6DBF3D66BB5383C5669DC87FBBD8A2E0F8B3F4FFB0F5F8AF
+    F8EE000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000
+  }
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnHide = FormHide
+  LCLVersion = '1.4.4.0'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 767
+    Width = 1181
+    Panels = <    
+      item
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 15
+    Top = 24
+    Width = 49
+    Caption = '00:00 Uhr'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 15
+    Top = 52
+    Width = 49
+    Caption = '00:15 Uhr'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 24
+    Height = 15
+    Top = 80
+    Width = 49
+    Caption = '00:30 Uhr'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 24
+    Height = 15
+    Top = 108
+    Width = 49
+    Caption = '00:45 Uhr'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 24
+    Height = 15
+    Top = 136
+    Width = 49
+    Caption = '01:00 Uhr'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 24
+    Height = 15
+    Top = 164
+    Width = 49
+    Caption = '01:15 Uhr'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 24
+    Height = 15
+    Top = 192
+    Width = 49
+    Caption = '01:30 Uhr'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 24
+    Height = 15
+    Top = 220
+    Width = 49
+    Caption = '01:45 Uhr'
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 24
+    Height = 15
+    Top = 248
+    Width = 49
+    Caption = '02:00 Uhr'
+    ParentColor = False
+  end
+  object Label10: TLabel
+    Left = 24
+    Height = 15
+    Top = 276
+    Width = 49
+    Caption = '02:15 Uhr'
+    ParentColor = False
+  end
+  object Label11: TLabel
+    Left = 24
+    Height = 15
+    Top = 304
+    Width = 49
+    Caption = '02:30 Uhr'
+    ParentColor = False
+  end
+  object Label12: TLabel
+    Left = 24
+    Height = 15
+    Top = 328
+    Width = 49
+    Caption = '02:45 Uhr'
+    ParentColor = False
+  end
+  object Label13: TLabel
+    Left = 24
+    Height = 15
+    Top = 360
+    Width = 49
+    Caption = '03:00 Uhr'
+    ParentColor = False
+  end
+  object Label14: TLabel
+    Left = 24
+    Height = 15
+    Top = 388
+    Width = 49
+    Caption = '03:15 Uhr'
+    ParentColor = False
+  end
+  object Label15: TLabel
+    Left = 24
+    Height = 15
+    Top = 416
+    Width = 49
+    Caption = '03:30 Uhr'
+    ParentColor = False
+  end
+  object Label16: TLabel
+    Left = 24
+    Height = 15
+    Top = 444
+    Width = 49
+    Caption = '03:45 Uhr'
+    ParentColor = False
+  end
+  object Label17: TLabel
+    Left = 24
+    Height = 15
+    Top = 472
+    Width = 49
+    Caption = '04:00 Uhr'
+    ParentColor = False
+  end
+  object Label18: TLabel
+    Left = 24
+    Height = 15
+    Top = 500
+    Width = 49
+    Caption = '04:15 Uhr'
+    ParentColor = False
+  end
+  object Label19: TLabel
+    Left = 24
+    Height = 15
+    Top = 528
+    Width = 49
+    Caption = '04:30 Uhr'
+    ParentColor = False
+  end
+  object Label20: TLabel
+    Left = 24
+    Height = 15
+    Top = 556
+    Width = 49
+    Caption = '04:45 Uhr'
+    ParentColor = False
+  end
+  object Label21: TLabel
+    Left = 24
+    Height = 15
+    Top = 584
+    Width = 49
+    Caption = '05:00 Uhr'
+    ParentColor = False
+  end
+  object Label22: TLabel
+    Left = 216
+    Height = 15
+    Top = 24
+    Width = 49
+    Caption = '05:15 Uhr'
+    ParentColor = False
+  end
+  object Label23: TLabel
+    Left = 216
+    Height = 15
+    Top = 52
+    Width = 49
+    Caption = '05:30 Uhr'
+    ParentColor = False
+  end
+  object Label24: TLabel
+    Left = 216
+    Height = 15
+    Top = 80
+    Width = 49
+    Caption = '05:45 Uhr'
+    ParentColor = False
+  end
+  object Label25: TLabel
+    Left = 216
+    Height = 15
+    Top = 108
+    Width = 49
+    Caption = '06:00 Uhr'
+    ParentColor = False
+  end
+  object Label26: TLabel
+    Left = 216
+    Height = 15
+    Top = 136
+    Width = 49
+    Caption = '06:15 Uhr'
+    ParentColor = False
+  end
+  object Label27: TLabel
+    Left = 216
+    Height = 15
+    Top = 164
+    Width = 49
+    Caption = '06:30 Uhr'
+    ParentColor = False
+  end
+  object Label28: TLabel
+    Left = 216
+    Height = 15
+    Top = 192
+    Width = 49
+    Caption = '06:45 Uhr'
+    ParentColor = False
+  end
+  object Label29: TLabel
+    Left = 216
+    Height = 15
+    Top = 220
+    Width = 49
+    Caption = '07:00 Uhr'
+    ParentColor = False
+  end
+  object Label30: TLabel
+    Left = 216
+    Height = 15
+    Top = 248
+    Width = 49
+    Caption = '07:15 Uhr'
+    ParentColor = False
+  end
+  object Label31: TLabel
+    Left = 216
+    Height = 15
+    Top = 276
+    Width = 49
+    Caption = '07:30 Uhr'
+    ParentColor = False
+  end
+  object Label32: TLabel
+    Left = 216
+    Height = 15
+    Top = 304
+    Width = 49
+    Caption = '07:45 Uhr'
+    ParentColor = False
+  end
+  object Label33: TLabel
+    Left = 216
+    Height = 15
+    Top = 332
+    Width = 49
+    Caption = '08:00 Uhr'
+    ParentColor = False
+  end
+  object Label34: TLabel
+    Left = 216
+    Height = 15
+    Top = 360
+    Width = 49
+    Caption = '08:15 Uhr'
+    ParentColor = False
+  end
+  object Label35: TLabel
+    Left = 216
+    Height = 15
+    Top = 384
+    Width = 49
+    Caption = '08:30 Uhr'
+    ParentColor = False
+  end
+  object Label36: TLabel
+    Left = 216
+    Height = 15
+    Top = 416
+    Width = 49
+    Caption = '08:45 Uhr'
+    ParentColor = False
+  end
+  object Label37: TLabel
+    Left = 216
+    Height = 15
+    Top = 444
+    Width = 49
+    Caption = '09:00 Uhr'
+    ParentColor = False
+  end
+  object Label38: TLabel
+    Left = 216
+    Height = 15
+    Top = 472
+    Width = 49
+    Caption = '09:15 Uhr'
+    ParentColor = False
+  end
+  object Label39: TLabel
+    Left = 216
+    Height = 15
+    Top = 500
+    Width = 49
+    Caption = '09:30 Uhr'
+    ParentColor = False
+  end
+  object Label40: TLabel
+    Left = 216
+    Height = 15
+    Top = 528
+    Width = 49
+    Caption = '09:45 Uhr'
+    ParentColor = False
+  end
+  object Label41: TLabel
+    Left = 216
+    Height = 15
+    Top = 556
+    Width = 49
+    Caption = '10:00 Uhr'
+    ParentColor = False
+  end
+  object Label42: TLabel
+    Left = 216
+    Height = 15
+    Top = 584
+    Width = 49
+    Caption = '10:15 Uhr'
+    ParentColor = False
+  end
+  object Label43: TLabel
+    Left = 408
+    Height = 15
+    Top = 24
+    Width = 49
+    Caption = '10:30 Uhr'
+    ParentColor = False
+  end
+  object Label44: TLabel
+    Left = 408
+    Height = 15
+    Top = 52
+    Width = 49
+    Caption = '10:45 Uhr'
+    ParentColor = False
+  end
+  object Label45: TLabel
+    Left = 408
+    Height = 15
+    Top = 80
+    Width = 49
+    Caption = '11:00 Uhr'
+    ParentColor = False
+  end
+  object Label46: TLabel
+    Left = 408
+    Height = 15
+    Top = 108
+    Width = 49
+    Caption = '11:15 Uhr'
+    ParentColor = False
+  end
+  object Label47: TLabel
+    Left = 408
+    Height = 15
+    Top = 136
+    Width = 49
+    Caption = '11:30 Uhr'
+    ParentColor = False
+  end
+  object Label48: TLabel
+    Left = 408
+    Height = 15
+    Top = 164
+    Width = 49
+    Caption = '11:45 Uhr'
+    ParentColor = False
+  end
+  object Label49: TLabel
+    Left = 408
+    Height = 15
+    Top = 192
+    Width = 49
+    Caption = '12:00 Uhr'
+    ParentColor = False
+  end
+  object Label50: TLabel
+    Left = 408
+    Height = 15
+    Top = 220
+    Width = 49
+    Caption = '12:15 Uhr'
+    ParentColor = False
+  end
+  object Label51: TLabel
+    Left = 408
+    Height = 15
+    Top = 248
+    Width = 49
+    Caption = '12:30 Uhr'
+    ParentColor = False
+  end
+  object Label52: TLabel
+    Left = 408
+    Height = 15
+    Top = 276
+    Width = 49
+    Caption = '12:45 Uhr'
+    ParentColor = False
+  end
+  object Label53: TLabel
+    Left = 408
+    Height = 15
+    Top = 304
+    Width = 49
+    Caption = '13:00 Uhr'
+    ParentColor = False
+  end
+  object Label54: TLabel
+    Left = 408
+    Height = 15
+    Top = 332
+    Width = 49
+    Caption = '13:15 Uhr'
+    ParentColor = False
+  end
+  object Label55: TLabel
+    Left = 408
+    Height = 15
+    Top = 360
+    Width = 49
+    Caption = '13:30 Uhr'
+    ParentColor = False
+  end
+  object Label56: TLabel
+    Left = 408
+    Height = 15
+    Top = 388
+    Width = 49
+    Caption = '13:45 Uhr'
+    ParentColor = False
+  end
+  object Label57: TLabel
+    Left = 408
+    Height = 15
+    Top = 416
+    Width = 49
+    Caption = '14:00 Uhr'
+    ParentColor = False
+  end
+  object Label58: TLabel
+    Left = 408
+    Height = 15
+    Top = 444
+    Width = 49
+    Caption = '14:15 Uhr'
+    ParentColor = False
+  end
+  object Label59: TLabel
+    Left = 408
+    Height = 15
+    Top = 472
+    Width = 49
+    Caption = '14:30 Uhr'
+    ParentColor = False
+  end
+  object Label60: TLabel
+    Left = 408
+    Height = 15
+    Top = 500
+    Width = 49
+    Caption = '14:45 Uhr'
+    ParentColor = False
+  end
+  object Label61: TLabel
+    Left = 408
+    Height = 15
+    Top = 528
+    Width = 49
+    Caption = '15:00 Uhr'
+    ParentColor = False
+  end
+  object Label62: TLabel
+    Left = 408
+    Height = 15
+    Top = 556
+    Width = 49
+    Caption = '15:15 Uhr'
+    ParentColor = False
+  end
+  object Label63: TLabel
+    Left = 408
+    Height = 15
+    Top = 584
+    Width = 49
+    Caption = '15:30 Uhr'
+    ParentColor = False
+  end
+  object Label64: TLabel
+    Left = 608
+    Height = 15
+    Top = 24
+    Width = 49
+    Caption = '15:45 Uhr'
+    ParentColor = False
+  end
+  object Label65: TLabel
+    Left = 608
+    Height = 15
+    Top = 52
+    Width = 49
+    Caption = '16:00 Uhr'
+    ParentColor = False
+  end
+  object Label66: TLabel
+    Left = 608
+    Height = 15
+    Top = 80
+    Width = 49
+    Caption = '16:15 Uhr'
+    ParentColor = False
+  end
+  object Label67: TLabel
+    Left = 608
+    Height = 15
+    Top = 108
+    Width = 49
+    Caption = '16:30 Uhr'
+    ParentColor = False
+  end
+  object Label68: TLabel
+    Left = 608
+    Height = 15
+    Top = 136
+    Width = 49
+    Caption = '16:45 Uhr'
+    ParentColor = False
+  end
+  object Label69: TLabel
+    Left = 608
+    Height = 15
+    Top = 164
+    Width = 49
+    Caption = '17:00 Uhr'
+    ParentColor = False
+  end
+  object Label70: TLabel
+    Left = 608
+    Height = 15
+    Top = 192
+    Width = 49
+    Caption = '17:15 Uhr'
+    ParentColor = False
+  end
+  object Label71: TLabel
+    Left = 608
+    Height = 15
+    Top = 220
+    Width = 49
+    Caption = '17:30 Uhr'
+    ParentColor = False
+  end
+  object Label72: TLabel
+    Left = 608
+    Height = 15
+    Top = 248
+    Width = 49
+    Caption = '17:45 Uhr'
+    ParentColor = False
+  end
+  object Label73: TLabel
+    Left = 608
+    Height = 15
+    Top = 276
+    Width = 49
+    Caption = '18:00 Uhr'
+    ParentColor = False
+  end
+  object Label74: TLabel
+    Left = 608
+    Height = 15
+    Top = 304
+    Width = 49
+    Caption = '18:15 Uhr'
+    ParentColor = False
+  end
+  object Label75: TLabel
+    Left = 608
+    Height = 15
+    Top = 332
+    Width = 49
+    Caption = '18:30 Uhr'
+    ParentColor = False
+  end
+  object Label76: TLabel
+    Left = 608
+    Height = 15
+    Top = 360
+    Width = 49
+    Caption = '18:45 Uhr'
+    ParentColor = False
+  end
+  object Label77: TLabel
+    Left = 608
+    Height = 15
+    Top = 384
+    Width = 49
+    Caption = '19:00 Uhr'
+    ParentColor = False
+  end
+  object Label78: TLabel
+    Left = 608
+    Height = 15
+    Top = 416
+    Width = 49
+    Caption = '19:15 Uhr'
+    ParentColor = False
+  end
+  object Label79: TLabel
+    Left = 608
+    Height = 15
+    Top = 444
+    Width = 49
+    Caption = '19:30 Uhr'
+    ParentColor = False
+  end
+  object Label80: TLabel
+    Left = 608
+    Height = 15
+    Top = 472
+    Width = 49
+    Caption = '19:45 Uhr'
+    ParentColor = False
+  end
+  object Label81: TLabel
+    Left = 608
+    Height = 15
+    Top = 500
+    Width = 49
+    Caption = '20:00 Uhr'
+    ParentColor = False
+  end
+  object Label82: TLabel
+    Left = 608
+    Height = 15
+    Top = 528
+    Width = 49
+    Caption = '20:15 Uhr'
+    ParentColor = False
+  end
+  object Label83: TLabel
+    Left = 608
+    Height = 15
+    Top = 556
+    Width = 49
+    Caption = '20:30 Uhr'
+    ParentColor = False
+  end
+  object Label84: TLabel
+    Left = 608
+    Height = 15
+    Top = 584
+    Width = 49
+    Caption = '20:45 Uhr'
+    ParentColor = False
+  end
+  object Label85: TLabel
+    Left = 800
+    Height = 15
+    Top = 24
+    Width = 49
+    Caption = '21:00 Uhr'
+    ParentColor = False
+  end
+  object Label86: TLabel
+    Left = 800
+    Height = 15
+    Top = 52
+    Width = 49
+    Caption = '21:15 Uhr'
+    ParentColor = False
+  end
+  object Label87: TLabel
+    Left = 800
+    Height = 15
+    Top = 80
+    Width = 49
+    Caption = '21:30 Uhr'
+    ParentColor = False
+  end
+  object Label88: TLabel
+    Left = 800
+    Height = 15
+    Top = 108
+    Width = 49
+    Caption = '21:45 Uhr'
+    ParentColor = False
+  end
+  object Label89: TLabel
+    Left = 800
+    Height = 15
+    Top = 136
+    Width = 49
+    Caption = '22:00 Uhr'
+    ParentColor = False
+  end
+  object Label90: TLabel
+    Left = 800
+    Height = 15
+    Top = 164
+    Width = 49
+    Caption = '22:15 Uhr'
+    ParentColor = False
+  end
+  object Label91: TLabel
+    Left = 800
+    Height = 15
+    Top = 192
+    Width = 49
+    Caption = '22:30 Uhr'
+    ParentColor = False
+  end
+  object Label92: TLabel
+    Left = 800
+    Height = 15
+    Top = 220
+    Width = 49
+    Caption = '22:45 Uhr'
+    ParentColor = False
+  end
+  object Label93: TLabel
+    Left = 800
+    Height = 15
+    Top = 248
+    Width = 49
+    Caption = '23:00 Uhr'
+    ParentColor = False
+  end
+  object Label94: TLabel
+    Left = 800
+    Height = 15
+    Top = 276
+    Width = 49
+    Caption = '23:15 Uhr'
+    ParentColor = False
+  end
+  object Label95: TLabel
+    Left = 800
+    Height = 15
+    Top = 304
+    Width = 49
+    Caption = '23:30 Uhr'
+    ParentColor = False
+  end
+  object Label96: TLabel
+    Left = 800
+    Height = 15
+    Top = 332
+    Width = 49
+    Caption = '23:45 Uhr'
+    ParentColor = False
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 824
+    Height = 41
+    Top = 517
+    Width = 168
+    Caption = 'Medikamente Create'
+    OnClick = SpeedButton1Click
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 24
+    Height = 25
+    Top = 624
+    Width = 241
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 241
+    DataSource = DataSource1
+    Options = []
+    TabOrder = 1
+  end
+  object SpeedButton2: TSpeedButton
+    Left = 829
+    Height = 22
+    Top = 577
+    Width = 163
+    Caption = 'Copy Form1'
+    OnClick = SpeedButton2Click
+  end
+  object DBDateEdit3: TDBDateEdit
+    Left = 872
+    Height = 23
+    Top = 367
+    Width = 103
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    OKCaption = 'OK'
+    CancelCaption = 'Cancel'
+    DefaultToday = True
+    DateOrder = doNone
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 2
+    DataSource = DataSource1
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 824
+    Height = 23
+    Top = 472
+    Width = 100
+    DataField = 'Monat'
+    DataSource = DataSource1
+    ListField = 'Month'
+    ListFieldIndex = 0
+    ListSource = DataSource3
+    LookupCache = False
+    TabOrder = 3
+  end
+  object DBLookupComboBox2: TDBLookupComboBox
+    Left = 944
+    Height = 23
+    Top = 472
+    Width = 100
+    DataField = 'Jahr'
+    DataSource = DataSource1
+    ListField = 'Jahr'
+    ListFieldIndex = 0
+    ListSource = DataSource2
+    LookupCache = False
+    TabOrder = 4
+  end
+  object DBRadioGroup1: TDBRadioGroup
+    Left = 829
+    Height = 57
+    Hint = 'Printed'#13#10'not Printed'
+    Top = 400
+    Width = 185
+    Caption = 'DBRadioGroup1'
+    DataSource = DataSource1
+    TabOrder = 5
+    Values.Strings = (
+      'Printed'
+      'not Printed'
+    )
+  end
+  object DBLookupComboBox3: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 16
+    Width = 100
+    DataField = '00.00'
+    DataSource = DataSource1
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 6
+  end
+  object DBLookupComboBox4: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 44
+    Width = 100
+    DataField = '00.15'
+    DataSource = DataSource1
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 7
+  end
+  object DBLookupComboBox5: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 72
+    Width = 100
+    DataField = '00.30'
+    DataSource = DataSource1
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 8
+  end
+  object DBLookupComboBox6: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 100
+    Width = 100
+    DataField = '00.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 9
+  end
+  object DBLookupComboBox7: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 128
+    Width = 100
+    DataField = '01.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 10
+  end
+  object DBLookupComboBox8: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 156
+    Width = 100
+    DataField = '01.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 11
+  end
+  object DBLookupComboBox9: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 184
+    Width = 100
+    DataField = '01.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 12
+  end
+  object DBLookupComboBox10: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 212
+    Width = 100
+    DataField = '01.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 13
+  end
+  object DBLookupComboBox11: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 240
+    Width = 100
+    DataField = '02.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 14
+  end
+  object DBLookupComboBox12: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 268
+    Width = 100
+    DataField = '02.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 15
+  end
+  object DBLookupComboBox13: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 296
+    Width = 100
+    DataField = '02.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 16
+  end
+  object DBLookupComboBox14: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 324
+    Width = 100
+    DataField = '02.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 17
+  end
+  object DBLookupComboBox15: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 352
+    Width = 100
+    DataField = '03.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 18
+  end
+  object DBLookupComboBox16: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 380
+    Width = 100
+    DataField = '03.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 19
+  end
+  object DBLookupComboBox17: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 408
+    Width = 100
+    DataField = '03.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 20
+  end
+  object DBLookupComboBox18: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 436
+    Width = 100
+    DataField = '03.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 21
+  end
+  object DBLookupComboBox19: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 464
+    Width = 100
+    DataField = '04.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 22
+  end
+  object DBLookupComboBox20: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 492
+    Width = 100
+    DataField = '04.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 23
+  end
+  object DBLookupComboBox21: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 520
+    Width = 100
+    DataField = '04.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 24
+  end
+  object DBLookupComboBox22: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 548
+    Width = 100
+    DataField = '04.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 25
+  end
+  object DBLookupComboBox23: TDBLookupComboBox
+    Left = 96
+    Height = 23
+    Top = 576
+    Width = 100
+    DataField = '05.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 26
+  end
+  object DBLookupComboBox24: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 16
+    Width = 100
+    DataField = '05.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 27
+  end
+  object DBLookupComboBox25: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 44
+    Width = 100
+    DataField = '05.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 28
+  end
+  object DBLookupComboBox26: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 72
+    Width = 100
+    DataField = '05.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 29
+  end
+  object DBLookupComboBox27: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 100
+    Width = 100
+    DataField = '06.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 30
+  end
+  object DBLookupComboBox28: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 128
+    Width = 100
+    DataField = '06.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 31
+  end
+  object DBLookupComboBox29: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 156
+    Width = 100
+    DataField = '06.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 32
+  end
+  object DBLookupComboBox30: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 184
+    Width = 100
+    DataField = '06.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 33
+  end
+  object DBLookupComboBox31: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 212
+    Width = 100
+    DataField = '07.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 34
+  end
+  object DBLookupComboBox32: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 240
+    Width = 100
+    DataField = '07.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 35
+  end
+  object DBLookupComboBox33: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 268
+    Width = 100
+    DataField = '07.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 36
+  end
+  object DBLookupComboBox34: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 296
+    Width = 100
+    DataField = '07.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 37
+  end
+  object DBLookupComboBox35: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 324
+    Width = 100
+    DataField = '08.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 38
+  end
+  object DBLookupComboBox36: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 352
+    Width = 100
+    DataField = '08.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 39
+  end
+  object DBLookupComboBox37: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 380
+    Width = 100
+    DataField = '08.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 40
+  end
+  object DBLookupComboBox38: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 408
+    Width = 100
+    DataField = '08.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 41
+  end
+  object DBLookupComboBox39: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 436
+    Width = 100
+    DataField = '09.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 42
+  end
+  object DBLookupComboBox40: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 464
+    Width = 100
+    DataField = '09.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 43
+  end
+  object DBLookupComboBox41: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 492
+    Width = 100
+    DataField = '09.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 44
+  end
+  object DBLookupComboBox42: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 520
+    Width = 100
+    DataField = '09.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 45
+  end
+  object DBLookupComboBox43: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 548
+    Width = 100
+    DataField = '10.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 46
+  end
+  object DBLookupComboBox44: TDBLookupComboBox
+    Left = 288
+    Height = 23
+    Top = 576
+    Width = 100
+    DataField = '10.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 47
+  end
+  object DBLookupComboBox45: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 16
+    Width = 100
+    DataField = '10.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 48
+  end
+  object DBLookupComboBox46: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 44
+    Width = 100
+    DataField = '10.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 49
+  end
+  object DBLookupComboBox47: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 72
+    Width = 100
+    DataField = '11.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 50
+  end
+  object DBLookupComboBox48: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 100
+    Width = 100
+    DataField = '11.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 51
+  end
+  object DBLookupComboBox49: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 128
+    Width = 100
+    DataField = '11.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 52
+  end
+  object DBLookupComboBox50: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 156
+    Width = 100
+    DataField = '11.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 53
+  end
+  object DBLookupComboBox51: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 184
+    Width = 100
+    DataField = '12.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 54
+  end
+  object DBLookupComboBox52: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 212
+    Width = 100
+    DataField = '12.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 55
+  end
+  object DBLookupComboBox53: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 240
+    Width = 100
+    DataField = '12.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 56
+  end
+  object DBLookupComboBox54: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 268
+    Width = 100
+    DataField = '12.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 57
+  end
+  object DBLookupComboBox55: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 296
+    Width = 100
+    DataField = '13.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 58
+  end
+  object DBLookupComboBox56: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 324
+    Width = 100
+    DataField = '13.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 59
+  end
+  object DBLookupComboBox57: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 352
+    Width = 100
+    DataField = '13.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 60
+  end
+  object DBLookupComboBox58: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 380
+    Width = 100
+    DataField = '13.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 61
+  end
+  object DBLookupComboBox59: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 408
+    Width = 100
+    DataField = '14.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 62
+  end
+  object DBLookupComboBox60: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 436
+    Width = 100
+    DataField = '14.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 63
+  end
+  object DBLookupComboBox61: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 464
+    Width = 100
+    DataField = '14.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 64
+  end
+  object DBLookupComboBox62: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 492
+    Width = 100
+    DataField = '14.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 65
+  end
+  object DBLookupComboBox63: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 520
+    Width = 100
+    DataField = '15.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 66
+  end
+  object DBLookupComboBox64: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 548
+    Width = 100
+    DataField = '15.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 67
+  end
+  object DBLookupComboBox65: TDBLookupComboBox
+    Left = 488
+    Height = 23
+    Top = 576
+    Width = 100
+    DataField = '15.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 68
+  end
+  object DBLookupComboBox66: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 16
+    Width = 100
+    DataField = '15.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 69
+  end
+  object DBLookupComboBox67: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 44
+    Width = 100
+    DataField = '16.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 70
+  end
+  object DBLookupComboBox68: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 72
+    Width = 100
+    DataField = '16.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 71
+  end
+  object DBLookupComboBox69: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 100
+    Width = 100
+    DataField = '16.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 72
+  end
+  object DBLookupComboBox70: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 128
+    Width = 100
+    DataField = '16.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 73
+  end
+  object DBLookupComboBox71: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 156
+    Width = 100
+    DataField = '17.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 74
+  end
+  object DBLookupComboBox72: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 184
+    Width = 100
+    DataField = '17.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 75
+  end
+  object DBLookupComboBox73: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 212
+    Width = 100
+    DataField = '17.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 76
+  end
+  object DBLookupComboBox74: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 240
+    Width = 100
+    DataField = '17.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 77
+  end
+  object DBLookupComboBox75: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 268
+    Width = 100
+    DataField = '18.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 78
+  end
+  object DBLookupComboBox76: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 296
+    Width = 100
+    DataField = '18.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 79
+  end
+  object DBLookupComboBox77: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 324
+    Width = 100
+    DataField = '18.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 80
+  end
+  object DBLookupComboBox78: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 352
+    Width = 100
+    DataField = '18.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 81
+  end
+  object DBLookupComboBox79: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 380
+    Width = 100
+    DataField = '19.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 82
+  end
+  object DBLookupComboBox80: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 408
+    Width = 100
+    DataField = '19.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 83
+  end
+  object DBLookupComboBox81: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 436
+    Width = 100
+    DataField = '19.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 84
+  end
+  object DBLookupComboBox82: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 464
+    Width = 100
+    DataField = '19.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 85
+  end
+  object DBLookupComboBox83: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 492
+    Width = 100
+    DataField = '20.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 86
+  end
+  object DBLookupComboBox84: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 520
+    Width = 100
+    DataField = '20.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 87
+  end
+  object DBLookupComboBox85: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 548
+    Width = 100
+    DataField = '20.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 88
+  end
+  object DBLookupComboBox86: TDBLookupComboBox
+    Left = 680
+    Height = 23
+    Top = 576
+    Width = 100
+    DataField = '20.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 89
+  end
+  object DBLookupComboBox87: TDBLookupComboBox
+    Left = 872
+    Height = 23
+    Top = 16
+    Width = 100
+    DataField = '21.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 90
+  end
+  object DBLookupComboBox88: TDBLookupComboBox
+    Left = 872
+    Height = 23
+    Top = 44
+    Width = 100
+    DataField = '21.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 91
+  end
+  object DBLookupComboBox89: TDBLookupComboBox
+    Left = 872
+    Height = 23
+    Top = 72
+    Width = 100
+    DataField = '21.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 92
+  end
+  object DBLookupComboBox90: TDBLookupComboBox
+    Left = 872
+    Height = 23
+    Top = 100
+    Width = 100
+    DataField = '21.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 93
+  end
+  object DBLookupComboBox91: TDBLookupComboBox
+    Left = 872
+    Height = 23
+    Top = 128
+    Width = 100
+    DataField = '22.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 94
+  end
+  object DBLookupComboBox92: TDBLookupComboBox
+    Left = 872
+    Height = 23
+    Top = 156
+    Width = 100
+    DataField = '22.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 95
+  end
+  object DBLookupComboBox93: TDBLookupComboBox
+    Left = 872
+    Height = 23
+    Top = 184
+    Width = 100
+    DataField = '22.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 96
+  end
+  object DBLookupComboBox94: TDBLookupComboBox
+    Left = 872
+    Height = 23
+    Top = 212
+    Width = 100
+    DataField = '22.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 97
+  end
+  object DBLookupComboBox95: TDBLookupComboBox
+    Left = 872
+    Height = 23
+    Top = 240
+    Width = 100
+    DataField = '23.00'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 98
+  end
+  object DBLookupComboBox96: TDBLookupComboBox
+    Left = 872
+    Height = 23
+    Top = 268
+    Width = 100
+    DataField = '23.15'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 99
+  end
+  object DBLookupComboBox97: TDBLookupComboBox
+    Left = 872
+    Height = 23
+    Top = 296
+    Width = 100
+    DataField = '23.30'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 100
+  end
+  object DBLookupComboBox98: TDBLookupComboBox
+    Left = 872
+    Height = 23
+    Top = 324
+    Width = 100
+    DataField = '23.45'
+    DataSource = DataSource1
+    KeyField = 'ID'
+    ListField = 'Medikament'
+    ListFieldIndex = 0
+    ListSource = DataSource4
+    LookupCache = False
+    TabOrder = 101
+  end
+  object SQLite3Connection1: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    AfterConnect = SQLite3Connection1AfterConnect
+    DatabaseName = './sql/migraenetagebuch.sql3db'
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    CharSet = 'utf-8'
+    LogEvents = []
+    Options = []
+    left = 1072
+    top = 716
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = SQLite3Connection1
+    left = 1015
+    top = 714
+  end
+  object SQLQuery1: TSQLQuery
+    IndexFieldNames = 'ID'
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Jahr'
+        DataType = ftDate
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Monat'
+        DataType = ftDate
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = '00.00'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = '00.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '00.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '00.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '01.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '01.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '01.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '01.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '02.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '02.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '02.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '02.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '03.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '03.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '03.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '03.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '04.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '04.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '04.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '04.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '05.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '05.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '05.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '05.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '06.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '06.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '06.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '06.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '07.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '07.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '07.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '07.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '08.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '08.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '08.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '08.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '09.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '09.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '09.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '09.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '10.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '10.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '10.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '10.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '11.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '11.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '11.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '11.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '12.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '12.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '12.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '12.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '13.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '13.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '13.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '13.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '14.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '14.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '14.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '14.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '15.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '15.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '15.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '15.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '16.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '16.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '16.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '16.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '17.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '17.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '17.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '17.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '18.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '18.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '18.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '18.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '19.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '19.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '19.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '19.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '20.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '20.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '20.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '20.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '21.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '21.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '21.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '21.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '22.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '22.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '22.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '22.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '23.00'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '23.15'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '23.30'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = '23.45'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end>
+    Database = SQLite3Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'Select * FROM tblDateTime'
+    )
+    Params = <>
+    left = 928
+    top = 712
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    left = 1016
+    top = 656
+  end
+  object SQLQuery2: TSQLQuery
+    IndexFieldNames = 'ID'
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Jahr'
+        DataType = ftString
+        Precision = -1
+        Size = 6
+      end>
+    Database = SQLite3Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'Select * FROM tblJahr'
+    )
+    Params = <>
+    left = 813
+    top = 717
+  end
+  object SQLQuery3: TSQLQuery
+    IndexFieldNames = 'ID'
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Month'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end>
+    Database = SQLite3Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'Select * FROM tblMonth'
+    )
+    Params = <>
+    left = 760
+    top = 720
+  end
+  object DataSource2: TDataSource
+    DataSet = SQLQuery2
+    left = 808
+    top = 672
+  end
+  object DataSource3: TDataSource
+    DataSet = SQLQuery3
+    left = 760
+    top = 680
+  end
+  object DataSource4: TDataSource
+    DataSet = SQLQuery4
+    left = 672
+    top = 680
+  end
+  object SQLQuery4: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Medikament'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'Image'
+        DataType = ftBlob
+        Precision = -1
+        Size = 0
+      end>
+    Database = SQLite3Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'Select * FROM tblMedikamente'
+    )
+    Params = <>
+    left = 672
+    top = 728
+  end
+  object TrayIcon1: TTrayIcon
+    BalloonFlags = bfInfo
+    BalloonTitle = 'Migräne Tagebuch'
+    Icon.Data = {
+      BE1C00000000010001003030000001001800A81C000016000000280000003000
+      0000600000000100180000000000000000000000000000000000000000000000
+      0000B8FDE9BBFCFAB6F4FF90CFEB589BBA387DA52A6DA61B5BA21C68B41F65B2
+      2363B12A62B32D64B52A62B4215DAF1858AC265AB82664BE2065BC1152A71F5C
+      B22462BC0350AC015CB7114BAA104AA90F49A80D47A60B45A40A44A30943A208
+      42A10047A7003C98003E95014396003B8F003C940543A10645A70E40A417509F
+      2362954989AC88C9E5B6F5FFBDFDFFB5F8F3BCFDFBA4E0F082BCE05991C0316F
+      9F29689A2D6CA82866AC3071AE2F6CAA2E66A72F63A53264A63166A92C66A828
+      65A72A5FA22E69A73571AC2E61993B62994469A32D5B95235F9A0854A00854A0
+      07539F06529E04509C034F9B024E9A024E9A2044981B3C8C29479434529F2546
+      95103A8D0C3E960D449F0F4799104A92084480154E85417AAE77AFD8A1DEF2BF
+      FFFFBAF8FF84BBE04C7EBA295DA0255B9A3A78AE5495C85B9BD275ADD673ABD4
+      74A8D174A8D177ABD476AED773B0D870B1D87AB5D570ACC96FA6BB5576894852
+      635858685459684C5C693F4C6C3F4C6C3F4C6C3E4B6B3E4B6B3D4A6A3D4A6A3D
+      4A6A524B6C4D44654C43644841663F486E4B66925989B95895C75394C74A88BE
+      2962A00A3C880C3B8C3163A574AFCFB4F5FD9CDAF85C94C5295CA2295BA34880
+      BB74B2DB91D4F598DBFAADEBFDAEECFEB0EEFFB2F0FFB1F2FFABF1FEA7EFFBA3
+      EDF9B4FCFFA9EDF2A8DCDC788F874E453B5D4234644B3B5E4D3A744530744530
+      7445307445307445307445307445307445306E5037694A3359402C4A3D2D5E66
+      5B96BBB3B1F1ECA1F0EDA0EBF99AE0F875B3E33E70BC133F98103F89447FA78C
+      CFD868A9D03470A42258974881B97CBAE0A1E5F8B2F7FFAFF4FEAAF3F7ABF5F9
+      AAF7F9A9F9FAA7F7F6A5F6F3A3F5F0A2F4EFA4F5FCACF7F9BDF3EC8FA1945E4C
+      3B68412B6B462C614326644A25644A25644A25644A25654B26654B26654B2665
+      4B26744A2563401E634D317776619DB5A3C0F3E5BFFFFCA3F9EDABFDF0B3FFFD
+      A6EAFF7CB6EA4071BB1043891F5A875597AA4181B71E5D972D6BA16FAED4A1E7
+      F4B4FAF9B2F5F6AAEBF3A2F0F6A1F2F5A2F5F6A2F6F4A3F9F3A9FCF4B2FFF7B8
+      FFFBA5F7FFB8FFFFC2F3F18C9991644D3E6E46336D4931674C315B45395B4539
+      5C463A5C463A5C463A5C463A5C463A5D473B73443C563631696364A6BCC2C3F1
+      FCB8F8FFAAF2FEA1ECFAA3F1E6AFFDF2B7FFFFAAEDFF73AFDD2A629D10498129
+      64952E6AB61B579D3E7DB087CDE5B2FBF9B2FBF3AEEEF3ACE5FAAAF2FEACF6FF
+      AEFCFFACFAFFABF5F7ABEDECADE7E6AEE5E2A3E9F6B5F3FBADD3D57175705D40
+      3770463969483565503A6B403D6B403D6B403D6B403D6B403D6B403D6B403D6B
+      403D6B414262515483979CB2E9F2B4FFFFA3F0FFA8EDFCB9F5FFADF2FFACF6F8
+      B4FFF7BAFFFF93D6EF437CB411429017469C245CBB1751A34181B88DD4E8B1FB
+      F5ADF3EDAEE9F9B7E8FFA8E7FBACEEFFADF2FFA6EAF797D4DE82B6BD719BA068
+      8A906BA5B188B9C184A0A157534E5E3D34774B3E624131574631634931634931
+      63493162483062483062483061472F61472F5C3C297F7D6BAAD5C6B2FFF79BFE
+      F49BF6EDB3F9F2C2F8F1B4EEFFA6E8FAA2F0E5B0FFF298DEEF4C83C01340A112
+      38AE235CB71959A0448FB590E0EBADFDFCA8F2F4B6F4FFAFE5FFA6EDFBA8F3FB
+      B7FDFD99CCC8687E794D4F49413E3647453D4A483D4F493E53493F59483F6046
+      3F65453F68443E68423D65463D60413861423967483F67483F62433A61423966
+      473E443F41809596C1F8F5AEF9F7B6FFFFA9F0F4ABF0F9B1F8FFB3F8FBB1FDFF
+      A8F8FFA6F2F8A8E7F5679EC5114893023DA41D5AB71F5FA64A8DB499DFECACF2
+      F1B2F7FAACEDFC9BDBF4AAEEFBB0EFF796C6C86C8280504D494F3C3756433E54
+      464052473F54473F5947405D474161474163454066433F68433F66464062423C
+      62423C66464066464060403A5F3F3963433D52595CA0C2C2BBFCFA9EEEEDA4F3
+      F6A8F0F7AEF6FEB1F9FFA8EDF0ABF7FDA6F7FEACF8FEA9EAF8609BC20C469100
+      3EA41659B52260A7457DA688BBCB98CECFBCF9FBABF1FE90DDF0AAF2FABCF0F7
+      7E92975346485432325E37356F4E4B6045415C45435E45435F46446145446345
+      446445446344436344436546436243406243406445426243405D3E3B5B3C395C
+      3D3A50686EB6E6E8B1FBFB9FF5F5A5F7FCAEF7FFAEF5FFA7F1FDACF1F4AFFBFF
+      A4F5FCAEFCFFAAEEFB5A98BE0C49930042A81059B51B59A03A6793547686749A
+      9CB9ECEEBAFFFF95E7F8A3F4F9BDEDF375787D5E3C426F4043683C3D724E4E5C
+      3E3D634147644248654349644449644449624449614348604247634649624548
+      6144476043465D4043593C3F56393C56393C5C8088B8F0F59CEBEEAAFFFFAEFF
+      FFAAF2FAA8EFF9A9F1FBB6F9FCB6FFFF9FEFF6A9F7FDA6ECF95695BB0D4C9600
+      40A50E59B515529C3A63902C4859597576A7D1D0BAF8FE90DEEB9BF6FAAADAE0
+      67626B643D4571484D5435385B4345543D4166404C67414D66424E65434E6343
+      4E61434E5E434D5D424C62464C62464C61454B5D41475A3E44583C4255393F52
+      363C688C9498CFD484CDD1B1FFFFB0F9FDA6E5EDB2F1F9B1F7FEA9E8ECB6FCFF
+      9EE9F1ADF7FDA9EDFA5694BA11509A003BA00D57B517549E4973A0415E6D4D67
+      6785A7A68BBBC17BB5C19FF3F98FB7C35B4E5C5B37435E414A3E30364C3D455F
+      47516241506342516243526243526043526043525D43515C42505F4350614552
+      6044515B3F4C593D4A593D4A563A475236433C535B51797E6FAAACAAEAEBA7E0
+      E2A8DDE0B9F0F397D4D686BDC2B5F3FBACF1FAB8FEFFACE9F7548DB41A549F00
+      3EA40F55B31C59A35283AF789DAB41605D5976733E5E6362859394D5E3778B9D
+      5C43575C364853414E433D484F3E4C6845595C42545D43555D43555E44565E44
+      565D43555E42555D41545B40506045555F44545A3F4F583D4D5A3F4F583D4D53
+      3848161B24192F3562898B78A6A7638C8E8CB4B3A5D4D2467D7A5B8990AFE6EF
+      B7F5FFB5F3FB8BC4D333678F144B960944AB0F53B21C5BA55287B2A2CEDB3859
+      5538534F03191F54697880ADC261657D623D57643A51594758514C5B4F3A5060
+      334E5542555743565844575A44575C43575E43575D42565D4155593F515E4456
+      5F4557593F51583E505C42545A4052543A4C261E28131E225975763153520424
+      2356777384ACA700312A39636AA6D7E1B2EDF79ED9E25F93A306375F01358108
+      42A90752B41557A64F89BAA8E3F37DB8B400261C294643525D618A96A27A8190
+      413B52453652634D6A5C426060455F5C425A543B575A415D5E45615C435F553C
+      58523955553C585A415D5B425E5C435F59405C563D59573E5A5B425E5A415D55
+      3C58503F5A221C2D1922263B514C2139314E63602C383E232634405E6381B0AE
+      C0FBF3A1D2D01734493B56891948990044A50350AC195CA74E89B6A5E0F0AAE7
+      E36598917492933A4650525668605F73493E58513F5E61486A543C5C5A42605C
+      4561523A5A573F5F5B4363594161543C5C513959543C5C5840605B43635B4363
+      594161553D5D563E5E5B43635B4363573F5F503E5D3932473940499AAFAD536F
+      69243F3C2A4045546470314F54699594BFF5EE7DACAA203F5448679A1A4B9B00
+      45A60552A811569B437FA99FDCEAC5FFFFB9EDEDA9CAD3263647342C4351435F
+      513E5F5A416760456D563D635842655643644F385E533C62563F65563F65533C
+      62513A60533C62553E645A43695A4369574066533C62543D635A43695B446A58
+      416759446A4A3E5C41435597AAAF5675740012124D727689AEB6284B4F4E7877
+      BCECE64A767534576B5B80B21A4D9D0044A50E5BAA094D8E3D7BA1A1E0EEBBFC
+      FDB8F1F3ABD0DE344861443354523D63563B66593C6A5F42735D46735845704E
+      3E674F3864513A66533C68533C68533C68523B67533C68543D6958416D58416D
+      553E6A513A66533C6859426E5B447058416D5D48754E3F653E3A57435060405C
+      63022D3092C7CA9DD8DA395E623E6464B0D8D32248484E76896694C4144C9B00
+      41A3135EAD0E51904785ABA9E7F7AEF1F4ACEAF0A9D5E656718C503C66513A67
+      593E70583B72573C745C457B5544774D41714D396E4D396E4D396E4F3B70513D
+      72513D72503C714F3B70513D72523E734F3B704C386D4F3B7055417657437854
+      4075543F765646764C436B3034513F55675C8790C0FFFFA2EAEA557E81325656
+      8BAAA71234346D98AB659BCA104B9A0542A40750A21253974D89B3A5E5F7A8EF
+      F2BAFCFFB5E8F87598B24F3F6F4632675B437D5C4180513777523D7B4F407A55
+      4880503C774E3A754D39744F3B76523E79533F7A503C774D39744D39744F3B76
+      4E3A754C3873503C7755417C56427D523E794C3B7A5D4B865243764E48713644
+      6089B0BEBBFBFFB0FFFC749FA22B4A4B556B691F3D3E8DBDCF5A98C60E4C9A0B
+      44A70347A01250974681AE9EE0F2A7F2F4BCFFFFB8EFFC98C1D7696196453973
+      5443825742864F377D533E824D3D7D5548865140804D3C7C4A39794D3C7C5140
+      805342824E3D7D4938784837774B3A7A4C3B7B4C3B7B503F7F5544845443834F
+      3E7E4D3E8257468654407B53447732365966879AA8E6ECB6FFFF91C1C32A4849
+      223231415D5EADE1F24E92BF094B990E45A80C4FAC104C983F7AA8A1E3F6A8F3
+      F5ADF7F7AEEBF5BAE8FA9594CC514B864A3E804F3D82503C845C48904D3F814F
+      41815442874E3C814B397E4D3B805240855341864E3C8147357A47357A4B397E
+      4E3C814F3D8253418657458A5543884F3D824B3D854F3C81644C8C48356C4645
+      6D3D5A6FAAE4EAAAF7F4AADADC324E4F08141460797BC3F9FF488FBB094B990F
+      43A7124BAE0942914A86B4A2E0F2B7F8F9B1F4F5B0F4FFA4E9FD9BCDE1667FA9
+      4745874C3C894E438C4F458B52418B52388B4C3E904D40904E41914F42904E41
+      8F4D418D4B3F8B493E874A3A874E3E8B52428F52428F4F3F8C4D3D8A50408D53
+      439059459051458D463B84554697503F903438739CC6D9B6FEF2C1FBFF274E50
+      0014149EC4C8AEEEFF4896C40B4E9D0E3FA5124BAE0841904A86B4A2E0F2B6F7
+      F8B1F4F5B0F4FFA4E9FDBAEAFF7E95C5534F974D3D904A3D8D473D894D3D8B50
+      378D4D3D944D3E924D3E924D3F914D3F914C3F8F4B3E8C4B3E8C4C3F8B4F428E
+      52459152459151449050438F52459154479354438D4F428C473D895141944B3B
+      8E2E326D7FA8BEAFF6ECAEEEF24D7D7F305553A7D4D7A7E9FB4A97C51052A00E
+      42A6124BAE0841904985B3A1DFF1B6F7F8B1F4F5B0F4FFA3E8FCB6E5FF7A8FC6
+      51499C4D3B994B3C97473E944F3F96573D9B4D3E994C3D984B3C974A3C944A3D
+      934A3D934A3D914A3D914E418F50439151449253469453469454479554479554
+      47955646945044904F46964F3F964E3E922F31715F849EADF0EBABF5F991CFCF
+      83B8B5BAF2F3A5EAFB4F98C410509E0940A1114AAD0841904985B3A1DFF1B6F7
+      F8B0F3F4AFF3FFA3E8FC98C5EB6274B3443A974C38A34E40A64941A04D3F9D50
+      3B9E4D3F9F4B3D9D4A3C9A483A98483B97483C964A3E984B3F994C41914D4292
+      4E4393504595514696514696514696504595594B9D504797544D9E50419C5846
+      9F3C3D81486D89ACEFECA9FAFFB6FFFFB3F6F1BEFFFFA6EBFC5598C50D4E9907
+      44A2114AAD07408F4884B2A0DEF0B5F6F7B0F3F4AFF3FFA2E7FB90BBE6596CB0
+      3F349A4C36AC5040B0443DA5443A9E48379E4C41A24A3FA0483D9E473C9C473D
+      9A473D9A49409B4A419C483E914A40934B41944C42954B41944B41944B41944B
+      419453489E4C4698524AA15042A05A48A546458D3D6082A7E7E89FEFF6ABFBFC
+      ADFDF8ACF7F5A9ECFB5D9AC6104F990C4FAB1049AC07408F4884B2A0DEF0B5F6
+      F7AFF2F3AEF2FFA2E7FB9BC6F15F70B940349E4934AF4C3EB4433FA94842A752
+      45AB4B42A34A41A24940A14941A048409D48409D49429D49429D443D92484196
+      4B44994A4398463F94433C91453E93484196483E984B459C4C48A15245A75643
+      A4494591416185A1DFE5ACF2FFA2F1F4A6FBF7A6F2F1AFEDFD619BC50F4F9606
+      53AA1049AC063F8E4884B2A0DEF0B4F5F6AFF2F3AEF2FFA2E7FBA5D0FB6576BF
+      4137A24A35B34B3EB8413EAB4744AB534BB04A44A34A44A34B45A44B46A24A45
+      A049449F48449D48449D443E954B459C504AA14D479E443E953F3990433D9449
+      439A413A955250AA5350AC6153B8543FA5494493506E97A7E2ECBEF9FFA4EEF4
+      AFFFFFA9F5F4B1ECFC6699C40F5297004EA31049AC063F8E4783B19FDDEFB4F5
+      F6AFF2F3AEF2FFA1E6FAAEDAFF6D7FC6483EA94F3AB9493EB83838A437379B40
+      3B9E4A44A34B46A24D48A44D48A34D48A34B47A049469C48459B474198504AA1
+      5650A7514BA24640973F3990443E954C469D433B98615FB9625EBD7164CA5442
+      A74C4697607DA9B0EAF6BAECFE9CE2E9B0FFFFA7F3F2AEE6F76899C515599C00
+      51A21249AC043F8E4485B29BE0F1B0F8F8ADF5F5AEF4FFA5E8FDB9F4FF7CA3DA
+      4853B5413BAC493FA9433F9F3E3AA33E3DB14F4CAF4744A74643A64E4CAC5150
+      AE4C4BA94A49A54E4DA94848AC4546A83F3E9E3E3A9947429D514BA44B439A3C
+      33893B42915D5BB58678DE7C6BD44B449F4254957EABCDBBF9FFA7F4F7ADF5FC
+      AFF3FAB4F8FDA3EAF459A0C1155A9F0C4DAF1249AC043F8E4485B29BE0F1B0F8
+      F8ADF5F5AEF4FFA5E8FDB4F4FF84AFE2515FBF3D37AC453BAD5049B14F4BB447
+      46B45854BB4F4BB24C48AD4F4CAF4E4BAE4B49A95250B05E5DBB4D4DB15051B3
+      4B4AAA403D993E39944842994F489D4E4699565AA85753AC5B4EB45042AC3E3D
+      99546EAA8DC3DCB5FCFFA7F4F7ADF5FCAEF2F9B4F8FDA3EAF459A0C1165BA00C
+      4DAF1249AC043F8E4485B29BE0F1B0F8F8ADF5F5AEF4FFA5E8FDB4F8FD9ACAF4
+      667AD23634AB342AA64E46B85753BC4948AF554FBA524DB6544FB85955BC5753
+      BA534FB45B58BB6865C86565C96364C65757B54846A04340964C479C514B9C4E
+      489742418B50489F4F44AC3B339E3E48A0759ACEA8E8F3AFFFF4A7F4F7ADF5FC
+      AEF2F9B4F8FDA2E9F359A0C1175CA10E4FB11249AC043F8E4485B29BE0F1B0F8
+      F8ADF5F5AEF4FFA5E8FDADF6F4AEE5FF83A0EB3B42B126209D4B42BA6763CC64
+      64C2625DCA5752BF504CB6524EB85450B95956BD6865CC7976DD7777DB6869CB
+      5151AF43419A4643984D4A9A433F8B302B763D367F4B44994944A7383DA0536A
+      B899CBF5B9FFFF9FFAE0A8F5F8ADF5FCAEF2F9B4F8FDA2E9F35AA1C2185DA20F
+      50B21249AC043F8E4485B29BE0F1B0F8F8ADF5F5AEF4FFA5E8FD9FEAE8B7F4FF
+      9DC6FD5567C43033A6514DC4817DE79190EC807DEA6461CE4947B1413FA94847
+      AF5857BE6F6ED58483EA8687E97678D75D5EB94B4AA04B4A9A52509C4A488E3B
+      387D5E57A23E3B8B2B32874057A7769FDDADEBFFB6FFFF98F3DAA8F5F8ADF5FC
+      AEF2F9B3F7FCA2E9F35BA2C3195EA31152B41249AC043F8E4485B29BE0F1B0F8
+      F8ADF5F5AEF4FFA5E8FD9DE7EBB7FCFFAFE7FF789BDA4C59BB5454C67D77E297
+      93F37F7DE76766CE5150B84F4EB55554BB5A5ABE6263C56B6CCE7576D87173D2
+      6263BD4B4B9F41418F4948905352945554944E4899282E7B364D9178A1D89FDB
+      FFA5EBFCA7F4F6B0FFF6A9F6F9AEF6FDAEF2F9B3F7FCA2E9F35BA2C31A5FA413
+      54B61249AC043F8E4485B29BE0F1B0F8F8ADF5F5AEF4FFA5E8FDA3EEF7B1FBFD
+      B7F9FE9FCFF1758DD95C60C96660CD7C73DB6769CF595BC15153B75659BB585B
+      BD5256B54E52B15055B24849AB4E50AF4B4CA63C3D8E33337F3A3B7F45468349
+      498534338944529A7BA0D2ADE9FFAFF8FF9FEAF2A8F0F8BBFDFFA9F6F9AEF6FD
+      AEF2F9B3F7FCA2E9F35BA2C31B60A51455B71249AC043F8E4485B29BE0F1B0F8
+      F8ADF5F5AEF4FFA5E8FDA5EDFEA7F4F1B3FFF4BAF3FF9CBBF87076D9625BCA70
+      63CF6265C75255B74447A94246A54146A34146A34A4FAA575CB74344A6494BAA
+      4B4CA64A4B9C4E4F995355964E4F8C42437D5556B08297DBB0DFFFAFF7FFA0F3
+      F1AAF9FCB4F7FFA8E1FBA9F6F9AEF6FDAEF2F9B2F6FBA2E9F35CA3C41C61A615
+      56B81041C5064296357C9788D4D0B2F9FCACEFFFA1E4FF9EE2FFB0ECF8B5F3FD
+      B6F7FFB4F3FFB5EAFFA8CEFE8398DC5B66B8534DBE4B45B24C46AB5550AC5552
+      A24D4A924C4B8B5654903F3E8049478D484894383A8E2C2D8835379B575BC479
+      7CE98FD7E89BE3F4A5EDFEA6EEFFA7EFFFACF4FFADF5FFA9F1FFB0F7FFABF8F5
+      A9FBE9AFFEF39BE2F05E9AC82F64A72B5DA91B53B2033D8827669280C2D4B4F8
+      FDB2F8FFA7ECFBA3E9FFADF0F9B2F8FFB0FBFDAEF8FCB3F7FFB8F1FFADD7FF99
+      BDF37584E16372CF5460BE4C56B44048A63339983336983B3EA02B28A33737AB
+      454BB64E5DBA5A70BE708ECF8FB2EAA6CEFFA8EFF9B0F7FFB4FBFFB1F8FFAFF6
+      FFB2F9FFB3FAFFB0F7FFA3EBF5A8F5F2AEFDF4ACF7F98DD0EB508ABE2B61A231
+      65AB4888B80F46890C3D89588BC39BD9EBB0F8F2ACF5F3A5ECF6A3EBF3A8F2F6
+      A5F6F39DF2EA9DF1ECA7F4F7AAF2FEA8EAFCA8DCFF97CAF287B5E57DA5E07093
+      DC6684D76681DC6E86E6687EE86F88EA7A9AED86B2EF97CBF3A5E2F6AEF2F7B2
+      FCF8ADF2F5B0F5F8B0F5F8ABF0F3A8EDF0AAEFF2ABF0F3AAEFF2AAF2F9B2FCFE
+      AEF7FB98DBF06CA7D5396FAC2F65A24B83BA82C7D63366A401248C1D43A16197
+      C097DDDDACF2F2A6E5F9B3F1FFB8FAFFB6FFFFB0FDF9ACFDF4ACFFF6ABFEF6A7
+      F9F4C0FFFABAFFF8B8FFFCB8FCFFB7F5FFB0EAFFAFE6FFB2E7FFB8F6FFB6F4FF
+      B4F6FFB5FBFFB7FFFFB4FFFDACFBF2A3F5E9B5F7FCB7F9FEB7F9FEB5F7FCB5F7
+      FCB6F8FDB6F8FDB6F8FDB2FAFFAEF5FF94D8EB69A7CD3F75B1285D9C427BAF75
+      B3D9A6E9EC6898D22344B10327931A4D8C5595AE80BDD781B8E596C9E999CEE9
+      99D2E79AD7E59CDDE59AE1E493DEE08CD9DB94DAD394DAD395DDD79AE0DF9AE0
+      E096DADF91D7DE91D6DF9AE2DC98E0DA97DDDC96DEDE96DDE193DBE390D7E18D
+      D3E096D4E696D4E698D6E89BD9EB9DDBED9BD9EB9AD8EA99D7E98CCCE481C1D9
+      5F9DBB3971A0295D99356AA366A1C9A0E1F6B2F2F699D0F76795E22554A80031
+      740B45792A619A3364AA4170A63E6DA13C6A9A3E6C9B43759F427CA03D7C9E37
+      7A994176A84176A83F78A5407AA43F7DA33E7EA14080A23E81A03C73AC3E75AE
+      4078AF427BAE457FB04984B14E8AB45390B84A82AB477FA84880A94D85AE4F87
+      B04B83AC4880A94880A9487EAD477FA83871982F66933F74A65F96C18CCAE2B7
+      FBFFB5F5FAADF0F99ADFF369AFD42B6CA30C478D0C3F8F0B3A8E1249920D428B
+      0C3A870E3A87103C890D408908428A06448A13479A14489B12499A114A99114D
+      9914539D15579E15589D1046A51349A7164EA71951A319539F1A569C1E5A9C21
+      5E9E2D61A3265A9C24589A2A5EA02C60A2295D9F275B9D295D9F2D5BA23B6DA7
+      437BA4538DB075AFD292CEEBA5E7F2B6FDFAB5F5F9A7F3E7A8FFE9A2F9F679C4
+      EB4B87D33064BE2453AE0A4DA20C48A11145A31645A71644A91244A80E47AA0D
+      4AAA1352A21756A71859AA185AAD165CB0165EB2135CB21059AF155FA71862AA
+      1F66B02268B52569B62568B72566B72465B6386ABC2F61B32B5DAF3163B53668
+      BA3567B93668BA3B6DBF3D66BB5383C5669DC87FBBD8A2E0F8B3F4FFB0F5F8AF
+      F8EE000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000
+    }
+    Hint = 'Migräne Tagebuch v 1.0'
+    left = 891
+    top = 656
+  end
+  object XMLConfig1: TXMLConfig
+    StartEmpty = False
+    RootName = 'CONFIG'
+    left = 631
+    top = 646
+  end
+  object EventLog1: TEventLog
+    AppendContent = False
+    LogType = ltSystem
+    Active = False
+    RaiseExceptionOnError = False
+    DefaultEventType = etCustom
+    CustomLogType = 0
+    EventIDOffset = 0
+    OnGetCustomCategory = EventLog1GetCustomCategory
+    Paused = False
+    left = 1101
+    top = 667
+  end
+end
