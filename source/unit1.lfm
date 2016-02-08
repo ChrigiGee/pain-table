@@ -6,7 +6,7 @@ object Form1: TForm1
   ActiveControl = DBLookupComboBox3
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Form1'
-  ClientHeight = 790
+  ClientHeight = 770
   ClientWidth = 1181
   Icon.Data = {
     BE1C00000000010001003030000001001800A81C000016000000280000003000
@@ -241,6 +241,7 @@ object Form1: TForm1
     0000000000000000000000000000000000000000000000000000000000000000
     0000
   }
+  Menu = MainMenu1
   OnClose = FormClose
   OnCreate = FormCreate
   OnHide = FormHide
@@ -248,7 +249,7 @@ object Form1: TForm1
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
-    Top = 767
+    Top = 747
     Width = 1181
     Panels = <    
       item
@@ -2458,7 +2459,6 @@ object Form1: TForm1
   object SQLite3Connection1: TSQLite3Connection
     Connected = False
     LoginPrompt = False
-    AfterConnect = SQLite3Connection1AfterConnect
     DatabaseName = './sql/migraenetagebuch.sql3db'
     KeepConnection = False
     Transaction = SQLTransaction1
@@ -3423,17 +3423,88 @@ object Form1: TForm1
     left = 631
     top = 646
   end
-  object EventLog1: TEventLog
-    AppendContent = False
-    LogType = ltSystem
-    Active = False
-    RaiseExceptionOnError = False
-    DefaultEventType = etCustom
-    CustomLogType = 0
-    EventIDOffset = 0
-    OnGetCustomCategory = EventLog1GetCustomCategory
-    Paused = False
-    left = 1101
-    top = 667
+  object MainMenu1: TMainMenu
+    left = 436
+    top = 687
+    object MenuItem1: TMenuItem
+      Caption = '&Datei'
+      object MenuItem4: TMenuItem
+        Caption = '&Medikamente'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = '&Jahr && Monat'
+        OnClick = MenuItem5Click
+      end
+      object MenuItem14: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem15: TMenuItem
+        Caption = 'Dr&uck'
+        object MenuItem17: TMenuItem
+          Caption = 'Druck&vorschau'
+        end
+        object MenuItem19: TMenuItem
+          Caption = 'Dru&cken'
+        end
+        object MenuItem18: TMenuItem
+          Caption = '&PDF Druck'
+        end
+      end
+      object MenuItem16: TMenuItem
+        Caption = 'Aus&wertung'
+        object MenuItem20: TMenuItem
+          Caption = 'New Item23'
+        end
+        object MenuItem21: TMenuItem
+          Caption = 'New Item24'
+        end
+        object MenuItem22: TMenuItem
+          Caption = 'New Item25'
+        end
+      end
+      object MenuItem23: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem24: TMenuItem
+        Caption = '&Beenden'
+        OnClick = MenuItem24Click
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = '&Sprache'
+      object MenuItem6: TMenuItem
+        Caption = 'Deu&tsch'
+      end
+      object MenuItem7: TMenuItem
+        Caption = 'F&ranzösisch'
+      end
+      object MenuItem8: TMenuItem
+        Caption = '&Italienisch'
+      end
+      object MenuItem9: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem10: TMenuItem
+        Caption = '&Englisch'
+      end
+    end
+    object MenuItem3: TMenuItem
+      Caption = '&Hilfe'
+      object MenuItem11: TMenuItem
+        Caption = 'Hi&lfe'
+        OnClick = MenuItem11Click
+      end
+      object MenuItem25: TMenuItem
+        Caption = 'send &Crash Report'
+        OnClick = MenuItem25Click
+      end
+      object MenuItem12: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem13: TMenuItem
+        Caption = '&About'
+      end
+    end
   end
 end

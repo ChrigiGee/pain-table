@@ -6,8 +6,9 @@ interface
 
 uses
   Classes, SysUtils, sqlite3conn, sqldb, db, XMLConf, eventlog, FileUtil,
-  DBDateTimePicker, Forms, Controls, Graphics, Dialogs, ComCtrls, StdCtrls,
-  DbCtrls, Buttons, DBExtCtrls, ExtCtrls, XMLPropStorage;
+  DBDateTimePicker, Forms, Controls, Graphics, Dialogs, ComCtrls,
+  StdCtrls, DbCtrls, Buttons, DBExtCtrls, ExtCtrls, XMLPropStorage, Menus;
+
 
 type
 
@@ -119,7 +120,6 @@ type
     DBLookupComboBox98: TDBLookupComboBox;
     DBNavigator1: TDBNavigator;
     DBRadioGroup1: TDBRadioGroup;
-    EventLog1: TEventLog;
     Label1: TLabel;
     Label10: TLabel;
     Label11: TLabel;
@@ -216,6 +216,32 @@ type
     Label94: TLabel;
     Label95: TLabel;
     Label96: TLabel;
+    MainMenu1: TMainMenu;
+    MenuItem1: TMenuItem;
+    MenuItem10: TMenuItem;
+    MenuItem11: TMenuItem;
+    MenuItem12: TMenuItem;
+    MenuItem13: TMenuItem;
+    MenuItem14: TMenuItem;
+    MenuItem15: TMenuItem;
+    MenuItem16: TMenuItem;
+    MenuItem17: TMenuItem;
+    MenuItem18: TMenuItem;
+    MenuItem19: TMenuItem;
+    MenuItem2: TMenuItem;
+    MenuItem20: TMenuItem;
+    MenuItem21: TMenuItem;
+    MenuItem22: TMenuItem;
+    MenuItem23: TMenuItem;
+    MenuItem24: TMenuItem;
+    MenuItem25: TMenuItem;
+    MenuItem3: TMenuItem;
+    MenuItem4: TMenuItem;
+    MenuItem5: TMenuItem;
+    MenuItem6: TMenuItem;
+    MenuItem7: TMenuItem;
+    MenuItem8: TMenuItem;
+    MenuItem9: TMenuItem;
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
     SQLite3Connection1: TSQLite3Connection;
@@ -227,20 +253,25 @@ type
     StatusBar1: TStatusBar;
     TrayIcon1: TTrayIcon;
     XMLConfig1: TXMLConfig;
-     procedure DBComboBox1Change(Sender: TObject);
-     procedure EventLog1GetCustomCategory(Sender: TObject; var Code: Word);
+
      procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
      procedure FormCreate(Sender: TObject);
      procedure FormHide(Sender: TObject);
-     procedure FormResize(Sender: TObject);
+     procedure MenuItem11Click(Sender: TObject);
+     procedure MenuItem24Click(Sender: TObject);
+     procedure MenuItem25Click(Sender: TObject);
+     procedure MenuItem4Click(Sender: TObject);
+     procedure MenuItem5Click(Sender: TObject);
+
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
-    procedure SQLite3Connection1AfterConnect(Sender: TObject);
-    procedure TrayIcon1Click(Sender: TObject);
+
+
     procedure StoreFormState(Sender: TObject);
         procedure RestoreFormState(Sender: TObject);
   private
     { private declarations }
+    procedure AppException(Sender: TObject; E: Exception);
   public
     { public declarations }
   end;
@@ -251,10 +282,34 @@ var
 implementation
 
 {$R *.lfm}
-uses unit2,Unit3;
+uses unit2,Unit3,smtpsend,ssl_openssl,Mimepart,Mimemess;
 { TForm1 }
 
+procedure TForm1.AppException(Sender: TObject; E: Exception);
+var
+  sLogFile: String;
+  f: Text;
+  DirStr: string;
+begin
+if not DirectoryExists('./log') then
+   DirStr:= 'log';
+  CreateDir(DirStr);
 
+  sLogFile:='./log/crashreport.log';
+  if not FileExists(sLogFile) then
+  begin
+    AssignFile(f, sLogFile);
+    ReWrite(f);
+  end
+  else
+  begin
+    AssignFile(f, sLogFile);
+    Append(f)
+  end;
+  WriteLn(f, formatdatetime('yyyy mm dd hh:nn:ss',now)+#9+'Exception:'+E.Message);
+  DumpExceptionBackTrace(f);
+  CloseFile(f);
+end;
 procedure TForm1.SpeedButton1Click(Sender: TObject);
 begin
 StoreFormState(self);
@@ -269,28 +324,20 @@ Form3.Show;
 Form1.Hide;
 end;
 
-procedure TForm1.SQLite3Connection1AfterConnect(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.TrayIcon1Click(Sender: TObject);
-begin
-
-end;
-
 
 procedure TForm1.FormCreate(Sender: TObject);
 var
   DirStr: string;
 begin
 
-EventLog1.FileName:='./log/CrashReport.txt';
-  EventLog1.Active:=True;
-
-
 {Testen ob Directory existiert wenn nicht erstelle Directory}
-  if not DirectoryExists('./sql') then
+if not DirectoryExists('./log') then
+   DirStr:= 'log';
+  CreateDir(DirStr);
+
+  Application.OnException:=@AppException;
+
+if not DirectoryExists('./sql') then
    DirStr:= 'sql';
   CreateDir(DirStr);
 
@@ -302,9 +349,8 @@ EventLog1.FileName:='./log/CrashReport.txt';
    DirStr:= 'ini';
    CreateDir(DirStr);
 
-  if not DirectoryExists('./log') then
-   DirStr:= 'log';
-  CreateDir(DirStr);
+
+
 
 
 {schliesst Verbindung zu SQLite Datenbanken }
@@ -318,21 +364,21 @@ EventLog1.FileName:='./log/CrashReport.txt';
 
   {erstellt die Tabellle DateTime}
 
-  SQLQuery1.SQL.text := 'CREATE TABLE IF NOT EXISTS tblDateTime (ID INTEGER PRIMARY KEY,Jahr Date, Monat Date, aktDatum Date, "Printed" VARCHAR(15), "00.00" VARCHAR(10), "00.15" VARCHAR(25),"00.30" VARCHAR(25),"00.45" VARCHAR(25),"01.00" VARCHAR(25),"01.15" VARCHAR(25),"01.30" VARCHAR(25),"01.45" VARCHAR(25),"02.00" VARCHAR(25),"02.15" VARCHAR(25),"02.30" VARCHAR(25),"02.45" VARCHAR(25),"03.00" VARCHAR(25),"03.15" VARCHAR(25),"03.30" VARCHAR(25),"03.45" VARCHAR(25),"04.00" VARCHAR(25),"04.15" VARCHAR(25),"04.30" VARCHAR(25),"04.45" VARCHAR(25),"05.00" VARCHAR(25),"05.15" VARCHAR(25),"05.30" VARCHAR(25),"05.45" VARCHAR(25),"06.00" VARCHAR(25),"06.15" VARCHAR(25),"06.30" VARCHAR(25),"06.45" VARCHAR(25),"07.00" VARCHAR(25),"07.15" VARCHAR(25),"07.30" VARCHAR(25),"07.45" VARCHAR(25),"08.00" VARCHAR(25),"08.15" VARCHAR(25),"08.30" VARCHAR(25),"08.45" VARCHAR(25),"09.00" VARCHAR(25),"09.15" VARCHAR(25),"09.30" VARCHAR(25),"09.45" VARCHAR(25),"10.00" VARCHAR(25),"10.15" VARCHAR(25),"10.30" VARCHAR(25),"10.45" VARCHAR(25),"11.00" VARCHAR(25),"11.15" VARCHAR(25),"11.30" VARCHAR(25),"11.45" VARCHAR(25),"12.00" VARCHAR(25),"12.15" VARCHAR(25),"12.30" VARCHAR(25),"12.45" VARCHAR(25),"13.00" VARCHAR(25),"13.15" VARCHAR(25),"13.30" VARCHAR(25),"13.45" VARCHAR(25),"14.00" VARCHAR(25),"14.15" VARCHAR(25),"14.30" VARCHAR(25),"14.45" VARCHAR(25),"15.00" VARCHAR(25),"15.15" VARCHAR(25),"15.30" VARCHAR(25),"15.45" VARCHAR(25),"16.00" VARCHAR(25),"16.15" VARCHAR(25),"16.30" VARCHAR(25),"16.45" VARCHAR(25),"17.00" VARCHAR(25),"17.15" VARCHAR(25),"17.30" VARCHAR(25),"17.45" VARCHAR(25),"18.00" VARCHAR(25),"18.15" VARCHAR(25),"18.30" VARCHAR(25),"18.45" VARCHAR(25),"19.00" VARCHAR(25),"19.15" VARCHAR(25),"19.30" VARCHAR(25),"19.45" VARCHAR(25),"20.00" VARCHAR(25),"20.15" VARCHAR(25),"20.30" VARCHAR(25),"20.45" VARCHAR(25),"21.00" VARCHAR(25),"21.15" VARCHAR(25),"21.30" VARCHAR(25),"21.45" VARCHAR(25),"22.00" VARCHAR(25),"22.15" VARCHAR(25),"22.30" VARCHAR(25),"22.45" VARCHAR(25),"23.00" VARCHAR(25),"23.15" VARCHAR(25),"23.30" VARCHAR(25),"23.45" VARCHAR(25))';
+  SQLQuery1.SQL.text := 'CREATE TABLE IF NOT EXISTS tblDateTime (ID AUTO_INCREMENT PRIMARY KEY,Jahr Date, Monat Date, aktDatum Date, "Printed" VARCHAR(15), "00.00" VARCHAR(10), "00.15" VARCHAR(25),"00.30" VARCHAR(25),"00.45" VARCHAR(25),"01.00" VARCHAR(25),"01.15" VARCHAR(25),"01.30" VARCHAR(25),"01.45" VARCHAR(25),"02.00" VARCHAR(25),"02.15" VARCHAR(25),"02.30" VARCHAR(25),"02.45" VARCHAR(25),"03.00" VARCHAR(25),"03.15" VARCHAR(25),"03.30" VARCHAR(25),"03.45" VARCHAR(25),"04.00" VARCHAR(25),"04.15" VARCHAR(25),"04.30" VARCHAR(25),"04.45" VARCHAR(25),"05.00" VARCHAR(25),"05.15" VARCHAR(25),"05.30" VARCHAR(25),"05.45" VARCHAR(25),"06.00" VARCHAR(25),"06.15" VARCHAR(25),"06.30" VARCHAR(25),"06.45" VARCHAR(25),"07.00" VARCHAR(25),"07.15" VARCHAR(25),"07.30" VARCHAR(25),"07.45" VARCHAR(25),"08.00" VARCHAR(25),"08.15" VARCHAR(25),"08.30" VARCHAR(25),"08.45" VARCHAR(25),"09.00" VARCHAR(25),"09.15" VARCHAR(25),"09.30" VARCHAR(25),"09.45" VARCHAR(25),"10.00" VARCHAR(25),"10.15" VARCHAR(25),"10.30" VARCHAR(25),"10.45" VARCHAR(25),"11.00" VARCHAR(25),"11.15" VARCHAR(25),"11.30" VARCHAR(25),"11.45" VARCHAR(25),"12.00" VARCHAR(25),"12.15" VARCHAR(25),"12.30" VARCHAR(25),"12.45" VARCHAR(25),"13.00" VARCHAR(25),"13.15" VARCHAR(25),"13.30" VARCHAR(25),"13.45" VARCHAR(25),"14.00" VARCHAR(25),"14.15" VARCHAR(25),"14.30" VARCHAR(25),"14.45" VARCHAR(25),"15.00" VARCHAR(25),"15.15" VARCHAR(25),"15.30" VARCHAR(25),"15.45" VARCHAR(25),"16.00" VARCHAR(25),"16.15" VARCHAR(25),"16.30" VARCHAR(25),"16.45" VARCHAR(25),"17.00" VARCHAR(25),"17.15" VARCHAR(25),"17.30" VARCHAR(25),"17.45" VARCHAR(25),"18.00" VARCHAR(25),"18.15" VARCHAR(25),"18.30" VARCHAR(25),"18.45" VARCHAR(25),"19.00" VARCHAR(25),"19.15" VARCHAR(25),"19.30" VARCHAR(25),"19.45" VARCHAR(25),"20.00" VARCHAR(25),"20.15" VARCHAR(25),"20.30" VARCHAR(25),"20.45" VARCHAR(25),"21.00" VARCHAR(25),"21.15" VARCHAR(25),"21.30" VARCHAR(25),"21.45" VARCHAR(25),"22.00" VARCHAR(25),"22.15" VARCHAR(25),"22.30" VARCHAR(25),"22.45" VARCHAR(25),"23.00" VARCHAR(25),"23.15" VARCHAR(25),"23.30" VARCHAR(25),"23.45" VARCHAR(25))';
   SQLQuery1.ExecSQL;
   SQLTransaction1.commit;
 
 {erstellt die Tabelle Jahr}
-SQLQuery2.SQL.text := 'CREATE TABLE IF NOT EXISTS tblJahr (ID INTEGER Primary KEY, Jahr Date)';
+SQLQuery2.SQL.text := 'CREATE TABLE IF NOT EXISTS tblJahr (ID AUTO_INCREMENT Primary KEY, Jahr Date)';
 SQLQuery2.ExecSQL;
 SQLTransaction1.commit;
 
 {erstellt die Tabelle Monat}
-SQLQuery3.SQL.text := 'CREATE TABLE IF NOT EXISTS tblMonth (ID INTEGER Primary KEY, Monat Date)';
+SQLQuery3.SQL.text := 'CREATE TABLE IF NOT EXISTS tblMonth (ID AUTO_INCREMENT Primary KEY, Monat Date)';
 SQLQuery3.ExecSQL;
 SQLTransaction1.commit;
 
-SQLQuery4.SQL.text := 'CREATE TABLE IF NOT EXISTS tblMedikamente (ID INTEGER Primary KEY, Medikament VARCHAR(25), Image BLOB)';
+SQLQuery4.SQL.text := 'CREATE TABLE IF NOT EXISTS tblMedikamente (ID AUTO_INCREMENT Primary KEY, Medikament VARCHAR(25), Image BLOB)';
 SQLQuery4.ExecSQL;
 SQLTransaction1.commit;
 
@@ -342,7 +388,7 @@ SQLQuery2.ExecSQL;
 SQLTransaction1.commit;
 
 {Erstellt Tabelle Jahr und für diverse Jahre als Einträge hinzu}
-SQLQuery2.SQL.text := 'CREATE TABLE IF NOT EXISTS tblJahr ( ID INTEGER Primary KEY, Jahr VARCHAR(6))';
+SQLQuery2.SQL.text := 'CREATE TABLE IF NOT EXISTS tblJahr ( ID AUTO_INCREMENT Primary KEY, Jahr VARCHAR(6))';
 SQLQuery2.ExecSQL;
 SQLTransaction1.commit;
 SQLQuery2.SQL.text := 'INSERT INTO tblJahr VALUES (NULL, "2010")';
@@ -378,7 +424,7 @@ SQLQuery3.ExecSQL;
 SQLTransaction1.commit;
 
 {Erstellt Tabelle Monat und für diverse Monate als Einträge hinzu}
-SQLQuery3.SQL.text := 'CREATE TABLE IF NOT EXISTS tblMonth (ID INTEGER Primary KEY, Month VARCHAR(25))';
+SQLQuery3.SQL.text := 'CREATE TABLE IF NOT EXISTS tblMonth (ID AUTO_INCREMENT Primary KEY, Month VARCHAR(25))';
 SQLQuery3.ExecSQL;
 SQLTransaction1.commit;
 SQLQuery3.SQL.text := 'INSERT INTO tblMonth VALUES (NULL, "Januar")';
@@ -456,32 +502,99 @@ begin
    StoreFormState(self);
 end;
 
-procedure TForm1.FormResize(Sender: TObject);
+procedure TForm1.MenuItem11Click(Sender: TObject);
 begin
 
 end;
 
-procedure TForm1.DBComboBox1Change(Sender: TObject);
+procedure TForm1.MenuItem24Click(Sender: TObject);
 begin
+  Form1.StoreFormState(self);
 
+ Form1.SQLQuery1.active:=False;
+ Form1.SQLQuery2.active:=False;
+ Form1.SQLQuery3.active:=False;
+ Form1.SQLQuery4.active:=False;
+
+ Form1.SQLQuery1.Close;
+Form1.SQLQuery2.Close;
+Form1.SQLQuery3.Close;
+Form1.SQLQuery4.Close;
+
+    Form1.SQLQuery1.active:=False;
+ Form1.SQLite3Connection1.CloseTransactions;
+ Form1.SQLite3Connection1.CloseDataSets;
+Form1.SQLite3Connection1.Connected:=False;
+ Form1.SQLite3Connection1.Free;
+ Close;
 end;
 
-procedure TForm1.EventLog1GetCustomCategory(Sender: TObject; var Code: Word);
+procedure TForm1.MenuItem25Click(Sender: TObject);
+var
+  m:TMimemess;
+  l:tstringlist;
+  p: TMimepart;
 begin
-
+  m:=TMimemess.create;
+  l:=tstringlist.create;
+  try
+    p := m.AddPartMultipart('mixed', nil);
+    l.loadfromfile('./log/crashreport.log');
+    m.AddPartText(l,p);
+    m.AddPartBinaryFromFile('./log/crashreport.log',p);
+    m.header.from:='cschaer131@bluewin.ch';
+    m.header.tolist.add('cschaer131@bluewin.ch');
+    m.header.subject:='Crash Report';
+    m.EncodeMessage;
+    // memo1.lines.assign(m.lines);
+    //if you wish to send it by SMTP too, then:
+    SendToRaw('from Mail', 'to mail', 'smtp_Server', m.lines, 'UserName', 'Password');
+  finally
+    m.free;
+    l.free;
+  end;
 end;
+
+procedure TForm1.MenuItem4Click(Sender: TObject);
+begin
+  StoreFormState(self);
+Form2.Show;
+  Form1.Hide;
+end;
+
+procedure TForm1.MenuItem5Click(Sender: TObject);
+begin
+  StoreFormState(self);
+Form3.Show;
+Form1.Hide;
+end;
+
 
 procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-Form1.EventLog1.Active:=False;
 
- Form1.EventLog1.Free;
+//Form1.SQLQuery1.ApplyUpdates;
+//Form1.SQLQuery2.ApplyUpdates;
+//Form1.SQLQuery3.ApplyUpdates;
+//Form1.SQLQuery4.ApplyUpdates;
 
-Form2.SQLQuery1.ApplyUpdates;
  Form1.StoreFormState(self);
- Form2.StoreFormState(self);
- Form3.StoreFormState(self);
 
+ Form1.SQLQuery1.active:=False;
+ Form1.SQLQuery2.active:=False;
+ Form1.SQLQuery3.active:=False;
+ Form1.SQLQuery4.active:=False;
+
+ Form1.SQLQuery1.Close;
+Form1.SQLQuery2.Close;
+Form1.SQLQuery3.Close;
+Form1.SQLQuery4.Close;
+
+    Form1.SQLQuery1.active:=False;
+ Form1.SQLite3Connection1.CloseTransactions;
+ Form1.SQLite3Connection1.CloseDataSets;
+Form1.SQLite3Connection1.Connected:=False;
+ Form1.SQLite3Connection1.Free;
 end;
 
 procedure TForm1.RestoreFormState(Sender: TObject);

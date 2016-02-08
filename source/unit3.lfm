@@ -1,7 +1,7 @@
 object Form3: TForm3
-  Left = 110
+  Left = 105
   Height = 475
-  Top = 508
+  Top = 469
   Width = 653
   BorderStyle = bsSingle
   Caption = 'Form3'
@@ -9,7 +9,7 @@ object Form3: TForm3
   ClientWidth = 653
   OnClose = FormClose
   OnCreate = FormCreate
-  LCLVersion = '1.7'
+  LCLVersion = '1.4.4.0'
   object DBGrid1: TDBGrid
     Left = 16
     Height = 192
@@ -71,7 +71,7 @@ object Form3: TForm3
     Panels = <>
   end
   object SQLQuery1: TSQLQuery
-    PacketRecords = -1
+    PacketRecords = 1
     IndexFieldNames = 'ID'
     FieldDefs = <>
     Filtered = True
@@ -80,7 +80,6 @@ object Form3: TForm3
     SQL.Strings = (
       'Select * FROM tblJahr'
     )
-    Options = []
     Params = <>
     ServerFiltered = True
     left = 472
@@ -105,27 +104,13 @@ object Form3: TForm3
     SQL.Strings = (
       'Select * FROM tblMonth'
     )
-    Options = []
     Params = <>
     left = 600
     top = 376
   end
-  object EventLog1: TEventLog
-    AppendContent = False
-    LogType = ltSystem
-    Active = False
-    RaiseExceptionOnError = False
-    DefaultEventType = etCustom
-    CustomLogType = 0
-    EventIDOffset = 0
-    Paused = False
-    left = 612
-    top = 343
-  end
   object XMLConfig1: TXMLConfig
     StartEmpty = False
     RootName = 'CONFIG'
-    ReadOnly = False
     left = 621
     top = 307
   end

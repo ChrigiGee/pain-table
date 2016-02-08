@@ -8,7 +8,7 @@ uses
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, datetimectrls, Unit1, Unit2,
-  Unit3
+  Unit3, laz_synapse
   { you can add units after this };
 
 {$R *.res}

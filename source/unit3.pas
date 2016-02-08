@@ -19,7 +19,6 @@ type
     DBEdit2: TDBEdit;
     DBGrid1: TDBGrid;
     DBGrid2: TDBGrid;
-    EventLog1: TEventLog;
     Jahr: TDBText;
     SpeedButton2: TSpeedButton;
     SpeedButton3: TSpeedButton;
@@ -38,6 +37,7 @@ type
 
   private
     { private declarations }
+    procedure AppException(Sender: TObject; E: Exception);
   public
     { public declarations }
   end;
@@ -72,9 +72,7 @@ end;
 procedure TForm3.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
 
- Form3.EventLog1.Active:=False;
 
-Form3.EventLog1.Free;
  Form3.StoreFormState(self);
 end;
 
@@ -83,8 +81,7 @@ var
   DirStr: string;
 begin
 
-EventLog1.FileName:='./log/CrashReport.txt';
-  EventLog1.Active:=True;
+Application.OnException:=@AppException;
 
 
 {Testet Datenbank Connection}
@@ -173,5 +170,30 @@ begin
 end;
 
    end;
+procedure TForm3.AppException(Sender: TObject; E: Exception);
+var
+  sLogFile: String;
+  f: Text;
+  DirStr: string;
+begin
+if not DirectoryExists('./log') then
+   DirStr:= 'log';
+  CreateDir(DirStr);
+
+  sLogFile:='./log/crashreport.log';
+  if not FileExists(sLogFile) then
+  begin
+    AssignFile(f, sLogFile);
+    ReWrite(f);
+  end
+  else
+  begin
+    AssignFile(f, sLogFile);
+    Append(f)
+  end;
+  WriteLn(f, formatdatetime('yyyy mm dd hh:nn:ss',now)+#9+'Exception:'+E.Message);
+  DumpExceptionBackTrace(f);
+  CloseFile(f);
+end;
 end.
 
