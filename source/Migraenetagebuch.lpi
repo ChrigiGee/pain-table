@@ -34,22 +34,31 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="5">
+    <RequiredPackages Count="8">
       <Item1>
-        <PackageName Value="laz_synapse"/>
+        <PackageName Value="log4fpc"/>
       </Item1>
       <Item2>
-        <PackageName Value="DateTimeCtrls"/>
+        <PackageName Value="zcomponent"/>
       </Item2>
       <Item3>
-        <PackageName Value="FCL"/>
+        <PackageName Value="dcpcrypt"/>
       </Item3>
       <Item4>
-        <PackageName Value="SQLDBLaz"/>
+        <PackageName Value="laz_synapse"/>
       </Item4>
       <Item5>
-        <PackageName Value="LCL"/>
+        <PackageName Value="DateTimeCtrls"/>
       </Item5>
+      <Item6>
+        <PackageName Value="FCL"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="SQLDBLaz"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="LCL"/>
+      </Item8>
     </RequiredPackages>
     <Units Count="6">
       <Unit0>
@@ -57,36 +66,36 @@
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="unit1.pas"/>
+        <Filename Value="schmerz_tabelle_unit.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Unit1"/>
       </Unit1>
       <Unit2>
-        <Filename Value="unit2.pas"/>
+        <Filename Value="medikamente_unit.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form2"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Unit2"/>
       </Unit2>
       <Unit3>
-        <Filename Value="unit3.pas"/>
+        <Filename Value="monat_jahr_unit.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form3"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Unit3"/>
       </Unit3>
       <Unit4>
-        <Filename Value="D:\Programme\lazarus\components\a new component\synapse\cryptlib-3.2.2\cryptlib.pas"/>
+        <Filename Value="D:\Programme\lazarus\components\a new component\synapse\synapse40\source\lib\ssl_openssl.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit4>
       <Unit5>
-        <Filename Value="D:\Programme\lazarus\components\a new component\synapse\synapse40\source\lib\ssl_openssl.pas"/>
+        <Filename Value="my_mail_unit.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form4"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
       </Unit5>
     </Units>
   </ProjectOptions>
@@ -98,17 +107,23 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="D:\Programme\lazarus\components\a new component\synapse\cryptlib-3.2.2\;D:\Programme\lazarus\components\a new component\synapse\synapse40\source\lib\"/>
+      <OtherUnitFiles Value="D:\Programme\lazarus\components\a new component\synapse\synapse40\source\lib\"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <CodeGeneration>
+      <Checks>
+        <IOChecks Value="True"/>
+        <RangeChecks Value="True"/>
+        <OverflowChecks Value="True"/>
+        <StackChecks Value="True"/>
+      </Checks>
       <Optimizations>
         <OptimizationLevel Value="3"/>
       </Optimizations>
     </CodeGeneration>
     <Linking>
       <Debugging>
-        <GenerateDebugInfo Value="False"/>
+        <DebugInfoType Value="dsDwarf3"/>
         <StripSymbols Value="True"/>
       </Debugging>
       <LinkSmart Value="True"/>
@@ -118,6 +133,12 @@
         </Win32>
       </Options>
     </Linking>
+    <Other>
+      <Verbosity>
+        <ShowDebugInfo Value="True"/>
+        <ShowUsedFiles Value="True"/>
+      </Verbosity>
+    </Other>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="3">
