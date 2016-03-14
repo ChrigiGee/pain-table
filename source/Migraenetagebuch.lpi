@@ -36,19 +36,22 @@
         <CommandLineParams Value="--debug-log=&quot;./log/exeption.txt&quot;"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="4">
+    <RequiredPackages Count="5">
       <Item1>
-        <PackageName Value="DateTimeCtrls"/>
+        <PackageName Value="laz_synapse"/>
       </Item1>
       <Item2>
-        <PackageName Value="FCL"/>
+        <PackageName Value="DateTimeCtrls"/>
       </Item2>
       <Item3>
-        <PackageName Value="SQLDBLaz"/>
+        <PackageName Value="FCL"/>
       </Item3>
       <Item4>
-        <PackageName Value="LCL"/>
+        <PackageName Value="SQLDBLaz"/>
       </Item4>
+      <Item5>
+        <PackageName Value="LCL"/>
+      </Item5>
     </RequiredPackages>
     <Units Count="6">
       <Unit0>
@@ -80,6 +83,7 @@
         <UnitName Value="Unit3"/>
       </Unit3>
       <Unit4>
+<<<<<<< HEAD
         <Filename Value="udm1.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="DM1"/>
@@ -94,6 +98,14 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uMediEdit"/>
+=======
+        <Filename Value="D:\Programme\lazarus\components\a new component\synapse\cryptlib-3.2.2\cryptlib.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="D:\Programme\lazarus\components\a new component\synapse\synapse40\source\lib\ssl_openssl.pas"/>
+        <IsPartOfProject Value="True"/>
+>>>>>>> b8408906f64c6381921985f76a0f602ffb623dbc
       </Unit5>
     </Units>
   </ProjectOptions>
@@ -105,6 +117,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="D:\Programme\lazarus\components\a new component\synapse\cryptlib-3.2.2\;D:\Programme\lazarus\components\a new component\synapse\synapse40\source\lib\"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>
@@ -123,7 +136,6 @@
       <Optimizations>
         <OptimizationLevel Value="3"/>
       </Optimizations>
-      <SmallerCode Value="True"/>
     </CodeGeneration>
     <Linking>
       <Debugging>

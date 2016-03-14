@@ -6,10 +6,16 @@ object FormEditMedi: TFormEditMedi
   Caption = 'FormEditMedi'
   ClientHeight = 439
   ClientWidth = 679
+  OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
+<<<<<<< HEAD
   OnDestroy = FormDestroy
   LCLVersion = '1.6.0.4'
+=======
+  OnShow = FormShow
+  LCLVersion = '1.4.4.0'
+>>>>>>> b8408906f64c6381921985f76a0f602ffb623dbc
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
@@ -90,28 +96,54 @@ object FormEditMedi: TFormEditMedi
     Caption = 'UpDate'
     OnClick = SpeedButton3Click
   end
+<<<<<<< HEAD
   object DSMedikamente: TDataSource
     DataSet = DM1.QMedikamente
+=======
+  object SQLQuery1: TSQLQuery
+    IndexFieldNames = 'ID'
+    MaxIndexesCount = 10
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Medikament'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'Image'
+        DataType = ftBlob
+        Precision = -1
+        Size = 0
+      end>
+    Database = Form1.SQLite3Connection1
+    Transaction = Form1.SQLTransaction1
+    SQL.Strings = (
+      'Select * FROM tblMedikamente'
+    )
+    UpdateSQL.Strings = (
+      'UpDate * FROM tblMedikamente'
+    )
+    Params = <>
+    left = 448
+    top = 350
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+>>>>>>> b8408906f64c6381921985f76a0f602ffb623dbc
     left = 512
     top = 352
   end
   object XMLConfig1: TXMLConfig
     StartEmpty = False
     RootName = 'CONFIG'
-    ReadOnly = False
     left = 335
     top = 337
-  end
-  object EventLog1: TEventLog
-    AppendContent = False
-    LogType = ltSystem
-    Active = False
-    RaiseExceptionOnError = False
-    DefaultEventType = etCustom
-    CustomLogType = 0
-    EventIDOffset = 0
-    Paused = False
-    left = 418
-    top = 332
   end
 end
