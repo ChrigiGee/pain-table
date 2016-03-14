@@ -1,14 +1,15 @@
-object Form2: TForm2
-  Left = 753
+object FormEditMedi: TFormEditMedi
+  Left = 596
   Height = 439
-  Top = 526
+  Top = 506
   Width = 679
-  Caption = 'Form2'
+  Caption = 'FormEditMedi'
   ClientHeight = 439
   ClientWidth = 679
   OnClose = FormClose
   OnCreate = FormCreate
-  LCLVersion = '1.7'
+  OnDestroy = FormDestroy
+  LCLVersion = '1.6.0.4'
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
@@ -20,9 +21,9 @@ object Form2: TForm2
     Left = 416
     Height = 15
     Top = 16
-    Width = 43
+    Width = 41
     DataField = 'ID'
-    DataSource = DataSource1
+    DataSource = DSMedikamente
     ParentColor = False
   end
   object DBGrid1: TDBGrid
@@ -32,7 +33,7 @@ object Form2: TForm2
     Width = 400
     Color = clWindow
     Columns = <>
-    DataSource = DataSource1
+    DataSource = DSMedikamente
     TabOrder = 1
   end
   object DBEdit1: TDBEdit
@@ -41,7 +42,7 @@ object Form2: TForm2
     Top = 40
     Width = 208
     DataField = 'Medikament'
-    DataSource = DataSource1
+    DataSource = DSMedikamente
     CharCase = ecNormal
     MaxLength = 25
     TabOrder = 2
@@ -52,7 +53,7 @@ object Form2: TForm2
     Top = 80
     Width = 208
     DataField = 'Image'
-    DataSource = DataSource1
+    DataSource = DSMedikamente
   end
   object DBNavigator1: TDBNavigator
     Left = 8
@@ -68,7 +69,7 @@ object Form2: TForm2
     ChildSizing.ControlsPerLine = 100
     ClientHeight = 25
     ClientWidth = 241
-    DataSource = DataSource1
+    DataSource = DSMedikamente
     Options = []
     TabOrder = 3
     VisibleButtons = [nbPrior, nbNext, nbInsert, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
@@ -89,39 +90,8 @@ object Form2: TForm2
     Caption = 'UpDate'
     OnClick = SpeedButton3Click
   end
-  object SQLQuery1: TSQLQuery
-    PacketRecords = -1
-    IndexFieldNames = 'ID'
-    MaxIndexesCount = 10
-    FieldDefs = <    
-      item
-        Name = 'ID'
-        DataType = ftInteger
-        Precision = -1
-      end    
-      item
-        Name = 'Medikament'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = 'Image'
-        DataType = ftBlob
-        Precision = -1
-      end>
-    Database = Form1.SQLite3Connection1
-    Transaction = Form1.SQLTransaction1
-    SQL.Strings = (
-      'Select * FROM tblMedikamente'
-    )
-    Options = []
-    Params = <>
-    left = 448
-    top = 350
-  end
-  object DataSource1: TDataSource
-    DataSet = SQLQuery1
+  object DSMedikamente: TDataSource
+    DataSet = DM1.QMedikamente
     left = 512
     top = 352
   end

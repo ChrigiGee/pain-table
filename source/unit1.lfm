@@ -244,7 +244,7 @@ object Form1: TForm1
   OnClose = FormClose
   OnCreate = FormCreate
   OnHide = FormHide
-  LCLVersion = '1.4.4.0'
+  LCLVersion = '1.6.0.4'
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
@@ -1049,6 +1049,7 @@ object Form1: TForm1
     DataSource = DataSource1
     Options = []
     TabOrder = 1
+    VisibleButtons = [nbPrior, nbNext, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
   end
   object SpeedButton2: TSpeedButton
     Left = 829
@@ -1072,6 +1073,7 @@ object Form1: TForm1
     NumGlyphs = 1
     MaxLength = 0
     TabOrder = 2
+    DataField = 'aktDatum'
     DataSource = DataSource1
   end
   object DBLookupComboBox1: TDBLookupComboBox
@@ -1081,10 +1083,12 @@ object Form1: TForm1
     Width = 100
     DataField = 'Monat'
     DataSource = DataSource1
+    KeyField = 'ID'
     ListField = 'Month'
     ListFieldIndex = 0
     ListSource = DataSource3
     LookupCache = False
+    OnChange = DBLookupComboBox1Change
     TabOrder = 3
   end
   object DBLookupComboBox2: TDBLookupComboBox
@@ -1094,6 +1098,7 @@ object Form1: TForm1
     Width = 100
     DataField = 'Jahr'
     DataSource = DataSource1
+    KeyField = 'ID'
     ListField = 'Jahr'
     ListFieldIndex = 0
     ListSource = DataSource2
@@ -1101,11 +1106,11 @@ object Form1: TForm1
     TabOrder = 4
   end
   object DBRadioGroup1: TDBRadioGroup
-    Left = 829
+    Left = 800
     Height = 57
     Hint = 'Printed'#13#10'not Printed'
-    Top = 400
-    Width = 185
+    Top = 392
+    Width = 240
     Caption = 'DBRadioGroup1'
     DataSource = DataSource1
     TabOrder = 5
@@ -1113,6 +1118,18 @@ object Form1: TForm1
       'Printed'
       'not Printed'
     )
+    object DBCheckBox1: TDBCheckBox
+      Left = 6
+      Height = 37
+      Top = 0
+      Width = 224
+      Caption = 'gedruckt ( ja / nein)'
+      DataField = 'Printed'
+      DataSource = DataSource1
+      TabOrder = 0
+      ValueChecked = 'True'
+      ValueUnchecked = 'False'
+    end
   end
   object DBLookupComboBox3: TDBLookupComboBox
     Left = 96
@@ -1121,6 +1138,7 @@ object Form1: TForm1
     Width = 100
     DataField = '00.00'
     DataSource = DataSource1
+    KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
     ListSource = DataSource4
@@ -1134,6 +1152,7 @@ object Form1: TForm1
     Width = 100
     DataField = '00.15'
     DataSource = DataSource1
+    KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
     ListSource = DataSource4
@@ -1147,6 +1166,7 @@ object Form1: TForm1
     Width = 100
     DataField = '00.30'
     DataSource = DataSource1
+    KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
     ListSource = DataSource4
@@ -2455,644 +2475,33 @@ object Form1: TForm1
     LookupCache = False
     TabOrder = 101
   end
-  object SQLite3Connection1: TSQLite3Connection
-    Connected = False
-    LoginPrompt = False
-    AfterConnect = SQLite3Connection1AfterConnect
-    DatabaseName = './sql/migraenetagebuch.sql3db'
-    KeepConnection = False
-    Transaction = SQLTransaction1
-    CharSet = 'utf-8'
-    LogEvents = []
-    Options = []
-    left = 1072
-    top = 716
-  end
-  object SQLTransaction1: TSQLTransaction
-    Active = False
-    Database = SQLite3Connection1
-    left = 1015
-    top = 714
-  end
   object SQLQuery1: TSQLQuery
+    PacketRecords = -1
     IndexFieldNames = 'ID'
-    FieldDefs = <    
-      item
-        Name = 'ID'
-        DataType = ftInteger
-        Precision = -1
-        Size = 0
-      end    
-      item
-        Name = 'Jahr'
-        DataType = ftDate
-        Precision = -1
-        Size = 0
-      end    
-      item
-        Name = 'Monat'
-        DataType = ftDate
-        Precision = -1
-        Size = 0
-      end    
-      item
-        Name = '00.00'
-        DataType = ftString
-        Precision = -1
-        Size = 10
-      end    
-      item
-        Name = '00.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '00.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '00.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '01.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '01.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '01.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '01.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '02.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '02.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '02.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '02.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '03.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '03.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '03.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '03.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '04.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '04.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '04.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '04.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '05.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '05.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '05.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '05.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '06.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '06.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '06.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '06.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '07.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '07.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '07.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '07.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '08.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '08.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '08.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '08.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '09.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '09.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '09.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '09.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '10.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '10.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '10.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '10.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '11.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '11.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '11.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '11.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '12.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '12.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '12.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '12.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '13.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '13.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '13.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '13.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '14.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '14.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '14.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '14.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '15.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '15.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '15.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '15.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '16.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '16.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '16.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '16.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '17.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '17.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '17.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '17.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '18.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '18.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '18.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '18.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '19.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '19.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '19.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '19.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '20.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '20.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '20.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '20.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '21.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '21.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '21.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '21.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '22.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '22.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '22.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '22.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '23.00'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '23.15'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '23.30'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = '23.45'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end>
-    Database = SQLite3Connection1
-    Transaction = SQLTransaction1
+    FieldDefs = <>
+    Database = DM1.Con1
+    Transaction = DM1.SQLTran1
     SQL.Strings = (
       'Select * FROM tblDateTime'
     )
+    Options = []
     Params = <>
-    left = 928
-    top = 712
+    left = 664
+    top = 672
   end
   object DataSource1: TDataSource
-    DataSet = SQLQuery1
-    left = 1016
-    top = 656
+    DataSet = DM1.QDay
+    left = 1104
+    top = 608
   end
   object SQLQuery2: TSQLQuery
+    PacketRecords = -1
     IndexFieldNames = 'ID'
     FieldDefs = <    
       item
         Name = 'ID'
         DataType = ftInteger
         Precision = -1
-        Size = 0
       end    
       item
         Name = 'Jahr'
@@ -3100,23 +2509,24 @@ object Form1: TForm1
         Precision = -1
         Size = 6
       end>
-    Database = SQLite3Connection1
-    Transaction = SQLTransaction1
+    Database = DM1.Con1
+    Transaction = DM1.SQLTran1
     SQL.Strings = (
       'Select * FROM tblJahr'
     )
+    Options = []
     Params = <>
-    left = 813
-    top = 717
+    left = 664
+    top = 728
   end
   object SQLQuery3: TSQLQuery
+    PacketRecords = -1
     IndexFieldNames = 'ID'
     FieldDefs = <    
       item
         Name = 'ID'
         DataType = ftInteger
         Precision = -1
-        Size = 0
       end    
       item
         Name = 'Month'
@@ -3124,29 +2534,30 @@ object Form1: TForm1
         Precision = -1
         Size = 25
       end>
-    Database = SQLite3Connection1
-    Transaction = SQLTransaction1
+    Database = DM1.Con1
+    Transaction = DM1.SQLTran1
     SQL.Strings = (
       'Select * FROM tblMonth'
     )
+    Options = []
     Params = <>
-    left = 760
-    top = 720
+    left = 600
+    top = 728
   end
   object DataSource2: TDataSource
     DataSet = SQLQuery2
-    left = 808
-    top = 672
+    left = 816
+    top = 656
   end
   object DataSource3: TDataSource
     DataSet = SQLQuery3
-    left = 760
-    top = 680
+    left = 1104
+    top = 504
   end
   object DataSource4: TDataSource
-    DataSet = SQLQuery4
-    left = 672
-    top = 680
+    DataSet = DM1.QMedikamente
+    left = 1104
+    top = 568
   end
   object SQLQuery4: TSQLQuery
     FieldDefs = <    
@@ -3154,7 +2565,6 @@ object Form1: TForm1
         Name = 'ID'
         DataType = ftInteger
         Precision = -1
-        Size = 0
       end    
       item
         Name = 'Medikament'
@@ -3166,16 +2576,16 @@ object Form1: TForm1
         Name = 'Image'
         DataType = ftBlob
         Precision = -1
-        Size = 0
       end>
-    Database = SQLite3Connection1
-    Transaction = SQLTransaction1
+    Database = DM1.Con1
+    Transaction = DM1.SQLTran1
     SQL.Strings = (
       'Select * FROM tblMedikamente'
     )
+    Options = []
     Params = <>
-    left = 672
-    top = 728
+    left = 600
+    top = 664
   end
   object TrayIcon1: TTrayIcon
     BalloonFlags = bfInfo
@@ -3414,14 +2824,8 @@ object Form1: TForm1
       0000
     }
     Hint = 'Migräne Tagebuch v 1.0'
-    left = 891
-    top = 656
-  end
-  object XMLConfig1: TXMLConfig
-    StartEmpty = False
-    RootName = 'CONFIG'
-    left = 631
-    top = 646
+    left = 1024
+    top = 632
   end
   object EventLog1: TEventLog
     AppendContent = False
@@ -3431,9 +2835,14 @@ object Form1: TForm1
     DefaultEventType = etCustom
     CustomLogType = 0
     EventIDOffset = 0
-    OnGetCustomCategory = EventLog1GetCustomCategory
     Paused = False
     left = 1101
     top = 667
+  end
+  object XMLPropStorage1: TXMLPropStorage
+    StoredValues = <>
+    OnRestoreProperties = XMLPropStorage1RestoreProperties
+    left = 1024
+    top = 568
   end
 end

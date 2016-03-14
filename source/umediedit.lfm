@@ -1,0 +1,183 @@
+object FormMediEdit: TFormMediEdit
+  Left = 243
+  Height = 407
+  Top = 575
+  Width = 642
+  Caption = 'FormMediEdit'
+  ClientHeight = 407
+  ClientWidth = 642
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  SessionProperties = 'WindowState;Width;Height;Left;Top'
+  LCLVersion = '1.6.0.4'
+  object DBGrid1: TDBGrid
+    Left = 8
+    Height = 200
+    Top = 8
+    Width = 400
+    Color = clWindow
+    Columns = <>
+    DataSource = DSMedikamente
+    TabOrder = 0
+  end
+  object BuSaveExit: TSpeedButton
+    Left = 272
+    Height = 35
+    Top = 216
+    Width = 136
+    Caption = 'save && exit'
+    OnClick = BuSaveExitClick
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 8
+    Height = 25
+    Top = 224
+    Width = 241
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 241
+    DataSource = DSMedikamente
+    Options = []
+    TabOrder = 1
+    VisibleButtons = [nbPrior, nbNext, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 384
+    Width = 642
+    Panels = <>
+  end
+  object PageControl1: TPageControl
+    Left = 408
+    Height = 200
+    Top = 8
+    Width = 224
+    ActivePage = TabSheet1
+    TabIndex = 0
+    TabOrder = 3
+    object TabSheet1: TTabSheet
+      Caption = 'Medikamente'
+      ClientHeight = 172
+      ClientWidth = 216
+      object DBText1: TDBText
+        Left = 0
+        Height = 15
+        Top = 0
+        Width = 41
+        DataField = 'ID'
+        DataSource = DSMedikamente
+        ParentColor = False
+      end
+      object GroupBox1: TGroupBox
+        Left = 0
+        Height = 57
+        Top = 24
+        Width = 209
+        Caption = 'Medikamente kurtz'
+        ClientHeight = 37
+        ClientWidth = 205
+        TabOrder = 0
+        object DBEdit1: TDBEdit
+          Left = 8
+          Height = 23
+          Top = 0
+          Width = 192
+          DataField = 'Medikament'
+          DataSource = DSMedikamente
+          CharCase = ecNormal
+          MaxLength = 0
+          TabOrder = 0
+        end
+      end
+      object GroupBox2: TGroupBox
+        Left = 0
+        Height = 56
+        Top = 96
+        Width = 209
+        Caption = 'Medikamente lang'
+        ClientHeight = 36
+        ClientWidth = 205
+        TabOrder = 1
+        object DBEdit2: TDBEdit
+          Left = 8
+          Height = 23
+          Top = 0
+          Width = 192
+          DataField = 'Medikament_long'
+          DataSource = DSMedikamente
+          CharCase = ecNormal
+          MaxLength = 0
+          TabOrder = 0
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Images'
+      ClientHeight = 172
+      ClientWidth = 216
+      object DBImage1: TDBImage
+        Left = 0
+        Height = 114
+        Top = 0
+        Width = 216
+        DataField = 'Image'
+        DataSource = DSMedikamente
+      end
+      object TabSheet3: TTabSheet
+        Caption = 'TabSheet3'
+        ClientHeight = 344
+        ClientWidth = 432
+        object DBImage2: TDBImage
+          Left = 0
+          Height = 114
+          Top = 0
+          Width = 216
+        end
+      end
+      object Button1: TButton
+        Left = 0
+        Height = 40
+        Top = 128
+        Width = 208
+        Caption = 'UpLoad Image'
+        OnClick = Button1Click
+        TabOrder = 1
+      end
+    end
+  end
+  object EventLog1: TEventLog
+    AppendContent = False
+    LogType = ltSystem
+    Active = False
+    RaiseExceptionOnError = False
+    DefaultEventType = etCustom
+    CustomLogType = 0
+    EventIDOffset = 0
+    Paused = False
+    left = 456
+    top = 312
+  end
+  object DSMedikamente: TDataSource
+    DataSet = DM1.QMedikamente
+    left = 536
+    top = 312
+  end
+  object XMLPropStorage1: TXMLPropStorage
+    StoredValues = <>
+    OnSaveProperties = XMLPropStorage1SaveProperties
+    OnRestoreProperties = XMLPropStorage1RestoreProperties
+    left = 360
+    top = 312
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    left = 592
+    top = 312
+  end
+end
