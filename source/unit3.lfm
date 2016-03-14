@@ -9,7 +9,7 @@ object Form3: TForm3
   ClientWidth = 653
   OnClose = FormClose
   OnCreate = FormCreate
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.7'
   object DBGrid1: TDBGrid
     Left = 16
     Height = 192
@@ -17,7 +17,7 @@ object Form3: TForm3
     Width = 632
     Color = clWindow
     Columns = <>
-    DataSource = DataSource2
+    DataSource = DSMonth
     TabOrder = 0
   end
   object Jahr: TDBText
@@ -25,7 +25,7 @@ object Form3: TForm3
     Height = 15
     Top = 216
     Width = 21
-    DataSource = DataSource1
+    DataSource = DSYear
     ParentColor = False
   end
   object DBEdit2: TDBEdit
@@ -33,7 +33,7 @@ object Form3: TForm3
     Height = 23
     Top = 248
     Width = 198
-    DataSource = DataSource1
+    DataSource = DSYear
     CharCase = ecNormal
     MaxLength = 0
     TabOrder = 1
@@ -45,7 +45,7 @@ object Form3: TForm3
     Width = 368
     Color = clWindow
     Columns = <>
-    DataSource = DataSource1
+    DataSource = DSYear
     TabOrder = 2
   end
   object SpeedButton2: TSpeedButton
@@ -70,12 +70,12 @@ object Form3: TForm3
     Width = 653
     Panels = <>
   end
-  object DataSource1: TDataSource
+  object DSYear: TDataSource
     DataSet = DM1.QYear
     left = 400
     top = 376
   end
-  object DataSource2: TDataSource
+  object DSMonth: TDataSource
     DataSet = DM1.QMonth
     left = 536
     top = 376

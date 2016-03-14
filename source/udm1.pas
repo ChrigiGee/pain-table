@@ -161,9 +161,8 @@ begin
     Con1.Transaction.Rollback;
     DebugLn('Error: Cannot create tblDateTime');
   end;
- {
-  SQL := 'CREATE TABLE IF NOT EXISTS tblJahr (ID INTEGER Primary KEY, Year Date)';
 
+  SQL := 'CREATE TABLE IF NOT EXISTS tblJahr (ID INTEGER Primary KEY, Year Date)';
   Con1.Transaction.StartTransaction;
   try
     Con1.ExecuteDirect(SQL);
@@ -174,7 +173,6 @@ begin
   end;
 
   SQL := 'CREATE TABLE IF NOT EXISTS tblMonth (ID INTEGER Primary KEY, Month Date)';
-
   Con1.Transaction.StartTransaction;
   try
     Con1.ExecuteDirect(SQL);
@@ -183,7 +181,117 @@ begin
     Con1.Transaction.Rollback;
     DebugLn('Error: Cannot create tblMonth');
   end;
-  }
+
+
+
+  //{Löscht die Tabelle Jahr (fals vorhanden)}
+  SQL := 'DROP TABLE IF EXISTS tblJahr';
+  Con1.Transaction.StartTransaction;
+  try
+    Con1.ExecuteDirect(SQL);
+    Con1.Transaction.Commit;
+  except
+    Con1.Transaction.Rollback;
+    DebugLn('Error: Cannot drop tblJahr');
+  end;
+
+  //{Erstellt Tabelle Jahr und für diverse Jahre als Einträge hinzu}
+  SQL := 'CREATE TABLE IF NOT EXISTS tblJahr ( ID INTEGER Primary KEY, Jahr VARCHAR(6))';
+  Con1.Transaction.StartTransaction;
+  try
+    Con1.ExecuteDirect(SQL);
+    Con1.Transaction.Commit;
+  except
+    Con1.Transaction.Rollback;
+    DebugLn('Error: Cannot create tblJahr');
+  end;
+
+  Con1.Transaction.StartTransaction;
+  try
+    SQL := 'INSERT INTO tblJahr VALUES (NULL, "2010")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblJahr VALUES (NULL, "2011")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblJahr VALUES (NULL, "2012")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblJahr VALUES (NULL, "2013")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblJahr VALUES (NULL, "2014")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblJahr VALUES (NULL, "2015")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblJahr VALUES (NULL, "2016")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblJahr VALUES (NULL, "2017")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblJahr VALUES (NULL, "2018")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblJahr VALUES (NULL, "2019")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblJahr VALUES (NULL, "2020")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblJahr VALUES (NULL, "2009")';
+    Con1.ExecuteDirect(SQL);
+    Con1.Transaction.Commit;
+  except
+    Con1.Transaction.Rollback;
+    DebugLn('Error: Cannot insert values in tblJahr');
+  end;
+
+  //{Löscht die Tabelle Monat}
+  SQL := 'DROP TABLE IF EXISTS tblMonth';
+  Con1.Transaction.StartTransaction;
+  try
+    Con1.ExecuteDirect(SQL);
+    Con1.Transaction.Commit;
+  except
+    Con1.Transaction.Rollback;
+    DebugLn('Error: Cannot drop tblMonth');
+  end;
+
+  //{Erstellt Tabelle Monat und für diverse Monate als Einträge hinzu}
+  SQL := 'CREATE TABLE IF NOT EXISTS tblMonth (ID INTEGER Primary KEY, Month VARCHAR(25))';
+  Con1.Transaction.StartTransaction;
+  try
+    Con1.ExecuteDirect(SQL);
+    Con1.Transaction.Commit;
+  except
+    Con1.Transaction.Rollback;
+    DebugLn('Error: Cannot create tblMonth');
+  end;
+
+  Con1.Transaction.StartTransaction;
+  try
+    SQL := 'INSERT INTO tblMonth VALUES (NULL, "Januar")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblMonth VALUES (NULL, "Februar")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblMonth VALUES (NULL, "März")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblMonth VALUES (NULL, "April")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblMonth VALUES (NULL, "Mai")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblMonth VALUES (NULL, "Juni")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblMonth VALUES (NULL, "Juli")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblMonth VALUES (NULL, "August")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblMonth VALUES (NULL, "September")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblMonth VALUES (NULL, "Oktober")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblMonth VALUES (NULL, "November")';
+    Con1.ExecuteDirect(SQL);
+    SQL := 'INSERT INTO tblMonth VALUES (NULL, "Dezember")';
+    Con1.ExecuteDirect(SQL);
+    Con1.Transaction.Commit;
+  except
+    Con1.Transaction.Rollback;
+    DebugLn('Error: Cannot insert values in tblMonth');
+  end;
+
 end;
 
 function TDM1.DeleteDB: Boolean;

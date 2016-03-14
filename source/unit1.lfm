@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 248
+  Left = 332
   Height = 790
-  Top = 103
+  Top = 95
   Width = 1181
   ActiveControl = DBLookupComboBox3
   BorderIcons = [biSystemMenu, biMinimize]
@@ -244,7 +244,7 @@ object Form1: TForm1
   OnClose = FormClose
   OnCreate = FormCreate
   OnHide = FormHide
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.7'
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
@@ -1046,7 +1046,7 @@ object Form1: TForm1
     ChildSizing.ControlsPerLine = 100
     ClientHeight = 25
     ClientWidth = 241
-    DataSource = DataSource1
+    DataSource = DSDay
     Options = []
     TabOrder = 1
     VisibleButtons = [nbPrior, nbNext, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
@@ -1074,7 +1074,7 @@ object Form1: TForm1
     MaxLength = 0
     TabOrder = 2
     DataField = 'aktDatum'
-    DataSource = DataSource1
+    DataSource = DSDay
   end
   object DBLookupComboBox1: TDBLookupComboBox
     Left = 824
@@ -1082,11 +1082,11 @@ object Form1: TForm1
     Top = 472
     Width = 100
     DataField = 'Monat'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Month'
     ListFieldIndex = 0
-    ListSource = DataSource3
+    ListSource = DSMonth
     LookupCache = False
     OnChange = DBLookupComboBox1Change
     TabOrder = 3
@@ -1097,11 +1097,11 @@ object Form1: TForm1
     Top = 472
     Width = 100
     DataField = 'Jahr'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Jahr'
     ListFieldIndex = 0
-    ListSource = DataSource2
+    ListSource = DSYear
     LookupCache = False
     TabOrder = 4
   end
@@ -1112,7 +1112,7 @@ object Form1: TForm1
     Top = 392
     Width = 240
     Caption = 'DBRadioGroup1'
-    DataSource = DataSource1
+    DataSource = DSDay
     TabOrder = 5
     Values.Strings = (
       'Printed'
@@ -1125,7 +1125,7 @@ object Form1: TForm1
       Width = 224
       Caption = 'gedruckt ( ja / nein)'
       DataField = 'Printed'
-      DataSource = DataSource1
+      DataSource = DSDay
       TabOrder = 0
       ValueChecked = 'True'
       ValueUnchecked = 'False'
@@ -1137,11 +1137,11 @@ object Form1: TForm1
     Top = 16
     Width = 100
     DataField = '00.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 6
   end
@@ -1151,11 +1151,11 @@ object Form1: TForm1
     Top = 44
     Width = 100
     DataField = '00.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 7
   end
@@ -1165,11 +1165,11 @@ object Form1: TForm1
     Top = 72
     Width = 100
     DataField = '00.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 8
   end
@@ -1179,11 +1179,11 @@ object Form1: TForm1
     Top = 100
     Width = 100
     DataField = '00.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 9
   end
@@ -1193,11 +1193,11 @@ object Form1: TForm1
     Top = 128
     Width = 100
     DataField = '01.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 10
   end
@@ -1207,11 +1207,11 @@ object Form1: TForm1
     Top = 156
     Width = 100
     DataField = '01.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 11
   end
@@ -1221,11 +1221,11 @@ object Form1: TForm1
     Top = 184
     Width = 100
     DataField = '01.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 12
   end
@@ -1235,11 +1235,11 @@ object Form1: TForm1
     Top = 212
     Width = 100
     DataField = '01.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 13
   end
@@ -1249,11 +1249,11 @@ object Form1: TForm1
     Top = 240
     Width = 100
     DataField = '02.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 14
   end
@@ -1263,11 +1263,11 @@ object Form1: TForm1
     Top = 268
     Width = 100
     DataField = '02.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 15
   end
@@ -1277,11 +1277,11 @@ object Form1: TForm1
     Top = 296
     Width = 100
     DataField = '02.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 16
   end
@@ -1291,11 +1291,11 @@ object Form1: TForm1
     Top = 324
     Width = 100
     DataField = '02.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 17
   end
@@ -1305,11 +1305,11 @@ object Form1: TForm1
     Top = 352
     Width = 100
     DataField = '03.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 18
   end
@@ -1319,11 +1319,11 @@ object Form1: TForm1
     Top = 380
     Width = 100
     DataField = '03.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 19
   end
@@ -1333,11 +1333,11 @@ object Form1: TForm1
     Top = 408
     Width = 100
     DataField = '03.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 20
   end
@@ -1347,11 +1347,11 @@ object Form1: TForm1
     Top = 436
     Width = 100
     DataField = '03.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 21
   end
@@ -1361,11 +1361,11 @@ object Form1: TForm1
     Top = 464
     Width = 100
     DataField = '04.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 22
   end
@@ -1375,11 +1375,11 @@ object Form1: TForm1
     Top = 492
     Width = 100
     DataField = '04.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 23
   end
@@ -1389,11 +1389,11 @@ object Form1: TForm1
     Top = 520
     Width = 100
     DataField = '04.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 24
   end
@@ -1403,11 +1403,11 @@ object Form1: TForm1
     Top = 548
     Width = 100
     DataField = '04.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 25
   end
@@ -1417,11 +1417,11 @@ object Form1: TForm1
     Top = 576
     Width = 100
     DataField = '05.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 26
   end
@@ -1431,11 +1431,11 @@ object Form1: TForm1
     Top = 16
     Width = 100
     DataField = '05.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 27
   end
@@ -1445,11 +1445,11 @@ object Form1: TForm1
     Top = 44
     Width = 100
     DataField = '05.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 28
   end
@@ -1459,11 +1459,11 @@ object Form1: TForm1
     Top = 72
     Width = 100
     DataField = '05.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 29
   end
@@ -1473,11 +1473,11 @@ object Form1: TForm1
     Top = 100
     Width = 100
     DataField = '06.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 30
   end
@@ -1487,11 +1487,11 @@ object Form1: TForm1
     Top = 128
     Width = 100
     DataField = '06.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 31
   end
@@ -1501,11 +1501,11 @@ object Form1: TForm1
     Top = 156
     Width = 100
     DataField = '06.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 32
   end
@@ -1515,11 +1515,11 @@ object Form1: TForm1
     Top = 184
     Width = 100
     DataField = '06.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 33
   end
@@ -1529,11 +1529,11 @@ object Form1: TForm1
     Top = 212
     Width = 100
     DataField = '07.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 34
   end
@@ -1543,11 +1543,11 @@ object Form1: TForm1
     Top = 240
     Width = 100
     DataField = '07.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 35
   end
@@ -1557,11 +1557,11 @@ object Form1: TForm1
     Top = 268
     Width = 100
     DataField = '07.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 36
   end
@@ -1571,11 +1571,11 @@ object Form1: TForm1
     Top = 296
     Width = 100
     DataField = '07.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 37
   end
@@ -1585,11 +1585,11 @@ object Form1: TForm1
     Top = 324
     Width = 100
     DataField = '08.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 38
   end
@@ -1599,11 +1599,11 @@ object Form1: TForm1
     Top = 352
     Width = 100
     DataField = '08.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 39
   end
@@ -1613,11 +1613,11 @@ object Form1: TForm1
     Top = 380
     Width = 100
     DataField = '08.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 40
   end
@@ -1627,11 +1627,11 @@ object Form1: TForm1
     Top = 408
     Width = 100
     DataField = '08.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 41
   end
@@ -1641,11 +1641,11 @@ object Form1: TForm1
     Top = 436
     Width = 100
     DataField = '09.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 42
   end
@@ -1655,11 +1655,11 @@ object Form1: TForm1
     Top = 464
     Width = 100
     DataField = '09.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 43
   end
@@ -1669,11 +1669,11 @@ object Form1: TForm1
     Top = 492
     Width = 100
     DataField = '09.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 44
   end
@@ -1683,11 +1683,11 @@ object Form1: TForm1
     Top = 520
     Width = 100
     DataField = '09.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 45
   end
@@ -1697,11 +1697,11 @@ object Form1: TForm1
     Top = 548
     Width = 100
     DataField = '10.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 46
   end
@@ -1711,11 +1711,11 @@ object Form1: TForm1
     Top = 576
     Width = 100
     DataField = '10.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 47
   end
@@ -1725,11 +1725,11 @@ object Form1: TForm1
     Top = 16
     Width = 100
     DataField = '10.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 48
   end
@@ -1739,11 +1739,11 @@ object Form1: TForm1
     Top = 44
     Width = 100
     DataField = '10.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 49
   end
@@ -1753,11 +1753,11 @@ object Form1: TForm1
     Top = 72
     Width = 100
     DataField = '11.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 50
   end
@@ -1767,11 +1767,11 @@ object Form1: TForm1
     Top = 100
     Width = 100
     DataField = '11.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 51
   end
@@ -1781,11 +1781,11 @@ object Form1: TForm1
     Top = 128
     Width = 100
     DataField = '11.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 52
   end
@@ -1795,11 +1795,11 @@ object Form1: TForm1
     Top = 156
     Width = 100
     DataField = '11.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 53
   end
@@ -1809,11 +1809,11 @@ object Form1: TForm1
     Top = 184
     Width = 100
     DataField = '12.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 54
   end
@@ -1823,11 +1823,11 @@ object Form1: TForm1
     Top = 212
     Width = 100
     DataField = '12.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 55
   end
@@ -1837,11 +1837,11 @@ object Form1: TForm1
     Top = 240
     Width = 100
     DataField = '12.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 56
   end
@@ -1851,11 +1851,11 @@ object Form1: TForm1
     Top = 268
     Width = 100
     DataField = '12.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 57
   end
@@ -1865,11 +1865,11 @@ object Form1: TForm1
     Top = 296
     Width = 100
     DataField = '13.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 58
   end
@@ -1879,11 +1879,11 @@ object Form1: TForm1
     Top = 324
     Width = 100
     DataField = '13.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 59
   end
@@ -1893,11 +1893,11 @@ object Form1: TForm1
     Top = 352
     Width = 100
     DataField = '13.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 60
   end
@@ -1907,11 +1907,11 @@ object Form1: TForm1
     Top = 380
     Width = 100
     DataField = '13.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 61
   end
@@ -1921,11 +1921,11 @@ object Form1: TForm1
     Top = 408
     Width = 100
     DataField = '14.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 62
   end
@@ -1935,11 +1935,11 @@ object Form1: TForm1
     Top = 436
     Width = 100
     DataField = '14.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 63
   end
@@ -1949,11 +1949,11 @@ object Form1: TForm1
     Top = 464
     Width = 100
     DataField = '14.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 64
   end
@@ -1963,11 +1963,11 @@ object Form1: TForm1
     Top = 492
     Width = 100
     DataField = '14.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 65
   end
@@ -1977,11 +1977,11 @@ object Form1: TForm1
     Top = 520
     Width = 100
     DataField = '15.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 66
   end
@@ -1991,11 +1991,11 @@ object Form1: TForm1
     Top = 548
     Width = 100
     DataField = '15.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 67
   end
@@ -2005,11 +2005,11 @@ object Form1: TForm1
     Top = 576
     Width = 100
     DataField = '15.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 68
   end
@@ -2019,11 +2019,11 @@ object Form1: TForm1
     Top = 16
     Width = 100
     DataField = '15.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 69
   end
@@ -2033,11 +2033,11 @@ object Form1: TForm1
     Top = 44
     Width = 100
     DataField = '16.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 70
   end
@@ -2047,11 +2047,11 @@ object Form1: TForm1
     Top = 72
     Width = 100
     DataField = '16.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 71
   end
@@ -2061,11 +2061,11 @@ object Form1: TForm1
     Top = 100
     Width = 100
     DataField = '16.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 72
   end
@@ -2075,11 +2075,11 @@ object Form1: TForm1
     Top = 128
     Width = 100
     DataField = '16.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 73
   end
@@ -2089,11 +2089,11 @@ object Form1: TForm1
     Top = 156
     Width = 100
     DataField = '17.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 74
   end
@@ -2103,11 +2103,11 @@ object Form1: TForm1
     Top = 184
     Width = 100
     DataField = '17.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 75
   end
@@ -2117,11 +2117,11 @@ object Form1: TForm1
     Top = 212
     Width = 100
     DataField = '17.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 76
   end
@@ -2131,11 +2131,11 @@ object Form1: TForm1
     Top = 240
     Width = 100
     DataField = '17.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 77
   end
@@ -2145,11 +2145,11 @@ object Form1: TForm1
     Top = 268
     Width = 100
     DataField = '18.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 78
   end
@@ -2159,11 +2159,11 @@ object Form1: TForm1
     Top = 296
     Width = 100
     DataField = '18.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 79
   end
@@ -2173,11 +2173,11 @@ object Form1: TForm1
     Top = 324
     Width = 100
     DataField = '18.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 80
   end
@@ -2187,11 +2187,11 @@ object Form1: TForm1
     Top = 352
     Width = 100
     DataField = '18.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 81
   end
@@ -2201,11 +2201,11 @@ object Form1: TForm1
     Top = 380
     Width = 100
     DataField = '19.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 82
   end
@@ -2215,11 +2215,11 @@ object Form1: TForm1
     Top = 408
     Width = 100
     DataField = '19.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 83
   end
@@ -2229,11 +2229,11 @@ object Form1: TForm1
     Top = 436
     Width = 100
     DataField = '19.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 84
   end
@@ -2243,11 +2243,11 @@ object Form1: TForm1
     Top = 464
     Width = 100
     DataField = '19.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 85
   end
@@ -2257,11 +2257,11 @@ object Form1: TForm1
     Top = 492
     Width = 100
     DataField = '20.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 86
   end
@@ -2271,11 +2271,11 @@ object Form1: TForm1
     Top = 520
     Width = 100
     DataField = '20.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 87
   end
@@ -2285,11 +2285,11 @@ object Form1: TForm1
     Top = 548
     Width = 100
     DataField = '20.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 88
   end
@@ -2299,11 +2299,11 @@ object Form1: TForm1
     Top = 576
     Width = 100
     DataField = '20.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 89
   end
@@ -2313,11 +2313,11 @@ object Form1: TForm1
     Top = 16
     Width = 100
     DataField = '21.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 90
   end
@@ -2327,11 +2327,11 @@ object Form1: TForm1
     Top = 44
     Width = 100
     DataField = '21.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 91
   end
@@ -2341,11 +2341,11 @@ object Form1: TForm1
     Top = 72
     Width = 100
     DataField = '21.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 92
   end
@@ -2355,11 +2355,11 @@ object Form1: TForm1
     Top = 100
     Width = 100
     DataField = '21.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 93
   end
@@ -2369,11 +2369,11 @@ object Form1: TForm1
     Top = 128
     Width = 100
     DataField = '22.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 94
   end
@@ -2383,11 +2383,11 @@ object Form1: TForm1
     Top = 156
     Width = 100
     DataField = '22.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 95
   end
@@ -2397,11 +2397,11 @@ object Form1: TForm1
     Top = 184
     Width = 100
     DataField = '22.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 96
   end
@@ -2411,11 +2411,11 @@ object Form1: TForm1
     Top = 212
     Width = 100
     DataField = '22.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 97
   end
@@ -2425,11 +2425,11 @@ object Form1: TForm1
     Top = 240
     Width = 100
     DataField = '23.00'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 98
   end
@@ -2439,11 +2439,11 @@ object Form1: TForm1
     Top = 268
     Width = 100
     DataField = '23.15'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 99
   end
@@ -2453,11 +2453,11 @@ object Form1: TForm1
     Top = 296
     Width = 100
     DataField = '23.30'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 100
   end
@@ -2467,125 +2467,33 @@ object Form1: TForm1
     Top = 324
     Width = 100
     DataField = '23.45'
-    DataSource = DataSource1
+    DataSource = DSDay
     KeyField = 'ID'
     ListField = 'Medikament'
     ListFieldIndex = 0
-    ListSource = DataSource4
+    ListSource = DSMedikamente
     LookupCache = False
     TabOrder = 101
   end
-  object SQLQuery1: TSQLQuery
-    PacketRecords = -1
-    IndexFieldNames = 'ID'
-    FieldDefs = <>
-    Database = DM1.Con1
-    Transaction = DM1.SQLTran1
-    SQL.Strings = (
-      'Select * FROM tblDateTime'
-    )
-    Options = []
-    Params = <>
-    left = 664
-    top = 672
-  end
-  object DataSource1: TDataSource
+  object DSDay: TDataSource
     DataSet = DM1.QDay
-    left = 1104
-    top = 608
+    left = 424
+    top = 624
   end
-  object SQLQuery2: TSQLQuery
-    PacketRecords = -1
-    IndexFieldNames = 'ID'
-    FieldDefs = <    
-      item
-        Name = 'ID'
-        DataType = ftInteger
-        Precision = -1
-      end    
-      item
-        Name = 'Jahr'
-        DataType = ftString
-        Precision = -1
-        Size = 6
-      end>
-    Database = DM1.Con1
-    Transaction = DM1.SQLTran1
-    SQL.Strings = (
-      'Select * FROM tblJahr'
-    )
-    Options = []
-    Params = <>
-    left = 664
-    top = 728
+  object DSYear: TDataSource
+    DataSet = DM1.QYear
+    left = 1008
+    top = 440
   end
-  object SQLQuery3: TSQLQuery
-    PacketRecords = -1
-    IndexFieldNames = 'ID'
-    FieldDefs = <    
-      item
-        Name = 'ID'
-        DataType = ftInteger
-        Precision = -1
-      end    
-      item
-        Name = 'Month'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end>
-    Database = DM1.Con1
-    Transaction = DM1.SQLTran1
-    SQL.Strings = (
-      'Select * FROM tblMonth'
-    )
-    Options = []
-    Params = <>
-    left = 600
-    top = 728
+  object DSMonth: TDataSource
+    DataSet = DM1.QMonth
+    left = 864
+    top = 440
   end
-  object DataSource2: TDataSource
-    DataSet = SQLQuery2
-    left = 816
-    top = 656
-  end
-  object DataSource3: TDataSource
-    DataSet = SQLQuery3
-    left = 1104
-    top = 504
-  end
-  object DataSource4: TDataSource
+  object DSMedikamente: TDataSource
     DataSet = DM1.QMedikamente
-    left = 1104
-    top = 568
-  end
-  object SQLQuery4: TSQLQuery
-    FieldDefs = <    
-      item
-        Name = 'ID'
-        DataType = ftInteger
-        Precision = -1
-      end    
-      item
-        Name = 'Medikament'
-        DataType = ftString
-        Precision = -1
-        Size = 25
-      end    
-      item
-        Name = 'Image'
-        DataType = ftBlob
-        Precision = -1
-      end>
-    Database = DM1.Con1
-    Transaction = DM1.SQLTran1
-    SQL.Strings = (
-      'Select * FROM tblMedikamente'
-    )
-    Options = []
-    Params = <>
-    left = 600
-    top = 664
+    left = 360
+    top = 624
   end
   object TrayIcon1: TTrayIcon
     BalloonFlags = bfInfo

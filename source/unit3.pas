@@ -14,8 +14,8 @@ type
   { TForm3 }
 
   TForm3 = class(TForm)
-    DataSource1: TDataSource;
-    DataSource2: TDataSource;
+    DSYear: TDataSource;
+    DSMonth: TDataSource;
     DBEdit2: TDBEdit;
     DBGrid1: TDBGrid;
     DBGrid2: TDBGrid;
