@@ -5,15 +5,39 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, sqlite3conn, sqldb, DB, eventlog, FileUtil,
+  Classes, SysUtils, sqlite3conn, sqldb, DB, eventlog, FileUtil, Process,
   DBDateTimePicker, Forms, Controls, Graphics, Dialogs, ComCtrls, StdCtrls,
-  DBCtrls, Buttons, DBExtCtrls, ExtCtrls, XMLPropStorage;
+  DBCtrls, Buttons, DBExtCtrls, ExtCtrls, XMLPropStorage, ActnList, Menus, LazLogger;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
+    CrashReport: TAction;
+    Help_Fi: TAction;
+    Help_En: TAction;
+    Help_It: TAction;
+    Help_Fr: TAction;
+    Help_Dt: TAction;
+    MenuItem28: TMenuItem;
+    MenuItem29: TMenuItem;
+    MenuItem30: TMenuItem;
+    MenuItem31: TMenuItem;
+    Tagalog: TAction;
+    Englisch: TAction;
+    Italienisch: TAction;
+    Franzoesisch: TAction;
+    Deutsch: TAction;
+    MenuItem26: TMenuItem;
+    MenuItem27: TMenuItem;
+    Print_Editor: TAction;
+    Print_Statistik: TAction;
+    Print_PreView: TAction;
+    Monat_and_Jahr: TAction;
+    Medikamente: TAction;
+    ActionClose: TAction;
+    ActionList1: TActionList;
     DSDay: TDataSource;
     DSYear: TDataSource;
     DSMonth: TDataSource;
@@ -121,6 +145,7 @@ type
     DBNavigator1: TDBNavigator;
     DBRadioGroup1: TDBRadioGroup;
     EventLog1: TEventLog;
+    ImageList1: TImageList;
     Label1: TLabel;
     Label10: TLabel;
     Label11: TLabel;
@@ -217,16 +242,50 @@ type
     Label94: TLabel;
     Label95: TLabel;
     Label96: TLabel;
+    MainMenu1: TMainMenu;
+    MenuItem1: TMenuItem;
+    MenuItem10: TMenuItem;
+    MenuItem11: TMenuItem;
+    MenuItem12: TMenuItem;
+    MenuItem13: TMenuItem;
+    MenuItem14: TMenuItem;
+    MenuItem15: TMenuItem;
+    MenuItem16: TMenuItem;
+    MenuItem17: TMenuItem;
+    MenuItem18: TMenuItem;
+    MenuItem19: TMenuItem;
+    MenuItem2: TMenuItem;
+    MenuItem20: TMenuItem;
+    MenuItem21: TMenuItem;
+    MenuItem22: TMenuItem;
+    MenuItem23: TMenuItem;
+    MenuItem24: TMenuItem;
+    MenuItem25: TMenuItem;
+    MenuItem3: TMenuItem;
+    MenuItem4: TMenuItem;
+    MenuItem5: TMenuItem;
+    MenuItem6: TMenuItem;
+    MenuItem7: TMenuItem;
+    MenuItem8: TMenuItem;
+    MenuItem9: TMenuItem;
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
     StatusBar1: TStatusBar;
     TrayIcon1: TTrayIcon;
     XMLPropStorage1: TXMLPropStorage;
+    procedure ActionCloseExecute(Sender: TObject);
     procedure DBLookupComboBox1Change(Sender: TObject);
 
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormHide(Sender: TObject);
+    procedure Help_DtExecute(Sender: TObject);
+    procedure Help_EnExecute(Sender: TObject);
+    procedure Help_FiExecute(Sender: TObject);
+    procedure MedikamenteExecute(Sender: TObject);
+    procedure Monat_and_JahrExecute(Sender: TObject);
+    procedure Print_EditorExecute(Sender: TObject);
+    procedure Print_PreViewExecute(Sender: TObject);
 
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
@@ -337,6 +396,103 @@ begin
 
 end;
 
+procedure TForm1.Help_DtExecute(Sender: TObject);
+var
+  AProcess: TProcess;
+  begin
+    try
+    AProcess := TProcess.Create(nil);
+    AProcess.CommandLine := './help/Docview/docview.exe ./help/help/Migraene_Tagebuch.inf';
+    AProcess.Options := AProcess.Options + [poWaitOnExit];
+    AProcess.Execute;
+    AProcess.Free;
+       Except
+         DebugLn('Error: Can`t Start Help De');
+       end;
+end;
+
+procedure TForm1.Help_EnExecute(Sender: TObject);
+var
+  AProcess: TProcess;
+  begin
+    try
+    AProcess := TProcess.Create(nil);
+    AProcess.CommandLine := './help/Docview/docview.exe ./help/help/migraine_diary.en.inf';
+    AProcess.Options := AProcess.Options + [poWaitOnExit];
+    AProcess.Execute;
+    AProcess.Free;
+       Except
+         DebugLn('Error: Can`t Start Help De');
+       end;
+
+end;
+
+procedure TForm1.Help_FiExecute(Sender: TObject);
+var
+  AProcess: TProcess;
+  begin
+    try
+    AProcess := TProcess.Create(nil);
+    AProcess.CommandLine := './help/Docview/docview.exe ./help/help/migraine_diary.ph.inf';
+    AProcess.Options := AProcess.Options + [poWaitOnExit];
+    AProcess.Execute;
+    AProcess.Free;
+       Except
+         DebugLn('Error: Can`t Start Help De');
+       end;
+
+end;
+
+procedure TForm1.MedikamenteExecute(Sender: TObject);
+
+  var
+  MyForm: TFormMediEdit;
+begin
+  if DM1.QDay.UpdateStatus <> TUpdateStatus.usUnmodified then
+    DM1.QDay.ApplyUpdates;
+
+  MyForm := TFormMediEdit.Create(nil);
+  try
+    MyForm.ShowModal;
+  finally
+    MyForm.Free;
+  end;
+end;
+
+procedure TForm1.Monat_and_JahrExecute(Sender: TObject);
+  var
+    MyForm3: TForm3;
+  begin
+
+    if DM1.QDay.UpdateStatus <> TUpdateStatus.usUnmodified then
+      DM1.QDay.ApplyUpdates;
+
+    MyForm3 := TForm3.Create(nil);
+    try
+      MyForm3.ShowModal;
+    finally
+      MyForm3.Free;
+    end;
+    DM1.QDay.Active := True;
+    DM1.QYear.Active := True;
+    DM1.QMonth.Active := True;
+    DM1.QMedikamente.Active := True;
+
+end;
+
+procedure TForm1.Print_EditorExecute(Sender: TObject);
+begin
+ DM1.frReport1.DesignReport;
+end;
+
+procedure TForm1.Print_PreViewExecute(Sender: TObject);
+begin
+  DM1.frReport1.LoadFromFile('./prnt/monats_uebersicht.lrf');
+DM1.frReport1.ShowReport;
+
+
+end;
+
 procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
 
@@ -353,6 +509,11 @@ end;
 procedure TForm1.DBLookupComboBox1Change(Sender: TObject);
 begin
 
+end;
+
+procedure TForm1.ActionCloseExecute(Sender: TObject);
+begin
+  Close;
 end;
 
 procedure TForm1.RestoreFormState(Sender: TObject);

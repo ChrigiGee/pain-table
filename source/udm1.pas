@@ -5,7 +5,8 @@ unit uDM1;
 interface
 
 uses
-  Classes, SysUtils, sqlite3conn, sqldb, LazFileUtils,lazlogger;
+  Classes, SysUtils, sqlite3conn, sqldb, LazFileUtils, lazlogger, LR_Class,
+  LR_Desgn, LRDialogControls;
 
 type
 
@@ -13,6 +14,8 @@ type
 
   TDM1 = class(TDataModule)
     Con1: TSQLite3Connection;
+    frDesigner1: TfrDesigner;
+    frReport1: TfrReport;
     QMedikamente: TSQLQuery;
     QYear: TSQLQuery;
     QMonth: TSQLQuery;

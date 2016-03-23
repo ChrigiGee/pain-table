@@ -18,7 +18,7 @@
       <UseVersionInfo Value="True"/>
       <MinorVersionNr Value="5"/>
       <RevisionNr Value="3"/>
-      <BuildNr Value="6"/>
+      <BuildNr Value="7"/>
       <Language Value="0807"/>
       <CharSet Value="04B0"/>
       <Attributes pvaPreRelease="True"/>
@@ -36,19 +36,25 @@
         <CommandLineParams Value="--debug-log=&quot;./log/exeption.txt&quot;"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="4">
+    <RequiredPackages Count="6">
       <Item1>
-        <PackageName Value="DateTimeCtrls"/>
+        <PackageName Value="lr_DialogDesign"/>
       </Item1>
       <Item2>
-        <PackageName Value="FCL"/>
+        <PackageName Value="lazreport"/>
       </Item2>
       <Item3>
-        <PackageName Value="SQLDBLaz"/>
+        <PackageName Value="DateTimeCtrls"/>
       </Item3>
       <Item4>
-        <PackageName Value="LCL"/>
+        <PackageName Value="FCL"/>
       </Item4>
+      <Item5>
+        <PackageName Value="SQLDBLaz"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="LCL"/>
+      </Item6>
     </RequiredPackages>
     <Units Count="6">
       <Unit0>

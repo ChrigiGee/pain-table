@@ -6,7 +6,7 @@ object DM1: TDM1
   VerticalOffset = 82
   Width = 577
   object Con1: TSQLite3Connection
-    Connected = False
+    Connected = True
     LoginPrompt = False
     DatabaseName = './sql/migraenetagebuch.sql3db'
     KeepConnection = False
@@ -16,7 +16,7 @@ object DM1: TDM1
     top = 16
   end
   object SQLTran1: TSQLTransaction
-    Active = False
+    Active = True
     Database = Con1
     Options = []
     left = 80
@@ -134,607 +134,625 @@ object DM1: TDM1
         Name = '00.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 10
       end    
       item
         Name = '00.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '00.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '00.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '01.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '01.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '01.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '01.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '02.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '02.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '02.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '02.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '03.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '03.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '03.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '03.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '04.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '04.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '04.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '04.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '05.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '05.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '05.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '05.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '06.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '06.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '06.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '06.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '07.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '07.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '07.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '07.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '08.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '08.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '08.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '08.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '09.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '09.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '09.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '09.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '10.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '10.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '10.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '10.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '11.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '11.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '11.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '11.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '12.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '12.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '12.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '12.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '13.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '13.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '13.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '13.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '14.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '14.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '14.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '14.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '15.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '15.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '15.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '15.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '16.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '16.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '16.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '16.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '17.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '17.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '17.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '17.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '18.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '18.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '18.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '18.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '19.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '19.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '19.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '19.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '20.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '20.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '20.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '20.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '21.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '21.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '21.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '21.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '22.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '22.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '22.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '22.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '23.00'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '23.15'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '23.30'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end    
       item
         Name = '23.45'
         DataType = ftString
         Precision = -1
-        Size = 255
+        Size = 25
       end>
     Database = Con1
     Transaction = SQLTran1
     SQL.Strings = (
-      'SELECT ID, Printed, Jahr, Monat, aktDatum,00.00 ,00.15 ,'
-      '         00.30 ,00.45 ,01.00 ,'
-      '         01.15 ,01.30 ,01.45 ,'
-      '         02.00 ,02.15 ,02.30 ,'
-      '         02.45 ,03.00 ,03.15 ,'
-      '         03.30 ,03.45 ,04.00 ,'
-      '         04.15 ,04.30 ,04.45 ,'
-      '         05.00 ,05.15 ,05.30 ,'
-      '         05.45 ,06.00 ,06.15 ,'
-      '         06.30 ,06.45 ,07.00 ,'
-      '         07.15 ,07.30 ,07.45 ,'
-      '         08.00 ,08.15 ,08.30 ,'
-      '         08.45 ,09.00 ,09.15 ,'
-      '         09.30 ,09.45 ,10.00 ,'
-      '         10.15 ,10.30 ,10.45 ,'
-      '11.00 ,11.15 ,11.30 ,11.45 ,'
-      '12.00 ,12.15 ,12.30 ,12.45 ,'
-      '13.00 ,13.15 ,13.30 ,13.45 ,'
-      '14.00 ,14.15 ,14.30 ,14.45 ,'
-      '15.00 ,15.15 ,15.30 ,15.45 ,'
-      '16.00 ,16.15 ,16.30 ,16.45 ,'
-      '17.00 ,17.15 ,17.30 ,17.45 ,18.00 ,18.15 ,18.30 ,18.45 ,19.00 ,19.15 ,19.30 ,19.45 ,20.00 ,20.15 ,20.30 ,20.45 ,21.00 ,21.15 ,21.30 ,21.45 ,22.00 ,22.15 ,22.30 ,22.45 ,23.00 ,23.15 ,23.30 ,23.45 FROM tblDateTime'
+      'SELECT ID, Printed, Jahr, Monat, aktDatum,"00.00" ,"00.15" ,'
+      '         "00.30" ,"00.45" ,"01.00" ,'
+      '         "01.15" ,"01.30" ,"01.45" ,'
+      '         "02.00" ,"02.15" ,"02.30" ,'
+      '         "02.45" ,"03.00" ,"03.15" ,'
+      '         "03.30" ,"03.45" ,"04.00" ,'
+      '         "04.15" ,"04.30" ,"04.45" ,'
+      '         "05.00" ,"05.15" ,"05.30" ,'
+      '         "05.45" ,"06.00" ,"06.15" ,'
+      '         "06.30" ,"06.45" ,"07.00" ,'
+      '         "07.15" ,"07.30" ,"07.45" ,'
+      '         "08.00" ,"08.15" ,"08.30" ,'
+      '         "08.45" ,"09.00" ,"09.15" ,'
+      '         "09.30" ,"09.45" ,"10.00" ,'
+      '         "10.15" ,"10.30" ,"10.45" ,'
+      '"11.00" ,"11.15" ,"11.30" ,"11.45" ,'
+      '"12.00" ,"12.15" ,"12.30" ,"12.45" ,'
+      '"13.00" ,"13.15" ,"13.30" ,"13.45" ,'
+      '"14.00" ,"14.15" ,"14.30" ,"14.45" ,'
+      '"15.00" ,"15.15" ,"15.30" ,"15.45" ,'
+      '"16.00" ,"16.15" ,"16.30" ,"16.45" ,'
+      '"17.00" ,"17.15" ,"17.30" ,"17.45" ,'
+      '"18.00" ,"18.15" ,"18.30" ,"18.45" ,'
+      '"19.00" ,"19.15" ,"19.30" ,"19.45" ,'
+      '"20.00" ,"20.15" ,"20.30" ,"20.45" ,'
+      '"21.00" ,"21.15" ,"21.30" ,"21.45" ,'
+      '"22.00" ,"22.15" ,"22.30" ,"22.45" ,'
+      '"23.00" ,"23.15" ,"23.30" ,"23.45" FROM tblDateTime'
     )
     Options = [sqoAutoCommit]
     Params = <>
     left = 32
     top = 146
+  end
+  object frReport1: TfrReport
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 144
+    top = 16
+  end
+  object frDesigner1: TfrDesigner
+    left = 208
+    top = 16
   end
 end
